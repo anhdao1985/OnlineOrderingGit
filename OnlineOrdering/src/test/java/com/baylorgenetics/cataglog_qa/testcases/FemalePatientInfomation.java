@@ -16,6 +16,7 @@ import com.baylorgenetics.catalog_qa.pages.allPanels;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 
@@ -270,7 +271,13 @@ public class FemalePatientInfomation {
 		 
 		 
 		 
-		 
+					/// Initiate the Submit button
+					allPanels saveButtonOnOrderPage = new allPanels(driver);
+
+					// Calling the submit button and then click
+					WebElement element2 = saveButtonOnOrderPage.gettheSaveButtonOnOrderForm();
+					Actions actions1 = new Actions(driver);
+					actions1.moveToElement(element2).click().build().perform();
 		 
 		 
 		 
