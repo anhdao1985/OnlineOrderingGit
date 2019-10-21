@@ -207,8 +207,7 @@ public class FemalePatientInfomation {
 				 ethnicityObjSel.selectByIndex(eSelect);
 				 if (eSelect == 15 ) {
 				 //if(ethnicityObjSel.selectedValue.equals("Other"){
-				 driver.findElement(By.xpath("//div[@id='root']/div/div/div[1]/div[2]/div/div[3]/div/div/form/div[1]/div[7]/div/div/input ")).sendKeys(NameOfInsured.generateRandomAlphaNumeric(8));
-				 
+					 driver.findElement(By.name("specifiedEthnicity")).sendKeys(NameOfInsured.generateRandomAlphaNumeric(8));	 
 				 }
 				 else{
 					 System.out.println(ethnicityDropDownList.getAttribute("value"));
