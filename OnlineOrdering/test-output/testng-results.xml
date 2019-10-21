@@ -2,23 +2,23 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="33274" started-at="2019-10-21T19:19:40Z" finished-at="2019-10-21T19:20:13Z">
+  <suite name="Default suite" duration-ms="31244" started-at="2019-10-21T19:37:11Z" finished-at="2019-10-21T19:37:43Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="33274" started-at="2019-10-21T19:19:40Z" finished-at="2019-10-21T19:20:13Z">
+    <test name="Default test" duration-ms="31244" started-at="2019-10-21T19:37:11Z" finished-at="2019-10-21T19:37:43Z">
       <class name="com.baylorgenetics.cataglog_qa.testcases.NegativePatientInfoSubmitWithoutRequiredFields">
-        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:com.baylorgenetics.cataglog_qa.testcases.NegativePatientInfoSubmitWithoutRequiredFields@75881071]" name="setup" is-config="true" duration-ms="10" started-at="2019-10-21T19:19:40Z" finished-at="2019-10-21T19:19:40Z">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:com.baylorgenetics.cataglog_qa.testcases.NegativePatientInfoSubmitWithoutRequiredFields@75881071]" name="setup" is-config="true" duration-ms="16" started-at="2019-10-21T19:37:11Z" finished-at="2019-10-21T19:37:11Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@3c443976]]>
+                <![CDATA[org.testng.TestRunner@502f1f4c]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="NegativePatientInfoNorequiredFieldsSubmit()[pri:0, instance:com.baylorgenetics.cataglog_qa.testcases.NegativePatientInfoSubmitWithoutRequiredFields@75881071]" name="NegativePatientInfoNorequiredFieldsSubmit" duration-ms="33236" started-at="2019-10-21T19:19:40Z" finished-at="2019-10-21T19:20:13Z">
+        <test-method status="PASS" signature="NegativePatientInfoNorequiredFieldsSubmit()[pri:0, instance:com.baylorgenetics.cataglog_qa.testcases.NegativePatientInfoSubmitWithoutRequiredFields@75881071]" name="NegativePatientInfoNorequiredFieldsSubmit" duration-ms="31209" started-at="2019-10-21T19:37:11Z" finished-at="2019-10-21T19:37:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- NegativePatientInfoNorequiredFieldsSubmit -->
