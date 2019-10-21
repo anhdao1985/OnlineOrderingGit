@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="com.baylorgenetics.cataglog_qa.testcases.LogInFireFox">
+        <methods>
+          <include name="logInFireFox"/>
+        </methods>
+      </class> <!-- com.baylorgenetics.cataglog_qa.testcases.LogInFireFox -->
+      <class name="com.baylorgenetics.cataglog_qa.testcases.GeneAwaresDownloadAndVerifyThePdf">
+        <methods>
+          <include name="VerifyGeneAwaresPreqPDF"/>
+        </methods>
+      </class> <!-- com.baylorgenetics.cataglog_qa.testcases.GeneAwaresDownloadAndVerifyThePdf -->
+      <class name="com.baylorgenetics.cataglog_qa.testcases.MalePatientInformation">
+        <methods>
+          <include name="male"/>
+        </methods>
+      </class> <!-- com.baylorgenetics.cataglog_qa.testcases.MalePatientInformation -->
+      <class name="com.baylorgenetics.cataglog_qa.testcases.AddingMoreThanOneAdditionalRecipients">
+        <methods>
+          <include name="additionalRecipients"/>
+        </methods>
+      </class> <!-- com.baylorgenetics.cataglog_qa.testcases.AddingMoreThanOneAdditionalRecipients -->
+      <class name="com.baylorgenetics.cataglog_qa.testcases.VerifyingMitochondrialOrderPageAndSections">
+        <methods>
+          <include name="verifyingTheUrlAndSectionMitOrderPage"/>
+        </methods>
+      </class> <!-- com.baylorgenetics.cataglog_qa.testcases.VerifyingMitochondrialOrderPageAndSections -->
+      <class name="com.baylorgenetics.cataglog_qa.testcases.FemalePatientInfomation">
+        <methods>
+          <include name="female"/>
+        </methods>
+      </class> <!-- com.baylorgenetics.cataglog_qa.testcases.FemalePatientInfomation -->
+      <class name="com.baylorgenetics.cataglog_qa.testcases.LoginChrome">
+        <methods>
+          <include name="logInChrome"/>
+        </methods>
+      </class> <!-- com.baylorgenetics.cataglog_qa.testcases.LoginChrome -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

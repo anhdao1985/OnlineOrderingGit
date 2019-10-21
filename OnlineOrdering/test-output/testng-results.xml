@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="19864" started-at="2019-10-18T17:52:18Z" finished-at="2019-10-18T17:52:38Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="19864" started-at="2019-10-18T17:52:18Z" finished-at="2019-10-18T17:52:38Z">
+      <class name="com.baylorgenetics.cataglog_qa.testcases.VerifyingAllValuesInTheEthnicityDropDown">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:com.baylorgenetics.cataglog_qa.testcases.VerifyingAllValuesInTheEthnicityDropDown@75881071]" name="setup" is-config="true" duration-ms="12" started-at="2019-10-18T17:52:18Z" finished-at="2019-10-18T17:52:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@5454d35e]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="ValidateAllValueEthnicity()[pri:0, instance:com.baylorgenetics.cataglog_qa.testcases.VerifyingAllValuesInTheEthnicityDropDown@75881071]" name="ValidateAllValueEthnicity" duration-ms="19840" started-at="2019-10-18T17:52:18Z" finished-at="2019-10-18T17:52:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateAllValueEthnicity -->
+      </class> <!-- com.baylorgenetics.cataglog_qa.testcases.VerifyingAllValuesInTheEthnicityDropDown -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
