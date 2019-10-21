@@ -76,14 +76,14 @@ public class NegativePatientInfoSubmitWithoutRequiredFields {
 		driver.findElement(By.xpath("//div[@id='root']/div/div[1]/div[2]/div/div[2]/div[2]/div[1]/a")).click();
 		Thread.sleep(1000);
 
-		// Get the Text from the location and give it a pass or fail base on the text
-		if (driver.findElement(By.xpath("//div[@id='root']/div/div[1]/div[2]/div/div[3]/div[1]/span")).getText()
-				.equalsIgnoreCase("1500")) {
-			System.out.println("Details Page Contains TC # Pass");
-		} else {
-			System.out.println("Details Page Contains TC # Fail");
-
-		}
+	
+		
+		//Verify the Test# and title of the test on the order page
+		WebElement username3 = driver.findElement(By.xpath("//div[@id='root']/div/div[1]/div[2]/div/div[3]/div[1]"));
+		assertEquals(username3.getText().trim(), "1500Proband Whole Exome Sequencing");
+		
+		
+		
 
 		// Initiate gettheOrderButtonDetailsP icon as the allPanels class
 		allPanels theOrderBDetailsPage = new allPanels(driver);

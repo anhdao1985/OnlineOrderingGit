@@ -95,7 +95,7 @@ public class LogInFlowSignInAtCatalogpage {
 
 //Checking for the username and hospital code on the catalog page
 		WebElement username = driver.findElement(By.className("MuiButton-label"));
-		assertEquals(username.getText().trim(), "CLARA ADAMS (AUTOTEST) ▼");
+		assertEquals(username.getText().trim(), "CLARA ADAMS (AUTOTEST)");
 
 		// Clicking on the search result
 		driver.findElement(By.xpath("//div[@id='root']/div/div[1]/div[2]/div/div[2]/div[2]/div[1]/a")).click();
@@ -112,7 +112,7 @@ public class LogInFlowSignInAtCatalogpage {
 
 //Checking for the username and hospital code on the details page	
 		WebElement username1 = driver.findElement(By.className("MuiButton-label"));
-		assertEquals(username1.getText().trim(), "CLARA ADAMS (AUTOTEST) ▼");
+		assertEquals(username1.getText().trim(), "CLARA ADAMS (AUTOTEST)");
 
 		// Initiate gettheOrderButtonDetailsP icon as the allPanels class
 		allPanels theOrderBDetailsPage = new allPanels(driver);
@@ -120,19 +120,14 @@ public class LogInFlowSignInAtCatalogpage {
 		// allPales and insert value
 		theOrderBDetailsPage.gettheOrderButtonDetailsP().click();
 
-		// Verifying the Test number and name on the Order page
-		if (driver.findElement(By.xpath("//div[@id='root']/div/div/div[1]/div[2]/div/div[3]")).getText()
-				.equalsIgnoreCase("4900Global Metabolomic Assisted Pathway Screen (Global MAPS)®")) {
-			System.out.println(
-					"Order Page Contains 4900 | Global Metabolomic Assisted Pathway Screen (Global MAPS)® Pass");
-		} else {
-			System.out.println(
-					"Order Page Contains 4900 | Global Metabolomic Assisted Pathway Screen (Global MAPS)® Fail");
-		}
-
+		//Verify the Test# and title of the test on the order page
+		WebElement username3 = driver.findElement(By.xpath("//div[@id='root']/div/div/div[1]/div[2]/div/div[3]"));
+		assertEquals(username3.getText().trim(), "4900Global Metabolomic Assisted Pathway Screen (Global MAPS)®");
+		
+		
 //Checking for the username and hospital code on the order page	
 		WebElement username2 = driver.findElement(By.className("MuiButton-label"));
-		assertEquals(username2.getText().trim(), "CLARA ADAMS (AUTOTEST) ▼");
+		assertEquals(username2.getText().trim(), "CLARA ADAMS (AUTOTEST)");
 
 		// To keep the web browser stay for 3s
 		Thread.sleep(3000);

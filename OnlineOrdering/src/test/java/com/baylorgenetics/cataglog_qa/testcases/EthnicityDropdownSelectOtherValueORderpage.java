@@ -75,7 +75,7 @@ public class EthnicityDropdownSelectOtherValueORderpage {
 
 		driver.findElement(
 				By.name("specifiedEthnicity"))
-				.sendKeys(" Slavic");
+				.sendKeys("Slavic");
 
 		// Tabbing out of the free form field into the next field
 		WebElement e = driver.findElement(By.id("address-1"));

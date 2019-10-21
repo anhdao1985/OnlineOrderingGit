@@ -1,5 +1,7 @@
 package com.baylorgenetics.cataglog_qa.testcases;
 
+import static org.testng.Assert.assertEquals;
+
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -45,14 +47,9 @@ public class NegativeInvalidKeyword {
 		driver.findElement(By.xpath("//*[@id='btn-login']")).click();
 		Thread.sleep(2000);
 
-		// Get the Text from the location and give it a pass or fail base on the text
-		if (driver.findElement(By.className("MuiButton-label")).getText()
-				.equalsIgnoreCase("  CLARA ADAMS (AUTOTEST) ▼")) {
-			System.out.println("CLARA ADAMS (autotest) ▼ Pass");
-		} else {
-			System.out.println("CLARA ADAMS (autotest) ▼ Fail");
-
-		}
+		// Verify the user name and hospital code
+		WebElement username = driver.findElement(By.className("MuiButton-label"));
+		assertEquals(username.getText().trim(), "CLARA ADAMS (AUTOTEST)");
 
 // Use this to get the text in an element
 		// WebElement webElement = driver.findElement(By.className("MuiButton-label"));
