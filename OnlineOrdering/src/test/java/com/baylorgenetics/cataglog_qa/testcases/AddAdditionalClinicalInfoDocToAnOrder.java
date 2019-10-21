@@ -24,6 +24,7 @@ import java.util.Random;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 //import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
@@ -391,10 +392,12 @@ public class AddAdditionalClinicalInfoDocToAnOrder {
 				By.xpath("//div[@id='root']/div/div/div[1]/div[2]/div/div[10]/div/div[3]/table/tbody/tr/th"));
 		assertEquals(username1.getText().trim(), "png");
 
-		//Clicking the Save button
-		driver.findElement(By.xpath("//div[@id='root']/div/div/div[1]/div[2]/div/div[1]/div[2]/button[1]")).click();
-		Thread.sleep(1000);
-
+		 allPanels theSaveButton = new allPanels(driver);
+         
+         WebElement element = theSaveButton.gettheSaveButtonOnOrderForm();
+         Actions actions = new Actions(driver);
+         actions.moveToElement(element).click().build().perform();
+        
 		// Close browser
 		driver.close();
 		

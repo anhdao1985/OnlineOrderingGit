@@ -54,7 +54,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Eclipse/eclipse/WorkSpace/OnlineOrdering/lib/selenium-server-standalone-3.141.59.jar"/>
 	<classpathentry kind="lib" path="C:/Eclipse/poi-4.1.0/poi-4.1.0.jar"/>
 	<classpathentry kind="lib" path="C:/Eclipse/poi-4.1.0/poi-examples-4.1.0.jar"/>
 	<classpathentry kind="lib" path="C:/Eclipse/poi-4.1.0/poi-excelant-4.1.0.jar"/>
@@ -74,5 +73,6 @@
 	<classpathentry kind="lib" path="C:/Eclipse/poi-4.1.0/lib/jaxb-impl-2.3.0.1.jar"/>
 	<classpathentry kind="lib" path="C:/Eclipse/poi-4.1.0/lib/junit-4.12.jar"/>
 	<classpathentry kind="lib" path="C:/Eclipse/poi-4.1.0/lib/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="C:/Eclipse/eclipse/WorkSpace/OnlineOrderingGit/OnlineOrdering/lib/selenium-server-standalone-3.141.59.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
