@@ -119,13 +119,13 @@ public class LogInFireFox {
 
 		}
 */
-		
+   //Check for the Login and institution
 		WebElement username = driver.findElement(By.className("MuiButton-label"));
-		assertEquals(username.getText().trim(), "CLARA ADAMS (AUTOTEST) ▼");
+		assertEquals(username.getText().trim(), "CLARA ADAMS (AUTOTEST)");
 
 // Use this to get the text in an element
-//		 WebElement webElement = driver.findElement(By.className("MuiButton-label"));
-//		 System.out.println(webElement.getText());
+//	 WebElement webElement = driver.findElement(By.className("MuiButton-label"));
+//	 System.out.println(webElement.getText());
 
 		Thread.sleep(3000);
 		// Expand the Primary panel

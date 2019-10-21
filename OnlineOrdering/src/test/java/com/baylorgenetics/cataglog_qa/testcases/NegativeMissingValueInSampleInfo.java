@@ -7,6 +7,8 @@ import org.testng.TestRunner;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import static org.testng.Assert.assertEquals;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -19,6 +21,7 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 //import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
@@ -69,11 +72,9 @@ public class NegativeMissingValueInSampleInfo {
 		Thread.sleep(1000);
 
 // Click on the Order button to log in instead of the login button on the details page
-		
 
 		// Initiate gettheOrderButtonDetailsP icon as the allPanels class
 		allPanels theOrderBDetailsPage = new allPanels(driver);
-
 
 		// allPales and insert value
 		theOrderBDetailsPage.gettheOrderButtonDetailsP().click();
@@ -98,9 +99,8 @@ public class NegativeMissingValueInSampleInfo {
 
 		Thread.sleep(3000);
 
-
-		//driver.get("https://orders-qa.baylorgenetics.com/create?test=60101");
-		//Thread.sleep(3000);
+		// driver.get("https://orders-qa.baylorgenetics.com/create?test=60101");
+		// Thread.sleep(3000);
 
 		// Get the Text from the location and give it a pass or fail base on the text
 		if (driver.findElement(By.xpath("//div[@id='root']/div/div/div[1]/div[2]/div/div[2]")).getText()
@@ -110,20 +110,15 @@ public class NegativeMissingValueInSampleInfo {
 			System.out.println("Details Page Contains 60101 GeneAware Complete Panel Version 2 (Female) # Fail");
 
 		}
-		
-		// Get the Text from the location and give it a pass or fail base on the text
-		if (driver.findElement(By.className("MuiButton-label"))
-				.getText().equalsIgnoreCase("  CLARA ADAMS (AUTOTEST) ▼")) {
-			System.out.println("CLARA ADAMS (autotest) ▼ Pass");
-		} else {
-			System.out.println("CLARA ADAMS (autotest) ▼ Fail");
 
-		}
-		
+		// Check for the Login and institution
+		WebElement username1 = driver.findElement(By.className("MuiButton-label"));
+		assertEquals(username1.getText().trim(), "CLARA ADAMS (AUTOTEST)");
+
 //Use this to get the text in an element 
-		//WebElement webElement = driver.findElement(By.className("MuiButton-label"));
-       // System.out.println(webElement.getText());
-		
+		// WebElement webElement = driver.findElement(By.className("MuiButton-label"));
+		// System.out.println(webElement.getText());
+
 		// Initiate First name value
 		allPanels insertValueinFirstName = new allPanels(driver);
 		// Calling the FirstName method and send key
@@ -234,8 +229,7 @@ public class NegativeMissingValueInSampleInfo {
 		ethnicityObjSel.selectByIndex(eSelect);
 		if (eSelect == 15) {
 			// if(ethnicityObjSel.selectedValue.equals("Other"){
-			driver.findElement(By.xpath(
-					"//div[@id='root']/div/div/div[1]/div[2]/div/div[3]/div/div/form/div[1]/div[7]/div/div/input "))
+			driver.findElement(By.className("specifiedEthnicity"))
 					.sendKeys(NameOfInsured.generateRandomAlphaNumeric(8));
 
 		} else {
@@ -351,7 +345,7 @@ public class NegativeMissingValueInSampleInfo {
 
 		// Print out Selected Value
 		System.out.println(bdDayList.getAttribute("value"));
-		
+
 		// Selecting a year for the LMP drop down
 		Select dropdown = new Select(driver.findElement(By.id("birth-date-year")));
 
@@ -359,11 +353,10 @@ public class NegativeMissingValueInSampleInfo {
 		Thread.sleep(1000);
 		dropdown.selectByVisibleText("1985");
 
-		 //Selecting female radio button	 
-		 driver.findElement(By.xpath("//*[starts-with(@id, 'patient-gender-0')]")).click();
-		 Thread.sleep(1000);
+		// Selecting female radio button
+		driver.findElement(By.xpath("//*[starts-with(@id, 'patient-gender-0')]")).click();
+		Thread.sleep(1000);
 
-		
 		// Initiate Sample type dropdown
 		// allPanels sampleTypeDrpOnOrderPage = new allPanels(driver);
 
@@ -374,7 +367,9 @@ public class NegativeMissingValueInSampleInfo {
 		allPanels submitButtonOnOrderPage = new allPanels(driver);
 
 		// Calling the submit button and then click
-		submitButtonOnOrderPage.gettheSubmitButtonOnOrderForm().click();
+		WebElement element1 = submitButtonOnOrderPage.gettheSubmitButtonOnOrderForm();
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element1).click().build().perform();
 
 		// Store the parent window
 		String parentWindowHandler = driver.getWindowHandle();
@@ -391,11 +386,13 @@ public class NegativeMissingValueInSampleInfo {
 		WebElement cancelOnMessage = driver.findElement(By.xpath("//html/body/div[3]/div[3]/div/div[3]/button[1]"));
 		cancelOnMessage.click();
 
-		// Initiate the Submit button
-		allPanels submitButtonagainOnOrderPage = new allPanels(driver);
+		/// Initiate the Submit button
+		allPanels submitButtonAgainOnOrderPage = new allPanels(driver);
 
 		// Calling the submit button and then click
-		submitButtonagainOnOrderPage.gettheSubmitButtonOnOrderForm().click();
+		WebElement element2 = submitButtonAgainOnOrderPage.gettheSubmitButtonOnOrderForm();
+		Actions actions1 = new Actions(driver);
+		actions1.moveToElement(element2).click().build().perform();
 
 // Selecting absolute xpath and click the Confirm button
 		WebElement confirmOnMessage = driver.findElement(By.xpath("//html/body/div[3]/div[3]/div/div[3]/button[2]"));
@@ -404,16 +401,12 @@ public class NegativeMissingValueInSampleInfo {
 		driver.switchTo().window(parentWindowHandler);
 
 		// Clicking verify the Error message after clicking the submit
-		
-		Thread.sleep(3000);
 
-		if (driver.findElement(By.xpath("//div[@id='root']/div[3]")).getText().equalsIgnoreCase("Unable to submit order.")) {
+		Thread.sleep(5000);
 
-			System.out.println("Details Page Contains Unable to submit order. Pass");
-		} else {
-			System.out.println("Details Page Contains Unable to submit order. Fail");
-
-		}
+		// Check for the Login and institution
+		WebElement username2 = driver.findElement(By.xpath("//div[@id='root']/div[3]"));
+		assertEquals(username2.getText().trim(), "Unable to submit order. Please correct any errors and try again.");
 
 		Thread.sleep(3000);
 		// Close browser
@@ -421,5 +414,3 @@ public class NegativeMissingValueInSampleInfo {
 
 	}
 }
-
-

@@ -7,7 +7,11 @@ import org.testng.TestRunner;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import static org.testng.Assert.assertEquals;
+
 import java.util.Iterator;
+import java.util.List;
+import java.util.Random;
 import java.util.Set;
 //import java.util.List;
 //import java.util.Random;
@@ -15,11 +19,13 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 //import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 
 import com.baylorgenetics.catalog_qa.pages.GenerateData;
 import com.baylorgenetics.catalog_qa.pages.allPanels;
 
-public class NegativePatientInfoSavingWithoutRequiredFields {
+public class NegativePatientInfoSubmitWithoutRequiredFields {
 	public String baseUrl = "https://catalog-qa.baylorgenetics.com/search?";
 	String driverPath = "C:\\Eclipse\\chromedriver.exe";
 	public WebDriver driver;
@@ -32,7 +38,7 @@ public class NegativePatientInfoSavingWithoutRequiredFields {
 	}
 
 	@Test
-	public void NegativePatientInfoNorequiredFieldsSaving() throws InterruptedException {
+	public void NegativePatientInfoNorequiredFieldsSubmit() throws InterruptedException {
 		// This is how i call the class GenerateData
 		NameOfInsured = new GenerateData();
 
@@ -130,99 +136,92 @@ public class NegativePatientInfoSavingWithoutRequiredFields {
 		// Generate The Middle Name of Insured using the GenerateData class
 		driver.findElement(By.id("last-name")).sendKeys(NameOfInsured.generateRandomString(10));
 
-		/*
-		 * // below is the portion to randomly select the Month in the Month drop down
-		 * //Object of the Month Dropdownlist WebElement drpDwnList =
-		 * driver.findElement(By.id("birth-date-month"));
-		 * 
-		 * //Using FindElements to create a List object //List <WebElement> weblist =
-		 * driver.findElements(By.xpath(".//*[@id='drpdwnTopics']/option"));
-		 * 
-		 * //Using Select Class to fetch the count Select objSel = new
-		 * Select(drpDwnList); List <WebElement> weblist = objSel.getOptions();
-		 * 
-		 * //Taking the count of items int iCnt = weblist.size(); //Using Random class
-		 * to generate random values
-		 * 
-		 * Random num = new Random(); int iSelect = num.nextInt(iCnt);
-		 * 
-		 * //Selecting value from DropDownList objSel.selectByIndex(iSelect);
-		 * 
-		 * //Print out Selected Value
-		 * System.out.println(drpDwnList.getAttribute("value"));
-		 * 
-		 * // below is the portion to randomly select the day in the Day drop down
-		 * 
-		 * //Object of the Day Dropdownlist WebElement drpDayDwnList =
-		 * driver.findElement(By.id("birth-date-day"));
-		 * 
-		 * //Using FindElements to create a List object //List <WebElement> weblist =
-		 * driver.findElements(By.xpath(".//*[@id='drpdwnTopics']/option"));
-		 * 
-		 * //Using Select Class to fetch the count Select objOneSel = new
-		 * Select(drpDayDwnList); List <WebElement> weblistDay = objOneSel.getOptions();
-		 * 
-		 * //Taking the count of items int aCnt = weblistDay.size(); //Using Random
-		 * class to generate random values
-		 * 
-		 * Random numDay = new Random(); int aSelect = numDay.nextInt(aCnt);
-		 * 
-		 * //Selecting value from DropDownList objOneSel.selectByIndex(aSelect);
-		 * 
-		 * 
-		 * //Print out Selected Value
-		 * System.out.println(drpDayDwnList.getAttribute("value"));
-		 * 
-		 * 
-		 * // below is the portion to randomly select the Year in the Year drop down
-		 * 
-		 * 
-		 * //Object of the Year Dropdownlist WebElement drpYearDwnList =
-		 * driver.findElement(By.id("birth-date-year"));
-		 * 
-		 * 
-		 * //Using Select Class to fetch the count Select objYearSel = new
-		 * Select(drpYearDwnList); List <WebElement> weblistYear =
-		 * objYearSel.getOptions();
-		 * 
-		 * //Taking the count of items int yCnt = weblistYear.size(); //Using Random
-		 * class to generate random values
-		 * 
-		 * Random numYear = new Random(); int ySelect = numYear.nextInt(yCnt);
-		 * 
-		 * //Selecting value from DropDownList objYearSel.selectByIndex(ySelect);
-		 * 
-		 * 
-		 * //Print out Selected Value
-		 * System.out.println(drpYearDwnList.getAttribute("value"));
-		 * 
-		 */
+		// below is the portion to randomly select the Month in the Month drop down
+		// Object of the Month Dropdownlist
+		WebElement drpDwnList = driver.findElement(By.id("birth-date-month"));
+		Thread.sleep(2000);
+		// Using FindElements to create a List object
+		// List <WebElement> weblist =
+		// driver.findElements(By.xpath(".//*[@id='drpdwnTopics']/option"));
 
-		// Initiate gettheSaveButtonOnOrderPage icon as the allPanels class
-		allPanels theSaveButtonOnOrderPage = new allPanels(driver);
+		// Using Select Class to fetch the count
+		Select objSel = new Select(drpDwnList);
+		List<WebElement> weblist = objSel.getOptions();
 
-		// Calling the get the order button on the details page method from class
-		// allPales and insert value
-		theSaveButtonOnOrderPage.gettheSaveButtonOnOrderForm().click();
-		Thread.sleep(1000);
+		// Taking the count of items
+		int iCnt = weblist.size();
+		// Using Random class to generate random values
 
-		// Clicking the Save button and verify the Error message
+		Random num = new Random();
+		int iSelect = num.nextInt(iCnt);
 
-		if (driver.findElement(By.xpath("//div[@id='root']/div[2]/div")).getText()
-				.equalsIgnoreCase("Unable to save order")) {
+		// Selecting value from DropDownList
+		objSel.selectByIndex(iSelect);
 
-			System.out.println("Details Page Contains Unable to save order.  Pass");
-		} else {
-			System.out.println("Details Page Contains Unable to save order.  Fail");
+		// Print out Selected Value
+		System.out.println(drpDwnList.getAttribute("value"));
 
-		}
+		// below is the portion to randomly select the day in the Day drop down
+
+		// Object of the Day Dropdownlist
+		WebElement drpDayDwnList = driver.findElement(By.id("birth-date-day"));
+
+		// Using FindElements to create a List object
+		// List <WebElement> weblist =
+		// driver.findElements(By.xpath(".//*[@id='drpdwnTopics']/option"));
+		Thread.sleep(2000);
+
+		// Using Select Class to fetch the count
+		Select objOneSel = new Select(drpDayDwnList);
+		List<WebElement> weblistDay = objOneSel.getOptions();
+
+		// Taking the count of items
+		int aCnt = weblistDay.size();
+		// Using Random class to generate random values
+
+		Random numDay = new Random();
+		int aSelect = numDay.nextInt(aCnt);
+
+		// Selecting value from DropDownList
+		objOneSel.selectByIndex(aSelect);
+
+		// Print out Selected Value
+		System.out.println(drpDayDwnList.getAttribute("value"));
+
+		// below is the portion to randomly select the Year in the Year drop down
+
+		// Object of the Year Dropdownlist
+		WebElement drpYearDwnList = driver.findElement(By.id("birth-date-year"));
+
+		Thread.sleep(2000);
+
+		// Using Select Class to fetch the count
+		Select objYearSel = new Select(drpYearDwnList);
+		List<WebElement> weblistYear = objYearSel.getOptions();
+
+		// Taking the count of items
+		int yCnt = weblistYear.size();
+		// Using Random class to generate random values
+
+		Random numYear = new Random();
+		int ySelect = numYear.nextInt(yCnt);
+
+		// Selecting value from DropDownList
+		objYearSel.selectByIndex(ySelect);
+
+		// Print out Selected Value
+		System.out.println(drpYearDwnList.getAttribute("value"));
+
 
 		// Initiate the Submit button
 		allPanels submitButtonOnOrderPage = new allPanels(driver);
 
 		// Calling the submit button and then click
-		submitButtonOnOrderPage.gettheSubmitButtonOnOrderForm().click();
-
+		WebElement element1 = submitButtonOnOrderPage.gettheSubmitButtonOnOrderForm();
+		Actions actions2 = new Actions(driver);
+		actions2.moveToElement(element1).click().build().perform();
+		
+		
 		// Store the parent window
 		String parentWindowHandler = driver.getWindowHandle();
 		String subWindowHandler = null;
@@ -238,11 +237,14 @@ public class NegativePatientInfoSavingWithoutRequiredFields {
 		WebElement cancelOnMessage = driver.findElement(By.xpath("//html/body/div[3]/div[3]/div/div[3]/button[1]"));
 		cancelOnMessage.click();
 
-		// Initiate the Submit button
-		allPanels submitButtonagainOnOrderPage = new allPanels(driver);
+
+		/// Initiate the Submit button
+		allPanels submitButtonAgainOnOrderPage = new allPanels(driver);
 
 		// Calling the submit button and then click
-		submitButtonagainOnOrderPage.gettheSubmitButtonOnOrderForm().click();
+		WebElement element2 = submitButtonAgainOnOrderPage.gettheSubmitButtonOnOrderForm();
+		Actions actions1 = new Actions(driver);
+		actions1.moveToElement(element2).click().build().perform();
 
 		// Selecting absolute xpath and click the Confirm button
 		WebElement confirmOnMessage = driver.findElement(By.xpath("//html/body/div[3]/div[3]/div/div[3]/button[2]"));
@@ -252,18 +254,11 @@ public class NegativePatientInfoSavingWithoutRequiredFields {
 
 		// Clicking verify the Error message after clicking the submit
 
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 
-		// verifying the message upon clicking on the Submit
-
-		if (driver.findElement(By.xpath("//div[@id='root']/div[2]/div")).getText()
-				.equalsIgnoreCase("Unable to save order")) {
-
-			System.out.println("Details Page Contains Unable to save order.  Pass");
-		} else {
-			System.out.println("Details Page Contains Unable to save order.  Fail");
-
-		}
+		// Check for the Login and institution
+		WebElement username2 = driver.findElement(By.xpath("//div[@id='root']/div[3]"));
+		assertEquals(username2.getText().trim(), "Unable to submit order. Please correct any errors and try again.");
 
 		// Close browser
 		driver.close();

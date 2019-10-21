@@ -125,7 +125,7 @@ public class AddAdditionalClinicalInfoDocToAnOrder {
 		// Object of the Day Dropdownlist
 		WebElement drpDayDwnList = driver.findElement(By.id("birth-date-day"));
 		Thread.sleep(3000);
-		
+
 		// Using FindElements to create a List object
 		// List <WebElement> weblist =
 		// driver.findElements(By.xpath(".//*[@id='drpdwnTopics']/option"));
@@ -136,9 +136,9 @@ public class AddAdditionalClinicalInfoDocToAnOrder {
 
 		// Taking the count of items
 		int aCnt = weblistDay.size();
-		
+
 		// Using Random class to generate random values
-        Random numDay = new Random();
+		Random numDay = new Random();
 		int aSelect = numDay.nextInt(aCnt);
 
 		// Selecting value from DropDownList
@@ -159,9 +159,9 @@ public class AddAdditionalClinicalInfoDocToAnOrder {
 
 		// Taking the count of items
 		int yCnt = weblistYear.size();
-		
+
 		// Using Random class to generate random values
-        Random numYear = new Random();
+		Random numYear = new Random();
 		int ySelect = numYear.nextInt(yCnt);
 
 		// Selecting value from DropDownList
@@ -191,7 +191,7 @@ public class AddAdditionalClinicalInfoDocToAnOrder {
 
 		// Taking the count of items
 		int eCnt = webListEthinicty.size();
-		
+
 		// Using Random class to generate random values
 		Random numEthnicity = new Random();
 		int eSelect = numEthnicity.nextInt(eCnt);
@@ -392,19 +392,14 @@ public class AddAdditionalClinicalInfoDocToAnOrder {
 				By.xpath("//div[@id='root']/div/div/div[1]/div[2]/div/div[10]/div/div[3]/table/tbody/tr/th"));
 		assertEquals(username1.getText().trim(), "png");
 
-		 allPanels theSaveButton = new allPanels(driver);
-         
-         WebElement element = theSaveButton.gettheSaveButtonOnOrderForm();
-         Actions actions = new Actions(driver);
-         actions.moveToElement(element).click().build().perform();
-        
+		allPanels theSaveButton = new allPanels(driver);
+
+		WebElement element = theSaveButton.gettheSaveButtonOnOrderForm();
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element).click().build().perform();
+
 		// Close browser
 		driver.close();
-		
-		
-		
-		
-		
 
 	}
 }
