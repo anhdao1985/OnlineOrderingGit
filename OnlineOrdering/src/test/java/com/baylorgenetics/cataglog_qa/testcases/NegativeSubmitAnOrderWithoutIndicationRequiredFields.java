@@ -1,6 +1,6 @@
 package com.baylorgenetics.cataglog_qa.testcases;
 
-import org.testng.Assert;
+
 //import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.TestRunner;
