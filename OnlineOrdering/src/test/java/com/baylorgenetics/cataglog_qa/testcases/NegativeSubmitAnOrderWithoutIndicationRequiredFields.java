@@ -109,6 +109,28 @@ public class NegativeSubmitAnOrderWithoutIndicationRequiredFields {
 		// Generate The Middle Name of Insured using the GenerateData class
 		driver.findElement(By.id("last-name")).sendKeys(NameOfInsured.generateRandomString(10));
 
+
+		//Initiate the Birth Month
+		allPanels dropMonthDownList = new allPanels(driver);
+		
+		//Enter 10/October
+		dropMonthDownList.getbirthMonthOrderPage().sendKeys("10");
+		
+		//Initiate the Birth Day
+		allPanels dropDayDownList = new allPanels(driver);
+		
+		//Enter 20 
+		 dropDayDownList.getbirthDayOrderPage().sendKeys("20");
+			
+		//Initiate the year drop down
+		allPanels drpYearDwnList = new allPanels(driver);
+		
+		//Enter 1985 
+		drpYearDwnList.getbirthYearOrderPage().sendKeys("1985");
+		
+	
+/*	
+		
 		// below is the portion to randomly select the Month in the Month drop down
 		// Object of the Month Dropdownlist
 		WebElement drpDwnList = driver.findElement(By.id("birth-date-month"));
@@ -184,7 +206,7 @@ public class NegativeSubmitAnOrderWithoutIndicationRequiredFields {
 
 		// Print out Selected Value
 		System.out.println(drpYearDwnList.getAttribute("value"));
-
+*/
 		// Selecting female radio button
 		driver.findElement(By.xpath("//*[starts-with(@id, 'patient-gender-0')]")).click();
 		Thread.sleep(1000);
@@ -209,7 +231,7 @@ public class NegativeSubmitAnOrderWithoutIndicationRequiredFields {
 		ethnicityObjSel.selectByIndex(eSelect);
 
 		ethnicityObjSel.selectByIndex(eSelect);
-		if (eSelect == 15) {
+		if (eSelect == 11) {
 			// if(ethnicityObjSel.selectedValue.equals("Other"){
 			driver.findElement(By.name("specifiedEthnicity")).sendKeys(NameOfInsured.generateRandomAlphaNumeric(8));
 		} else {

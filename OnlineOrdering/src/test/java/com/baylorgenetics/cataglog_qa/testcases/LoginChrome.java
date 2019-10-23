@@ -111,7 +111,7 @@ public class LoginChrome {
 		// Calling the password method from class allPales and insert value
 		windowLogInButton.getWindowLogInButton().click();
 
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 
 		//Check for the Login and institution
 				WebElement username = driver.findElement(By.className("MuiButton-label"));

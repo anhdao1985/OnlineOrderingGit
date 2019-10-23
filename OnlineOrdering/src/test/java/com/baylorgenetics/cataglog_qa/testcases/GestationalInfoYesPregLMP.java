@@ -82,7 +82,7 @@ public class GestationalInfoYesPregLMP {
 
 		// Selecting Yes for Pregnant
 		// driver.findElement(By.xpath("//*[starts-with(@id, '')]")).click();
-		Thread.sleep(2000);
+		Thread.sleep(3500);
 
 		// Selecting Last Menstrual period
 		driver.findElement(By.xpath("//*[starts-with(@id, 'last-menstrual-period')]")).click();
