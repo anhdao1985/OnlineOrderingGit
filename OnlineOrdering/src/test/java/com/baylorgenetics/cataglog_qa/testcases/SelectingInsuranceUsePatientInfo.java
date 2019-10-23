@@ -108,6 +108,29 @@ public class SelectingInsuranceUsePatientInfo {
 		// Generate The Middle Name of Insured using the GenerateData class
 		driver.findElement(By.id("last-name")).sendKeys(NameOfInsured.generateRandomString(10));
 
+		
+		//Initiate the Birth Month
+		allPanels dropMonthDownList = new allPanels(driver);
+		
+		//Enter 10/October
+		dropMonthDownList.getbirthMonthOrderPage().sendKeys("10");
+		
+		//Initiate the Birth Day
+		allPanels dropDayDownList = new allPanels(driver);
+		
+		//Enter 20 
+		 dropDayDownList.getbirthDayOrderPage().sendKeys("20");
+			
+		//Initiate the year drop down
+		allPanels drpYearDwnList = new allPanels(driver);
+		
+		//Enter 1985 
+		drpYearDwnList.getbirthYearOrderPage().sendKeys("1985");
+		
+		
+		
+		
+	/*	
 		// below is the portion to randomly select the Month in the Month drop down
 		// Object of the Month Dropdownlist
 		WebElement drpDwnList = driver.findElement(By.id("birth-date-month"));
@@ -161,14 +184,16 @@ public class SelectingInsuranceUsePatientInfo {
 		System.out.println(drpDayDwnList.getAttribute("value"));
 
 		// below is the portion to randomly select the Year in the Year drop down
-
+ */
+	
+		
 		Thread.sleep(1000);
-		// Selecting a year for the drop down
-		Select drpYearDwnList = new Select(driver.findElement(By.id("birth-date-year")));
+//Selecting a year for the drop down
+//Select drpYearDwnList = new Select(driver.findElement(By.id("birth-date-year")));
 
-		// wait 1 second and select "1985"
-		Thread.sleep(1000);
-		drpYearDwnList.selectByVisibleText("1985");
+// wait 1 second and select "1985"
+//Thread.sleep(1000);
+//drpYearDwnList.selectByVisibleText("1985");
 
 		// Selecting female radio button
 		driver.findElement(By.xpath("//*[starts-with(@id, 'patient-gender-0')]")).click();
@@ -194,7 +219,7 @@ public class SelectingInsuranceUsePatientInfo {
 		ethnicityObjSel.selectByIndex(eSelect);
 
 		ethnicityObjSel.selectByIndex(eSelect);
-		if (eSelect == 15) {
+		if (eSelect == 11) {
 			// if(ethnicityObjSel.selectedValue.equals("Other"){
 			driver.findElement(By.name("specifiedEthnicity")).sendKeys(NameOfInsured.generateRandomAlphaNumeric(8));
 		} else {

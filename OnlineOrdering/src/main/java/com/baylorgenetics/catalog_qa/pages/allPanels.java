@@ -187,14 +187,36 @@ public class allPanels {
 	//Accession #
 	public static By acessionNumberOrderPage = By.id("accession-number"); 
 	
+	//Birth Month
+	public static By birthMonthOrderPage = By.id("birth-date-month");
+	
+	//Birth Day
+	public static By birthDayOrderPage = By.id("birth-date-day");
+	
+	//Birth Year
+	public static By birthYearOrderPage = By.id("birth-date-year");
+	
+	
+	
+	
+	
+	
 	
 	
 //----------Sample Information Panel-----------------------------------------------
 	
 	//Sample Type drop down
-	public static By sampleTypeDropDownOrderPage = By.id("accession-number"); 
+	public static By sampleTypeDropDownOrderPage = By.id("sample-type"); 
 	
+	//Collected Month
+	public static By sampleCollectedMonth = By.id("collection-date-month");
 	
+	//Collected day
+	public static By sampleCollectedDay = By.id("collection-date-day");
+		
+	//Collected year
+	public static By sampleCollectedYear = By.id("collection-date-year");
+		
 	
 	
 // Login window	
@@ -496,10 +518,65 @@ public class allPanels {
 		return driver.findElement(ethnicityOnOrderPage);
 	}	
 	
+//Birth Month
+	public WebElement getbirthMonthOrderPage() {
+		return driver.findElement(birthMonthOrderPage);
+	}	
+			
+//Birth Day
+	public WebElement getbirthDayOrderPage() {
+		return driver.findElement(birthDayOrderPage);
+	}	
+				
+//Birth Year
+	public WebElement getbirthYearOrderPage() {
+		return driver.findElement(birthYearOrderPage);
+	}	
+					
+			
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+
+		
+	
+	
+	
 //Sample type drop down under Sample Information panel	
 	public WebElement getsampleTypeDropDownOrderPage () {
 		return driver.findElement(sampleTypeDropDownOrderPage);
 	}
+	
+	//Collected Month
+	public WebElement getsampleCollectedMonth () {
+		return driver.findElement(sampleCollectedMonth);
+	}
+	
+	//Collected Day
+	public WebElement getsampleCollectedDay () {
+		return driver.findElement(sampleCollectedDay);
+	}
+		
+	//Collected  year
+	public WebElement getsampleCollectedYear () {
+		return driver.findElement(sampleCollectedYear);
+	}
+			
+	
+	
+	
+	
+	
+// Login window	
+	
+	
 	
 	
 //Document title field 	
