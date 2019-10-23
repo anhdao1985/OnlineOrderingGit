@@ -31,6 +31,21 @@ public class allPanels {
 	//Payment Info Panel
 	public static By paymentInfoPanel = By.id("payment-information"); 
 	
+	//Insurance sub tab / icon
+	public static By insuranceIcon = By.id("insurance");
+
+	//Self pay icon
+	public static By selfPayIcon = By.id("self-pay");
+	
+	//flag use Patient info
+	public static By flagUsePatientInfo = (By.xpath("//div[@id='simple-tabpanel-Insurance']/div/div/div[2]/div[1]/div[2]/label/span[1]/span[1]"));
+	
+	//Patient's RElationship to insured drop down
+	public static By patientRelationshipToInsuredDrp = By.id("insuredRelationship");
+	
+	//Institution billing icon
+	public static By institutionBillingIcon = By.id("institution-billing");
+	
 	//Additional Test Option Panel
 	public static By additionalTestOpPanel = By.id("additional-test-options"); 
 	
@@ -218,6 +233,28 @@ public class allPanels {
 		return driver.findElement(paymentInfoPanel);
 	}
 
+
+	public WebElement getinsuranceIcon() {
+		return driver.findElement(insuranceIcon);
+	}
+
+	public WebElement getselfPayIcon () {
+		return driver.findElement(selfPayIcon );
+	}
+
+	public WebElement getinstitutionBillingIcon() {
+		return driver.findElement(institutionBillingIcon);
+	}
+	
+	public WebElement getflagUsePatientInfo() {
+		return driver.findElement(flagUsePatientInfo);
+	}
+	
+	public WebElement getpatientRelationshipToInsuredDrp() {
+		return driver.findElement(patientRelationshipToInsuredDrp);
+	}
+	
+	
 	public WebElement getAdditionalTestOpPanel() {
 		return driver.findElement(additionalTestOpPanel);
 	}
