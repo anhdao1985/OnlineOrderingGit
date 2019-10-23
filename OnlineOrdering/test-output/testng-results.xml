@@ -2,23 +2,23 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="60960" started-at="2019-10-23T16:45:20Z" finished-at="2019-10-23T16:46:21Z">
+  <suite name="Default suite" duration-ms="58832" started-at="2019-10-23T18:23:49Z" finished-at="2019-10-23T18:24:48Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="60960" started-at="2019-10-23T16:45:20Z" finished-at="2019-10-23T16:46:21Z">
+    <test name="Default test" duration-ms="58832" started-at="2019-10-23T18:23:49Z" finished-at="2019-10-23T18:24:48Z">
       <class name="com.baylorgenetics.cataglog_qa.testcases.SelectingInsuranceUsePatientInfo">
-        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:com.baylorgenetics.cataglog_qa.testcases.SelectingInsuranceUsePatientInfo@75881071]" name="setup" is-config="true" duration-ms="11" started-at="2019-10-23T16:45:20Z" finished-at="2019-10-23T16:45:20Z">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:com.baylorgenetics.cataglog_qa.testcases.SelectingInsuranceUsePatientInfo@75881071]" name="setup" is-config="true" duration-ms="12" started-at="2019-10-23T18:23:49Z" finished-at="2019-10-23T18:23:49Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@22fa55b2]]>
+                <![CDATA[org.testng.TestRunner@5707c1cb]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="selectingInsuranceFlagUsePatientInfo()[pri:0, instance:com.baylorgenetics.cataglog_qa.testcases.SelectingInsuranceUsePatientInfo@75881071]" name="selectingInsuranceFlagUsePatientInfo" duration-ms="60936" started-at="2019-10-23T16:45:20Z" finished-at="2019-10-23T16:46:21Z">
+        <test-method status="PASS" signature="selectingInsuranceFlagUsePatientInfo()[pri:0, instance:com.baylorgenetics.cataglog_qa.testcases.SelectingInsuranceUsePatientInfo@75881071]" name="selectingInsuranceFlagUsePatientInfo" duration-ms="58807" started-at="2019-10-23T18:23:49Z" finished-at="2019-10-23T18:24:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectingInsuranceFlagUsePatientInfo -->
