@@ -43,6 +43,26 @@ public class allPanels {
 	//Patient's RElationship to insured drop down
 	public static By patientRelationshipToInsuredDrp = By.id("insuredRelationship");
 	
+	//Insurance Co. Name field under payment
+	public static By insuranceCoNameField = (By.xpath("//div[@id='simple-tabpanel-Insurance']/div/div/div[2]/div[2]/div/div[9]/div/div/input"));
+	
+	//Insurance Co. Phone field under payment
+	public static By insuranceCoPhoneField = (By.xpath("//div[@id='simple-tabpanel-Insurance']/div/div/div[2]/div[2]/div/div[10]/div/div/input"));
+		
+	//Insurance Member Policy Number under payment
+	public static By memberPolicyNumberField = (By.xpath("//div[@id='simple-tabpanel-Insurance']/div/div/div[2]/div[2]/div/div[11]/div/div/input"));
+				
+	//Insurance Member Group Number under payment
+	public static By memberGroupNumberField = (By.xpath("//div[@id='simple-tabpanel-Insurance']/div/div/div[2]/div[2]/div/div[12]/div/div/input"));
+								
+				
+	
+	
+	
+	
+	
+	
+	
 	//Institution billing icon
 	public static By institutionBillingIcon = By.id("institution-billing");
 	
@@ -211,7 +231,7 @@ public class allPanels {
 // The Details page
 	
 	//The order button
-	public static By theOrderButtonDetailsP = By.xpath("//div[@id='root']/div/div[1]/div[2]/div/div[2]/div[2]/a[2]");
+	public static By theOrderButtonDetailsP = By.id("order-test");
 	
 	
 	
@@ -253,6 +273,25 @@ public class allPanels {
 	public WebElement getpatientRelationshipToInsuredDrp() {
 		return driver.findElement(patientRelationshipToInsuredDrp);
 	}
+	
+	public WebElement getinsuranceCoNameField() {
+		return driver.findElement(insuranceCoNameField);
+	}
+	
+	public WebElement getinsuranceCoPhoneField() {
+		return driver.findElement(insuranceCoPhoneField);
+	}
+	
+	public WebElement getmemberPolicyNumberField() {
+		return driver.findElement(memberPolicyNumberField);
+	}
+	
+	public WebElement getmemberGroupNumberField () {
+		return driver.findElement(memberGroupNumberField );
+	}
+	
+
+	
 	
 	
 	public WebElement getAdditionalTestOpPanel() {

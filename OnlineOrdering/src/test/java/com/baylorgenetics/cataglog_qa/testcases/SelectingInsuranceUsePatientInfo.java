@@ -1,6 +1,5 @@
 package com.baylorgenetics.cataglog_qa.testcases;
 
-
 //import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.TestRunner;
@@ -40,11 +39,8 @@ public class SelectingInsuranceUsePatientInfo {
 		runner.setOutputDirectory("J:\\zzQA Selenium Automation Suite\\Test Results");
 	}
 
-	
-	
-  @Test
-  public void selectingInsuranceFlagUsePatientInfo() throws InterruptedException  {
-	  
+	@Test
+	public void selectingInsuranceFlagUsePatientInfo() throws InterruptedException {
 
 		// This is how i call the class GenerateData
 		NameOfInsured = new GenerateData();
@@ -57,8 +53,6 @@ public class SelectingInsuranceUsePatientInfo {
 		driver.get(baseUrl);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-		
-		
 
 		// Initiate the search bar as the allPanels class
 		allPanels theSearchBar = new allPanels(driver);
@@ -168,27 +162,13 @@ public class SelectingInsuranceUsePatientInfo {
 
 		// below is the portion to randomly select the Year in the Year drop down
 
-		// Object of the Year Dropdownlist
-		WebElement drpYearDwnList = driver.findElement(By.id("birth-date-year"));
+		Thread.sleep(1000);
+		// Selecting a year for the drop down
+		Select drpYearDwnList = new Select(driver.findElement(By.id("birth-date-year")));
 
-		Thread.sleep(2000);
-
-		// Using Select Class to fetch the count
-		Select objYearSel = new Select(drpYearDwnList);
-		List<WebElement> weblistYear = objYearSel.getOptions();
-
-		// Taking the count of items
-		int yCnt = weblistYear.size();
-		// Using Random class to generate random values
-
-		Random numYear = new Random();
-		int ySelect = numYear.nextInt(yCnt);
-
-		// Selecting value from DropDownList
-		objYearSel.selectByIndex(ySelect);
-
-		// Print out Selected Value
-		System.out.println(drpYearDwnList.getAttribute("value"));
+		// wait 1 second and select "1985"
+		Thread.sleep(1000);
+		drpYearDwnList.selectByVisibleText("1985");
 
 		// Selecting female radio button
 		driver.findElement(By.xpath("//*[starts-with(@id, 'patient-gender-0')]")).click();
@@ -274,109 +254,181 @@ public class SelectingInsuranceUsePatientInfo {
 		Thread.sleep(1000);
 
 		// Initiate the sample info panel
-				allPanels sampleinfopanel = new allPanels(driver);
+		allPanels sampleinfopanel = new allPanels(driver);
 
-				// Calling the sampleinfo panel
-				sampleinfopanel.getSampleInfoPanel().click();
-				Thread.sleep(1000);
-				
-				// Set 2 months prior to today date
-				SimpleDateFormat df = new SimpleDateFormat("M"); // this is to pass in just the month into the field
-				Date dt = new Date();
-				Calendar cl = Calendar.getInstance();
-				cl.setTime(dt);
-				;
-				cl.add(Calendar.MONTH, -2);
-				dt = cl.getTime();
-				String str = df.format(dt);
-				System.out.println("the date today is " + str);
+		// Calling the sampleinfo panel
+		sampleinfopanel.getSampleInfoPanel().click();
+		Thread.sleep(1000);
 
-				Thread.sleep(1000);
-				WebElement el = driver.findElement(By.id("collection-date-month"));
-				el.sendKeys(str);
-				Thread.sleep(1000);
+		// Set 2 months prior to today date
+		SimpleDateFormat df = new SimpleDateFormat("M"); // this is to pass in just the month into the field
+		Date dt = new Date();
+		Calendar cl = Calendar.getInstance();
+		cl.setTime(dt);
+		;
+		cl.add(Calendar.MONTH, -2);
+		dt = cl.getTime();
+		String str = df.format(dt);
+		System.out.println("the date today is " + str);
 
-				// below is the portion to randomly select the day in the Day drop down
+		Thread.sleep(1000);
+		WebElement el = driver.findElement(By.id("collection-date-month"));
+		el.sendKeys(str);
+		Thread.sleep(1000);
 
-				// Object of the Day Drop downlist
-				WebElement lmpDayList = driver.findElement(By.id("collection-date-day"));
+		// below is the portion to randomly select the day in the Day drop down
 
-				// Using FindElements to create a List object
-				// List <WebElement> weblist =
-				// driver.findElements(By.xpath(".//*[@id='drpdwnTopics']/option"));
-				Thread.sleep(1000);
+		// Object of the Day Drop downlist
+		WebElement lmpDayList = driver.findElement(By.id("collection-date-day"));
 
-				// Using Select Class to fetch the count
-				Select objLmpDaySel = new Select(lmpDayList);
-				List<WebElement> weblistLmpDay = objLmpDaySel.getOptions();
+		// Using FindElements to create a List object
+		// List <WebElement> weblist =
+		// driver.findElements(By.xpath(".//*[@id='drpdwnTopics']/option"));
+		Thread.sleep(1000);
 
-				// Taking the count of items
-				int dCnt = weblistLmpDay.size();
-				// Using Random class to generate random values
+		// Using Select Class to fetch the count
+		Select objLmpDaySel = new Select(lmpDayList);
+		List<WebElement> weblistLmpDay = objLmpDaySel.getOptions();
 
-				Random numLmpDay = new Random();
-				int dSelect = numLmpDay.nextInt(dCnt);
+		// Taking the count of items
+		int dCnt = weblistLmpDay.size();
+		// Using Random class to generate random values
 
-				// Selecting value from DropDownList
-				objLmpDaySel.selectByIndex(dSelect);
+		Random numLmpDay = new Random();
+		int dSelect = numLmpDay.nextInt(dCnt);
 
-				// Print out Selected Value
-				System.out.println(lmpDayList.getAttribute("value"));
+		// Selecting value from DropDownList
+		objLmpDaySel.selectByIndex(dSelect);
 
-				Thread.sleep(1000);
-				// Selecting a year for the LMP drop down
-				Select dropdown = new Select(driver.findElement(By.id("collection-date-year")));
+		// Print out Selected Value
+		System.out.println(lmpDayList.getAttribute("value"));
 
-				// wait 1 second and select "2019"
-				Thread.sleep(1000);
-				dropdown.selectByVisibleText("2019");
+		Thread.sleep(1000);
+		// Selecting a year for the drop down
+		Select dropdown = new Select(driver.findElement(By.id("collection-date-year")));
 
-				// Selecting a value in the Sample Type drop down
-				Select dropdownSampleType = new Select(driver.findElement(By.id("sample-type")));
-				
+		// wait 1 second and select "2019"
+		Thread.sleep(1000);
+		dropdown.selectByVisibleText("2019");
 
-				// Select blood in the drop down
-				Thread.sleep(1000);
-				dropdownSampleType.selectByVisibleText("Blood");
-	  
-	  
-				//Initiate the Payment Info
-				allPanels thePaymentInfo = new allPanels(driver);
-				
-				//Click on the Payment info panel
-				thePaymentInfo.getPaymentInfoPanel().click();
-	  
-				//Initiate the Insurance icon
-				allPanels theInsuranceIcon = new allPanels(driver);
-				
-				Thread.sleep(1000);
-				//Click on the Insurance icon
-				theInsuranceIcon.getinsuranceIcon().click();
-				
-	  
-				//Initiate the flag Use Patient info
-				allPanels flagUsePatientInfo = new allPanels(driver);
+		// Selecting a value in the Sample Type drop down
+		Select dropdownSampleType = new Select(driver.findElement(By.id("sample-type")));
+
+		// Select blood in the drop down
+		Thread.sleep(1000);
+		dropdownSampleType.selectByVisibleText("Blood");
+
+		// Initiate the Payment Info
+		allPanels thePaymentInfo = new allPanels(driver);
+
+		// Click on the Payment info panel
+		thePaymentInfo.getPaymentInfoPanel().click();
+
+		// Initiate the Insurance icon
+		allPanels theInsuranceIcon = new allPanels(driver);
+
+		Thread.sleep(1000);
+		// Click on the Insurance icon
+		theInsuranceIcon.getinsuranceIcon().click();
+
+		// Initiate the flag Use Patient info
+		allPanels flagUsePatientInfo = new allPanels(driver);
+
+		// Click on the Use Patient info flag
+		flagUsePatientInfo.getflagUsePatientInfo().click();
+
+		// Selecting self in the relationship drop down
+		Select relationshipDropdown = new Select(driver.findElement(By.id("insuredRelationship")));
+
+		// Select blood in the drop down
+		Thread.sleep(1000);
+		relationshipDropdown.selectByVisibleText("Self");
+
+		// Initiate the Insurance Co. Name
+		allPanels insuranceCoNameFieldOrderPage = new allPanels(driver);
+
+		// Enter a value in the Insurance Co. Name field
+		insuranceCoNameFieldOrderPage.getinsuranceCoNameField().sendKeys("Blue Cross");
+
+		// Initiate the Insurance Co.Phone
+		allPanels insuranceCoPhoneOrderPage = new allPanels(driver);
+
+		// Enter a value in the Insurance Co Phone field
+		insuranceCoPhoneOrderPage.getinsuranceCoPhoneField().sendKeys("1-800-898-8985");
+
+		// Initiate the Member Policy Number
+		allPanels memberPolicyNumber = new allPanels(driver);
+
+		// Enter a value in the Member policy number field
+		memberPolicyNumber.getmemberPolicyNumberField().sendKeys(NameOfInsured.generateRandomAlphaNumeric(10));
+
+		// Initiate the member groupd number
+		allPanels memberGroupFieldOrderPage = new allPanels(driver);
+
+		// Enter a value in the Member Group number field
+		memberGroupFieldOrderPage.getmemberGroupNumberField().sendKeys(NameOfInsured.generateRandomNumber(10));
+
+		// Initiate the save button on the Order page
+		allPanels theSaveButton = new allPanels(driver);
+
+		// Click on the save button
+		WebElement element = theSaveButton.gettheSaveButtonOnOrderForm();
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element).click().build().perform();
+
+		Thread.sleep(3000);
+
+		// Initiate the Submit button
+		allPanels submitButtonOnOrderPage = new allPanels(driver);
+
+		// Calling the submit button and then click
+		WebElement element1 = submitButtonOnOrderPage.gettheSubmitButtonOnOrderForm();
+		Actions actions2 = new Actions(driver);
+		actions2.moveToElement(element1).click().build().perform();
+
+		// Store the parent window
+		String parentWindowHandler = driver.getWindowHandle();
+		String subWindowHandler = null;
+
+		// get all window handles
+		Set<String> handles = driver.getWindowHandles();
+		Iterator<String> iterator = handles.iterator();
+
+		subWindowHandler = iterator.next();
+		driver.switchTo().window(subWindowHandler);
 		
-				
-				//Click on the Use Patient info flag
-				flagUsePatientInfo.getflagUsePatientInfo().click();
-	  
-				
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-  }
+		Thread.sleep(2000);
+		// click the cancel button
+		WebElement cancelOnMessage = driver.findElement(By.xpath("//html/body/div[3]/div[3]/div/div[3]/button[1]"));
+		cancelOnMessage.click();
+		
+		
+		/// Initiate the Submit button
+		allPanels submitButtonAgainOnOrderPage = new allPanels(driver);
+		
+		Thread.sleep(2000);
+		// Calling the submit button and then click
+		WebElement element2 = submitButtonAgainOnOrderPage.gettheSubmitButtonOnOrderForm();
+		Actions actions1 = new Actions(driver);
+		actions1.moveToElement(element2).click().build().perform();
+		
+		Thread.sleep(2000);
+		// Selecting absolute xpath and click the Confirm button
+		WebElement confirmOnMessage = driver.findElement(By.xpath("//html/body/div[3]/div[3]/div/div[3]/button[2]"));
+		confirmOnMessage.click();
+
+		driver.switchTo().window(parentWindowHandler);
+		
+		
+		WebElement username2 = driver.findElement(By.id("download-completed-req"));
+		assertEquals(username2.getText().trim(), "DOWNLOAD REQ");
+
+		
+		
+		
+		Thread.sleep(3000);	
+		// Close browser
+		driver.close();
+
+	}
 }
