@@ -98,6 +98,26 @@ public class AddDiffDiagnosisDocToAnOrder {
 		driver.findElement(By.id("last-name")).sendKeys(NameOfInsured.generateRandomString(10));
 		Thread.sleep(1000);
 
+
+		//Initiate the Birth Month
+		allPanels dropMonthDownList = new allPanels(driver);
+		
+		//Enter 10/October
+		dropMonthDownList.getbirthMonthOrderPage().sendKeys("10");
+		
+		//Initiate the Birth Day
+		allPanels dropDayDownList = new allPanels(driver);
+		
+		//Enter 20 
+		 dropDayDownList.getbirthDayOrderPage().sendKeys("20");
+			
+		//Initiate the year drop down
+		allPanels drpYearDwnList = new allPanels(driver);
+		
+		//Enter 1985 
+		drpYearDwnList.getbirthYearOrderPage().sendKeys("1985");
+		
+/*		
 		// below is the portion to randomly select the Month in the Month drop down
 		// Object of the Month Dropdownlist
 		WebElement drpDwnList = driver.findElement(By.id("birth-date-month"));
@@ -173,12 +193,12 @@ public class AddDiffDiagnosisDocToAnOrder {
 		// Print out Selected Value
 		System.out.println(drpYearDwnList.getAttribute("value"));
 
-		/*
+		
 		 * Select the radio button randomly List<WebElement> options =
 		 * driver.findElements(By.xpath("//*[starts-with(@id, 'patinet-gender')]")) ;
 		 * Random randomGender = new Random(); int index =
 		 * randomGender.nextInt(options.size()); options.get(index).click();
-		 */
+ */
 		// Selecting female radio button
 		driver.findElement(By.xpath("//*[starts-with(@id, 'patient-gender-0')]")).click();
 		Thread.sleep(5000);
