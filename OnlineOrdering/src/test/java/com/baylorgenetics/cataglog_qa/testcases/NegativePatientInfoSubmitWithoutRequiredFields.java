@@ -10,8 +10,8 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 
 import java.util.Iterator;
-import java.util.List;
-import java.util.Random;
+//import java.util.List;
+//import java.util.Random;
 import java.util.Set;
 //import java.util.List;
 //import java.util.Random;
@@ -20,7 +20,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 //import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
+//import org.openqa.selenium.support.ui.Select;
 
 import com.baylorgenetics.catalog_qa.pages.GenerateData;
 import com.baylorgenetics.catalog_qa.pages.allPanels;

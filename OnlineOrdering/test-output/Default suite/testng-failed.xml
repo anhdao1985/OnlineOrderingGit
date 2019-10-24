@@ -3,18 +3,6 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.baylorgenetics.cataglog_qa.testcases.NegativeSubmitAnOrderWithoutIndicationRequiredFields">
-        <methods>
-          <include name="negativeSubmitOrderWithoutRequiredIndicationRequiredF"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- com.baylorgenetics.cataglog_qa.testcases.NegativeSubmitAnOrderWithoutIndicationRequiredFields -->
-      <class name="com.baylorgenetics.cataglog_qa.testcases.LoginFlowSigninAtDetailsPage">
-        <methods>
-          <include name="SignInAtDetailsgPage"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- com.baylorgenetics.cataglog_qa.testcases.LoginFlowSigninAtDetailsPage -->
       <class name="com.baylorgenetics.cataglog_qa.testcases.LogInFlowSignInAtCatalogpage">
         <methods>
           <include name="SignInAtCatalogPage"/>
