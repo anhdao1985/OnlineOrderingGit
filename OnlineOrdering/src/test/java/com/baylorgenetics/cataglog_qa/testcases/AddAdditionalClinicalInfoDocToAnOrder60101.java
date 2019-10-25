@@ -32,7 +32,7 @@ import org.openqa.selenium.support.ui.Select;
 import com.baylorgenetics.catalog_qa.pages.GenerateData;
 import com.baylorgenetics.catalog_qa.pages.allPanels;
 
-public class AddAdditionalClinicalInfoDocToAnOrder {
+public class AddAdditionalClinicalInfoDocToAnOrder60101 {
 	public String baseUrl = "https://catalog-qa.baylorgenetics.com/details/60101";
 	String driverPath = "C:\\Eclipse\\chromedriver.exe";
 	public WebDriver driver;

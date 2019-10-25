@@ -18,7 +18,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 //import org.openqa.selenium.support.ui.Select;
 
-public class AddingMoreThanOneAdditionalRecipients {
+public class AddingMoreThanOneAdditionalRecipients60101 {
 
 	public String baseUrl = "https://orders-qa.baylorgenetics.com/create?test=60101";
 	String driverPath = "C:\\Eclipse\\chromedriver.exe";

@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 import com.baylorgenetics.catalog_qa.pages.allPanels;
 
 
-public class EthnicityDropdownSelectEastAsianValueOrderpage {
+public class EthnicityDropdownSelectEastAsianValueOrderpage60101 {
 	
 	public String baseUrl = "https://orders-qa.baylorgenetics.com/create?test=60101";
 	String driverPath = "C:\\Eclipse\\chromedriver.exe";

@@ -125,10 +125,10 @@ public class allPanels {
 	public static By documentDescriptionField = By.id("document-description"); 
 	
 	//Upload button
-	public static By uploadButton  = (By.xpath("//div[@id='root']/div/div/div[1]/div[2]/div/div[10]/div/div[2]/div[6]/button"));
+	public static By uploadButton  = By.id("download-file"); 
 	
 	//Select file button
-	public static By selectFileButton  = (By.xpath("//div[@id='root']/div/div/div[1]/div[2]/div/div[10]/div/div[2]/div[5]/button/span[1]"));
+	public static By selectFileButton  =  By.id("select-file"); 
 	
 	
 	
@@ -139,11 +139,11 @@ public class allPanels {
 //------Patient Information Panel-----------------------------------------------	
 	
 	//Save button
-	public static By theSaveButtonOnOrderForm  = (By.xpath("//div[@id='root']/div/div/div[1]/div[2]/div/div[1]/div[2]/button[1]"));
+	public static By theSaveButtonOnOrderForm  =  By.id("save-order"); 
 	
 	
 	//Submit button
-	public static By theSubmitButtonOnOrderForm  = (By.xpath("//div[@id='root']/div/div/div[1]/div[2]/div/div[1]/div[2]/button[2]"));
+	public static By theSubmitButtonOnOrderForm  = By.id("submit-order"); 
 	
 	//FirstName
 	public static By FNameorderPage = By.id("first-name"); 
@@ -197,7 +197,8 @@ public class allPanels {
 	public static By birthYearOrderPage = By.id("birth-date-year");
 	
 	
-	
+//Catalog page
+	public static By theLoginButton = By.id("log-in");
 	
 	
 	

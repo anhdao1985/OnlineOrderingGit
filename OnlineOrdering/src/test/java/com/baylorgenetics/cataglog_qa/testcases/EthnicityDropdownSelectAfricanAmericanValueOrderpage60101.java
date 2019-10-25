@@ -22,7 +22,7 @@ import com.baylorgenetics.catalog_qa.pages.allPanels;
 
 
 
-public class EthnicityDropdownSelectAfricanAmericanValueOrderpage {
+public class EthnicityDropdownSelectAfricanAmericanValueOrderpage60101 {
 	
 	public String baseUrl = "https://orders-qa.baylorgenetics.com/create?test=60101";
 	String driverPath = "C:\\Eclipse\\chromedriver.exe";

@@ -26,7 +26,7 @@ import org.openqa.selenium.interactions.Actions;
 //import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Select;
 
-public class GestationalInfoYesPregLMP {
+public class GestationalInfoYesPregLMP60101 {
 
 	public String baseUrl = "https://orders-qa.baylorgenetics.com/create?test=60101";
 	String driverPath = "C:\\Eclipse\\chromedriver.exe";

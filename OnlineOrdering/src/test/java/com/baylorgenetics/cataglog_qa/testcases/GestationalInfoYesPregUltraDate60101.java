@@ -28,7 +28,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 
-public class GestationalInfoYesPregUltraDate {
+public class GestationalInfoYesPregUltraDate60101 {
 	public String baseUrl = "https://orders-qa.baylorgenetics.com/create?test=60101";
 	String driverPath = "C:\\Eclipse\\chromedriver.exe";
 	public WebDriver driver ;
