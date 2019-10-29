@@ -108,7 +108,7 @@ public class LogInFireFox {
 		// Calling the password method from class allPales and insert value
 		windowLogInButton.getWindowLogInButton().click();
 		
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 /*		
 // Get the Text from the location and give it a pass or fail base on the text
 		if (driver.findElement(By.className("MuiButton-label")).getText()

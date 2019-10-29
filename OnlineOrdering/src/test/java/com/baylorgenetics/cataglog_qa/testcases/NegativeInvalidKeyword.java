@@ -45,7 +45,7 @@ public class NegativeInvalidKeyword {
 
 		// Click on the Signin button on the Signin window
 		driver.findElement(By.xpath("//*[@id='btn-login']")).click();
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 
 		// Verify the user name and hospital code
 		WebElement username = driver.findElement(By.className("MuiButton-label"));

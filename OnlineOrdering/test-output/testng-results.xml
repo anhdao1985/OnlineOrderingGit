@@ -2,27 +2,27 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="56831" started-at="2019-10-23T20:59:25Z" finished-at="2019-10-23T21:00:22Z">
+  <suite name="Default suite" duration-ms="54551" started-at="2019-10-29T18:17:58Z" finished-at="2019-10-29T18:18:52Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="56831" started-at="2019-10-23T20:59:25Z" finished-at="2019-10-23T21:00:22Z">
-      <class name="com.baylorgenetics.cataglog_qa.testcases.SelectingInsuranceUsePatientInfo">
-        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:com.baylorgenetics.cataglog_qa.testcases.SelectingInsuranceUsePatientInfo@752325ad]" name="setup" is-config="true" duration-ms="12" started-at="2019-10-23T20:59:25Z" finished-at="2019-10-23T20:59:25Z">
+    <test name="Default test" duration-ms="54551" started-at="2019-10-29T18:17:58Z" finished-at="2019-10-29T18:18:52Z">
+      <class name="com.baylorgenetics.cataglog_qa.testcases.AddDiffDiagnosisDocToAnOrder60101">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:com.baylorgenetics.cataglog_qa.testcases.AddDiffDiagnosisDocToAnOrder60101@75881071]" name="setup" is-config="true" duration-ms="10" started-at="2019-10-29T18:17:58Z" finished-at="2019-10-29T18:17:58Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@7eb6b6b6]]>
+                <![CDATA[org.testng.TestRunner@66971f6b]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="selectingInsuranceFlagUsePatientInfo()[pri:0, instance:com.baylorgenetics.cataglog_qa.testcases.SelectingInsuranceUsePatientInfo@752325ad]" name="selectingInsuranceFlagUsePatientInfo" duration-ms="56803" started-at="2019-10-23T20:59:25Z" finished-at="2019-10-23T21:00:22Z">
+        <test-method status="PASS" signature="addDifferentialDiagnosisDoc()[pri:0, instance:com.baylorgenetics.cataglog_qa.testcases.AddDiffDiagnosisDocToAnOrder60101@75881071]" name="addDifferentialDiagnosisDoc" duration-ms="54526" started-at="2019-10-29T18:17:58Z" finished-at="2019-10-29T18:18:52Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- selectingInsuranceFlagUsePatientInfo -->
-      </class> <!-- com.baylorgenetics.cataglog_qa.testcases.SelectingInsuranceUsePatientInfo -->
+        </test-method> <!-- addDifferentialDiagnosisDoc -->
+      </class> <!-- com.baylorgenetics.cataglog_qa.testcases.AddDiffDiagnosisDocToAnOrder60101 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

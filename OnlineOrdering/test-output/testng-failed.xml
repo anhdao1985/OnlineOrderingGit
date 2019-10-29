@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.baylorgenetics.cataglog_qa.testcases.LogInFlowSignInAtCatalogpage">
+      <class name="com.baylorgenetics.cataglog_qa.testcases.AddConsentFormDocToAnOrder60101">
         <methods>
-          <include name="SignInAtCatalogPage"/>
+          <include name="addConsentFormtoOrder"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.baylorgenetics.cataglog_qa.testcases.LogInFlowSignInAtCatalogpage -->
+      </class> <!-- com.baylorgenetics.cataglog_qa.testcases.AddConsentFormDocToAnOrder60101 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

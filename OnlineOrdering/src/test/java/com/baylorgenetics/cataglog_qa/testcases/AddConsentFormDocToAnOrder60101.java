@@ -402,7 +402,7 @@ public class AddConsentFormDocToAnOrder60101 {
 			Thread.sleep(1000);
 
 			// Enter value in the Description field
-			theDescriptionField.getdocumentDescriptionField().sendKeys("AutomationTest1");
+			theDescriptionField.getdocumentDescriptionField().sendKeys("jpeg");
 
 			// Initiate the Upload file button
 			allPanels theUploadFileButton = new allPanels(driver);
@@ -413,7 +413,7 @@ public class AddConsentFormDocToAnOrder60101 {
 
 			// Checking for the username and hospital code on the details page
 			WebElement username1 = driver.findElement(
-					By.xpath("//div[@id='root']/div/div/div[1]/div[2]/div/div[10]/div/div[3]/table/tbody/tr/th"));
+					By.xpath("//div[@id='root']/div/div/div[1]/div[2]/div/div[10]/div/div[3]/table/tbody/tr/td[3]"));
 			assertEquals(username1.getText().trim(), "jpeg");
 
 			 allPanels theSaveButton = new allPanels(driver);

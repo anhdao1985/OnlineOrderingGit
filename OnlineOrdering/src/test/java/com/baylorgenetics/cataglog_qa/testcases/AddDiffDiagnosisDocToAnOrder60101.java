@@ -401,7 +401,7 @@ public class AddDiffDiagnosisDocToAnOrder60101 {
 		Thread.sleep(1000);
 
 		// Enter value in the Description field
-		theDescriptionField.getdocumentDescriptionField().sendKeys("AutomationTest1");
+		theDescriptionField.getdocumentDescriptionField().sendKeys("pdf");
 
 		// Initiate the Upload file button
 		allPanels theUploadFileButton = new allPanels(driver);
