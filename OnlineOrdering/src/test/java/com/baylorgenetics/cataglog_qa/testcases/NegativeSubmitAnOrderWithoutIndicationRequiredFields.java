@@ -349,7 +349,7 @@ public class NegativeSubmitAnOrderWithoutIndicationRequiredFields {
 		dropdown.selectByVisibleText("2019");
 
 		// Selecting a value in the Sample Type drop down
-		Select dropdownSampleType = new Select(driver.findElement(By.id("sample-type")));
+		//Select dropdownSampleType = new Select(driver.findElement(By.id("sample-type")));
 
 		// wait 1 second and select "2019"
 		//Thread.sleep(1000);
