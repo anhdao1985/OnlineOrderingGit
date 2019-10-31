@@ -363,7 +363,7 @@ public class NegativeSubmitAnOrderWithoutIndicationRequiredFields {
 
 		// Check the NO Family History check box
 		driver.findElement(By.xpath(
-				"//div[@id='root']/div/div/div[1]/div[2]/div/div[7]/div/div/div/div/div[9]/div/div[1]/label/span[2]"))
+				"//div[@id='root']/div/div/div[1]/div[2]/div/div[7]/div/div/div/div/div[7]/div/div/label"))
 				.click();
 
 		// Initiate the Submit button

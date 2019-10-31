@@ -38,33 +38,102 @@ public class allPanels {
 	public static By selfPayIcon = By.id("self-pay");
 	
 	//flag use Patient info
-	public static By flagUsePatientInfo = (By.xpath("//div[@id='simple-tabpanel-Insurance']/div/div/div[2]/div[1]/div[2]/label/span[1]/span[1]"));
+	public static By flagUsePatientInfo = By.id("use-patient-info");
 	
 	//Patient's RElationship to insured drop down
-	public static By patientRelationshipToInsuredDrp = By.id("insuredRelationship");
+	public static By patientRelationshipToInsuredDrp = By.id("insured-relationship-insurance-1");
 	
 	//Insurance Co. Name field under payment
-	public static By insuranceCoNameField = (By.xpath("//div[@id='simple-tabpanel-Insurance']/div/div/div[2]/div[2]/div/div[9]/div/div/input"));
+	public static By insuranceCoNameField =  By.id("insurance-name-insurance-0");
 	
 	//Insurance Co. Phone field under payment
-	public static By insuranceCoPhoneField = (By.xpath("//div[@id='simple-tabpanel-Insurance']/div/div/div[2]/div[2]/div/div[10]/div/div/input"));
+	public static By insuranceCoPhoneField = By.id("insurance-phone-insurance-0");
 		
 	//Insurance Member Policy Number under payment
-	public static By memberPolicyNumberField = (By.xpath("//div[@id='simple-tabpanel-Insurance']/div/div/div[2]/div[2]/div/div[11]/div/div/input"));
+	public static By memberPolicyNumberField = By.id("insured-policy-number-insurance-0");
 				
 	//Insurance Member Group Number under payment
-	public static By memberGroupNumberField = (By.xpath("//div[@id='simple-tabpanel-Insurance']/div/div/div[2]/div[2]/div/div[12]/div/div/input"));
-								
-				
+	public static By memberGroupNumberField =  By.id("insured-group-number-insurance-0");
+						
 	
+	//Pay with sample radio button
+	public static By payWithSampleRadioButton = By.id("pay-with-sample");
 	
-	
-	
-	
-	
+	//Bill to patient radio button
+	public static By billTopatientRadioButton = By.id("bill-to-patient");
 	
 	//Institution billing icon
 	public static By institutionBillingIcon = By.id("institution-billing");
+	
+
+// Secondary under insurance
+	
+	//Secondary insured name
+	public static By secondaryInsuredNameInsurance = By.id("insured-name-insurance-1");
+	
+	//Secondary insured dob month
+	public static By dobInsuranceMonthDropdown = By.id("dob-insurance-1-month");
+	
+	//Secondary dob insurance day
+	public static By dobInsuranceDayDropdown = By.id("dob-insurance-1-day");
+	
+	//Secondary dob insurance year
+	public static By dobInsuranceYearDropdown = By.id("dob-insurance-1-year");
+	
+	//Secondary insured relationship insurance field 
+	public static By secondaryInsuredRelationship = By.id("insured-relationship-insurance-1");
+	
+	//Secondary insured phone insurance
+	public static By secondaryInsuredPhone = By.id("insured-phone-insurance-1");
+	
+	//Secondary insured address insurance
+	public static By secondaryInsuredAddress = By.id("insured-address-insurance-1");
+	
+	//Secondary insured zip insurance
+	public static By secondaryInsuredZip = By.id("insured-zip-insurance-1");
+	
+	//Secondary insured state insurance
+	public static By secondaryInsuredState = By.id("insured-state-insurance-1");
+	
+	
+	//Secondary insured city insurance
+	public static By secondaryCity = By.id ("insured-city-insurance-1");
+	
+	//Secondary insured name insurance 
+	public static By secondaryName = By.id("insurance-name-insurance-1");
+	
+	//Secondary insured phone insurance
+	public static By secondaryPhone = By.id("insurance-phone-insurance-1");
+	
+	//Secondary insured policy number insurance
+	public static By secondaryPolicyNumber = By.id("insured-policy-number-insurance-1");
+	
+	//Secondary insured group number insurance
+	public static By secondaryGroupNumber = By.id("insured-group-number-insurance-1");
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	//The order-kits button
+	public static By theOrderKitsButton = By.id("order-kits");
+	
+	
+	
+	
+	
+	
+
 	
 	//Additional Test Option Panel
 	public static By additionalTestOpPanel = By.id("additional-test-options"); 
@@ -114,7 +183,7 @@ public class allPanels {
 	//Documents Panel
 	public static By documentsPanel = By.id("document-section"); 
 	
-	//Document title field C:\Users\atd0623\Desktop\Automation test files\1
+	
 	
 	public static By documentTtitleField = By.id("document-title"); 
 	
@@ -241,11 +310,25 @@ public class allPanels {
 // The Catalog page
 	
 	//The search bar
-	public static By theSearchBar = By.xpath("//div[@id='root']/div/div[1]/div[2]/div/div[1]/form/div[1]/input");
+	public static By theSearchBar = By.id("test-search-bar"); 
 	
 	//The Magnifying glass icon
-	public static By theMagnifyingGlassIcon = By.xpath("//div[@id='root']/div/div[1]/div[2]/div/div[1]/form/div[2]/button");
+	public static By theMagnifyingGlassIcon = By.id("search"); 
 	
+	//The preconception icon
+	public static By thePreconceptionIcon = By.id("preconception");
+	
+	//The Prenatal icon
+	public static By thePrenatalIcon = By.id("prenatal");
+	
+	//The Pediatric icon
+	public static By thePediatricIcon = By.id("pediatric");
+	
+	//The Adult icon
+	public static By theAdultIcon = By.id("adult");
+	
+	//The oncology icon
+	public static By theOcologyIcon = By.id("oncology");
 	
 	
 	//---------------------------------------------------------------
@@ -313,7 +396,16 @@ public class allPanels {
 		return driver.findElement(memberGroupNumberField );
 	}
 	
-
+	//pay with sample radio button
+	public WebElement getpayWithSampleRadioButton () {
+		return driver.findElement(payWithSampleRadioButton);
+	}
+	
+	//Bill to patient radio button
+	public WebElement getbillTopatientRadioButton () {
+		return driver.findElement(billTopatientRadioButton);
+	}
+		
 	
 	
 	
@@ -613,12 +705,125 @@ public class allPanels {
 	}	
 	
 	
-
+//Select the orders-kits
+	public WebElement gettheOrderKitsButton() {
+		return driver.findElement(theOrderKitsButton);
+	}	
 	
 
+//Select the Preconception icon
+	public WebElement getthePreconceptionIcon() {
+		return driver.findElement(thePreconceptionIcon);
+	}	
+			
+	
+//Select the Prenatal icon
+	public WebElement getthePrenatalIcon() {
+		return driver.findElement(thePrenatalIcon);
+	}	
 	
 	
+//Select the Prenatal icon
+	public WebElement getthePediatricIcon() {
+		return driver.findElement(thePediatricIcon);
+	}	
+				
+	
+//Select the Prenatal icon
+	public WebElement gettheAdultIcon() {
+		return driver.findElement(theAdultIcon);
+	}	
+	
+	
+//Select the Prenatal icon
+	public WebElement gettheOcologyIcon() {
+		return driver.findElement(theOcologyIcon);
+	}	
+						
+			
+//Secondary under insurance
+	
+	
+//Select Secondary insured name
+	public WebElement getsecondaryInsuredNameInsurance() {
+		return driver.findElement(secondaryInsuredNameInsurance);
+	}	
+	
+//Select Secondary insured dob month
+	public WebElement getdobInsuranceMonthDropdown () {
+		return driver.findElement(dobInsuranceMonthDropdown );
+	}		
+	
+//Select Secondary dob insurance day
+	public WebElement getdobInsuranceDayDropdown () {
+		return driver.findElement(dobInsuranceDayDropdown);
+	}		
+			
+//Select Secondary dob insurance year
+	public WebElement getdobInsuranceYearDropdown() {
+		return driver.findElement(dobInsuranceYearDropdown);
+	}		
+	
+//Select Secondary insured relationship insurance field 
+	public WebElement getsecondaryInsuredRelationship() {
+		return driver.findElement(secondaryInsuredRelationship);
+	}		
+			
+//Select Secondary insured phone insurance
+	public WebElement getsecondaryInsuredPhone() {
+		return driver.findElement(secondaryInsuredPhone);
+	}		
+				
+//Select Secondary insured address insurance
+	public WebElement getsecondaryInsuredAddress() {
+		return driver.findElement(secondaryInsuredAddress);
+	}	
+		
+//Select Secondary insured zip insurance
+	public WebElement getsecondaryInsuredZip() {
+		return driver.findElement(secondaryInsuredZip);
+	}	
+		
+//Select Secondary insured state insurance
+	public WebElement getsecondaryInsuredState() {
+		return driver.findElement(secondaryInsuredState);
+	}	
+		
+//Select Secondary insured city insurance
+	public WebElement getsecondaryCity() {
+		return driver.findElement(secondaryCity);
+	}	
+		
+//Select Secondary insured name insurance 
+	public WebElement getsecondaryName() {
+		return driver.findElement( secondaryName);
+	}		
+		
+//Select Secondary insured phone insurance 
+	public WebElement getsecondaryPhone() {
+		return driver.findElement(secondaryPhone);
+	}
+	
+//Select Secondary insured policy number insurance
+	public WebElement getsecondaryPolicyNumber() {
+		return driver.findElement(secondaryPolicyNumber);
+	}
+	
+//Select Secondary insured group number insurance
+	public WebElement getsecondaryGroupNumber() {
+		return driver.findElement(secondaryGroupNumber);
+	}		
+		
+		
 
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	 

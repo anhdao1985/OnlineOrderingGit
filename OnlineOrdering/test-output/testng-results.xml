@@ -2,27 +2,27 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="54551" started-at="2019-10-29T18:17:58Z" finished-at="2019-10-29T18:18:52Z">
+  <suite name="Default suite" duration-ms="37840" started-at="2019-10-31T15:26:19Z" finished-at="2019-10-31T15:26:57Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="54551" started-at="2019-10-29T18:17:58Z" finished-at="2019-10-29T18:18:52Z">
-      <class name="com.baylorgenetics.cataglog_qa.testcases.AddDiffDiagnosisDocToAnOrder60101">
-        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:com.baylorgenetics.cataglog_qa.testcases.AddDiffDiagnosisDocToAnOrder60101@75881071]" name="setup" is-config="true" duration-ms="10" started-at="2019-10-29T18:17:58Z" finished-at="2019-10-29T18:17:58Z">
+    <test name="Default test" duration-ms="37840" started-at="2019-10-31T15:26:19Z" finished-at="2019-10-31T15:26:57Z">
+      <class name="com.baylorgenetics.cataglog_qa.testcases.NegativeSubmitAnOrderWithoutIndicationRequiredFields">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:com.baylorgenetics.cataglog_qa.testcases.NegativeSubmitAnOrderWithoutIndicationRequiredFields@75881071]" name="setup" is-config="true" duration-ms="0" started-at="2019-10-31T15:26:19Z" finished-at="2019-10-31T15:26:19Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@66971f6b]]>
+                <![CDATA[org.testng.TestRunner@47428937]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="addDifferentialDiagnosisDoc()[pri:0, instance:com.baylorgenetics.cataglog_qa.testcases.AddDiffDiagnosisDocToAnOrder60101@75881071]" name="addDifferentialDiagnosisDoc" duration-ms="54526" started-at="2019-10-29T18:17:58Z" finished-at="2019-10-29T18:18:52Z">
+        <test-method status="PASS" signature="negativeSubmitOrderWithoutRequiredIndicationRequiredF()[pri:0, instance:com.baylorgenetics.cataglog_qa.testcases.NegativeSubmitAnOrderWithoutIndicationRequiredFields@75881071]" name="negativeSubmitOrderWithoutRequiredIndicationRequiredF" duration-ms="37816" started-at="2019-10-31T15:26:19Z" finished-at="2019-10-31T15:26:57Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addDifferentialDiagnosisDoc -->
-      </class> <!-- com.baylorgenetics.cataglog_qa.testcases.AddDiffDiagnosisDocToAnOrder60101 -->
+        </test-method> <!-- negativeSubmitOrderWithoutRequiredIndicationRequiredF -->
+      </class> <!-- com.baylorgenetics.cataglog_qa.testcases.NegativeSubmitAnOrderWithoutIndicationRequiredFields -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

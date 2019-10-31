@@ -362,12 +362,14 @@ public class SelectingInsuranceUsePatientInfo60101 {
 		// Click on the Use Patient info flag
 		flagUsePatientInfo.getflagUsePatientInfo().click();
 
+		//Initiate the relationship drop down
+		allPanels relationshipDropdown = new allPanels(driver);
+		
+		
 		// Selecting self in the relationship drop down
-		Select relationshipDropdown = new Select(driver.findElement(By.id("insuredRelationship")));
-
-		// Select blood in the drop down
+		//Select relationshipDropdown = new Select(driver.findElement(By.id("insured-relationship-insurance-1")));
 		Thread.sleep(1000);
-		relationshipDropdown.selectByVisibleText("Self");
+		relationshipDropdown.getpatientRelationshipToInsuredDrp().sendKeys("Self");
 
 		// Initiate the Insurance Co. Name
 		allPanels insuranceCoNameFieldOrderPage = new allPanels(driver);
