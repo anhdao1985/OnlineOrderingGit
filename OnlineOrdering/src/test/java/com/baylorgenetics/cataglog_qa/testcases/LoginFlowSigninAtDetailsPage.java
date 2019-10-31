@@ -97,7 +97,7 @@ public class LoginFlowSigninAtDetailsPage {
 
 		// Checking for the username and hospital code on the catalog page
 		WebElement username = driver.findElement(By.className("MuiButton-label"));
-		assertEquals(username.getText().trim(), "CLARA ADAMS (AUTOTEST) ▼");
+		assertEquals(username.getText().trim(), "CLARA ADAMS (AUTOTEST)");
 
 		// Initiate gettheOrderButtonDetailsP icon as the allPanels class
 		allPanels theOrderBDetailsPage = new allPanels(driver);

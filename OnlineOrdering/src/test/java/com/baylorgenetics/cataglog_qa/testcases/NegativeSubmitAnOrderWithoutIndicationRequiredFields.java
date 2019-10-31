@@ -352,18 +352,18 @@ public class NegativeSubmitAnOrderWithoutIndicationRequiredFields {
 		Select dropdownSampleType = new Select(driver.findElement(By.id("sample-type")));
 
 		// wait 1 second and select "2019"
-		Thread.sleep(1000);
-		dropdownSampleType.selectByVisibleText("Blood");
+		//Thread.sleep(1000);
+		//dropdownSampleType.selectByVisibleText("Blood");
 
 		// Initiate the Indication for testing panel
 		allPanels indicationPanelOrderPage = new allPanels(driver);
 
 		// Click on the Indication For Testing panel
 		indicationPanelOrderPage.getIndicationForTestingPanel().click();
-
+		Thread.sleep(3000);
 		// Check the NO Family History check box
 		driver.findElement(By.xpath(
-				"//div[@id='root']/div/div/div[1]/div[2]/div/div[7]/div/div/div/div/div[7]/div/div/label"))
+				"//div[@id='root']/div/div/div[1]/div[2]/div/div[7]/div/div/div/div/div[7]/div/div/label/span[1]/span[1]/input"))
 				.click();
 
 		// Initiate the Submit button

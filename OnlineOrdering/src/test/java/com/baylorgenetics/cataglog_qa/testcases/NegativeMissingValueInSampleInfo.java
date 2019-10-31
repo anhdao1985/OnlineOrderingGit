@@ -227,7 +227,7 @@ public class NegativeMissingValueInSampleInfo {
 		ethnicityObjSel.selectByIndex(eSelect);
 
 		ethnicityObjSel.selectByIndex(eSelect);
-		if (eSelect == 15) {
+		if (eSelect == 11) {
 			// if(ethnicityObjSel.selectedValue.equals("Other"){
 			driver.findElement(By.className("specifiedEthnicity"))
 					.sendKeys(NameOfInsured.generateRandomAlphaNumeric(8));

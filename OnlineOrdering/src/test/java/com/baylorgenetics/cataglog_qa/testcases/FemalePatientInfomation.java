@@ -225,7 +225,7 @@ public class FemalePatientInfomation {
 				 ethnicityObjSel.selectByIndex(eSelect);
 				 
 				 ethnicityObjSel.selectByIndex(eSelect);
-				 if (eSelect == 12 ) {
+				 if (eSelect == 11 ) {
 				 //if(ethnicityObjSel.selectedValue.equals("Other"){
 					 driver.findElement(By.name("specifiedEthnicity")).sendKeys(NameOfInsured.generateRandomAlphaNumeric(8));	 
 				 }
