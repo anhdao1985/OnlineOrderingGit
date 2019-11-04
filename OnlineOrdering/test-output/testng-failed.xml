@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.baylorgenetics.cataglog_qa.testcases.NegativeSubmitAnOrderWithoutIndicationRequiredFields">
+      <class name="com.baylorgenetics.cataglog_qa.testcases.GestationalInfoYesPregLMP60101">
         <methods>
-          <include name="negativeSubmitOrderWithoutRequiredIndicationRequiredF"/>
+          <include name="yesPregnantLmp"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.baylorgenetics.cataglog_qa.testcases.NegativeSubmitAnOrderWithoutIndicationRequiredFields -->
+      </class> <!-- com.baylorgenetics.cataglog_qa.testcases.GestationalInfoYesPregLMP60101 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
