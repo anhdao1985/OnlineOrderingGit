@@ -21,7 +21,7 @@ public class allPanels {
 
 	
 	
-	
+//Tuan
 	//Patient Info Panel
 	public static By patientInfoPanel  = By.id("patient-information");
 	
