@@ -306,13 +306,13 @@ public class AddAdditionalClinicalInfoDocToAnOrder60101 {
 
 		// below is the portion to randomly select the day in the Day drop down
 
-		// Object of the Day Drop downlist
+		// Object of the Day Drop down list
 		WebElement lmpDayList = driver.findElement(By.id("collection-date-day"));
 
 		// Using FindElements to create a List object
 		// List <WebElement> weblist =
 		// driver.findElements(By.xpath(".//*[@id='drpdwnTopics']/option"));
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 
 		// Using Select Class to fetch the count
 		Select objLmpDaySel = new Select(lmpDayList);
