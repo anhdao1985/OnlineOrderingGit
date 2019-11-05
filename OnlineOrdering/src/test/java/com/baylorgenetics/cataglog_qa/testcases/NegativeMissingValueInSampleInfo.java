@@ -284,8 +284,12 @@ public class NegativeMissingValueInSampleInfo {
 		// Calling Phone type
 		phoneTypeOnOrderPage.getphoneTypeDropDownOrderPage().sendKeys("H");
 
-	
-		
+		// Initiate medical record
+		allPanels medicalRecordOnOrderPage = new allPanels(driver);
+
+		// Calling medical record
+		medicalRecordOnOrderPage.gethospitalMedicalRecordNumberOrderPage()
+				.sendKeys(NameOfInsured.generateRandomAlphaNumeric(10));
 
 		// Initiate Accession #
 		allPanels accessionNumberOnOrderPage = new allPanels(driver);

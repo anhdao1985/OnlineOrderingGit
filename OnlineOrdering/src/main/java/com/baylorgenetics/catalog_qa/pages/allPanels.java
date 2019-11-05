@@ -166,7 +166,7 @@ public class allPanels {
 	public static By additionalStudiesPanel = By.id("additional-studies"); 
 	
 	//Previous Testing panel
-	public static By previousTestingPanel = By.id("previous-testings"); 
+	public static By previousTestingPanel = By.id("previous-testing"); 
 	
 	//Partner Consent Panel
 	public static By partnerConsentPanel = By.id("partner-consent"); 
@@ -250,7 +250,7 @@ public class allPanels {
 	//Phone type
 	public static By phoneTypeDropDownOrderPage = By.id("preference"); 
 	
-	//Hospital/medical records# (Removed from the UI)
+	//Hospital/medical records#
 	public static By hospitalMedicalRecordNumberOrderPage = By.id("medical-record-number"); 
 	
 	//Accession #
@@ -581,7 +581,7 @@ public class allPanels {
 		return driver.findElement(phoneTypeDropDownOrderPage);
 	}
 	
-//hospital - medical record number (REmoved from the UI)
+//hospital - medical record number
 	public WebElement gethospitalMedicalRecordNumberOrderPage () {
 		return driver.findElement(hospitalMedicalRecordNumberOrderPage);
 	}

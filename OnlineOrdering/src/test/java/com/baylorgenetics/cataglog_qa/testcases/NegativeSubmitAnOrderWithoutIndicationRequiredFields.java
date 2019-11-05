@@ -281,7 +281,7 @@ public class NegativeSubmitAnOrderWithoutIndicationRequiredFields {
 		System.out.println(referenceDropDownList.getAttribute("value"));
 
 		// Assign value for Medical record # under Patient info section
-		//driver.findElement(By.id("medical-record-number")).sendKeys(NameOfInsured.generateRandomAlphaNumeric(10));
+		driver.findElement(By.id("medical-record-number")).sendKeys(NameOfInsured.generateRandomAlphaNumeric(10));
 
 		// Assign value for Accession # under Patient info section
 		driver.findElement(By.id("accession-number")).sendKeys(NameOfInsured.generateRandomNumber(10));
