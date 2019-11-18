@@ -3,12 +3,48 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.baylorgenetics.cataglog_qa.testcases.NegativeSubmitAnOrderWithoutIndicationRequiredFields">
+      <class name="com.baylorgenetics.cataglog_qa.testcases.NegativePatientInfoSubmitWithoutRequiredFields">
         <methods>
-          <include name="negativeSubmitOrderWithoutRequiredIndicationRequiredF"/>
+          <include name="NegativePatientInfoNorequiredFieldsSubmit"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.baylorgenetics.cataglog_qa.testcases.NegativeSubmitAnOrderWithoutIndicationRequiredFields -->
+      </class> <!-- com.baylorgenetics.cataglog_qa.testcases.NegativePatientInfoSubmitWithoutRequiredFields -->
+      <class name="com.baylorgenetics.cataglog_qa.testcases.VerifyingGlobalMapsOrderPageAndSections">
+        <methods>
+          <include name="setup"/>
+          <include name="verifyingTheUrlAndSectionWestGlobalMapsOrderPage"/>
+        </methods>
+      </class> <!-- com.baylorgenetics.cataglog_qa.testcases.VerifyingGlobalMapsOrderPageAndSections -->
+      <class name="com.baylorgenetics.cataglog_qa.testcases.GestationalInfoYesPregLMP60101">
+        <methods>
+          <include name="yesPregnantLmp"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.baylorgenetics.cataglog_qa.testcases.GestationalInfoYesPregLMP60101 -->
+      <class name="com.baylorgenetics.cataglog_qa.testcases.LoginFlowSigninAtDetailsPage">
+        <methods>
+          <include name="SignInAtDetailsgPage"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.baylorgenetics.cataglog_qa.testcases.LoginFlowSigninAtDetailsPage -->
+      <class name="com.baylorgenetics.cataglog_qa.testcases.LogInFireFox">
+        <methods>
+          <include name="logInFireFox"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.baylorgenetics.cataglog_qa.testcases.LogInFireFox -->
+      <class name="com.baylorgenetics.cataglog_qa.testcases.LogInFlowSignInAtCatalogpage">
+        <methods>
+          <include name="SignInAtCatalogPage"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.baylorgenetics.cataglog_qa.testcases.LogInFlowSignInAtCatalogpage -->
+      <class name="com.baylorgenetics.cataglog_qa.testcases.VerifyingCytogeneticsOrderpageAndSections">
+        <methods>
+          <include name="setup"/>
+          <include name="verifyingTheUrlAndSectionWestCytogeneticsOrderPage"/>
+        </methods>
+      </class> <!-- com.baylorgenetics.cataglog_qa.testcases.VerifyingCytogeneticsOrderpageAndSections -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

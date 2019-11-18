@@ -166,7 +166,7 @@ public class allPanels {
 	public static By additionalStudiesPanel = By.id("additional-studies"); 
 	
 	//Previous Testing panel
-	public static By previousTestingPanel = By.id("previous-testing"); 
+	public static By previousTestingPanel = By.id("previous-testings"); 
 	
 	//Partner Consent Panel
 	public static By partnerConsentPanel = By.id("partner-consent"); 
@@ -814,13 +814,7 @@ public class allPanels {
 		return driver.findElement(secondaryGroupNumber);
 	}		
 		
-		
 
-	
-	
-	
-	
-	
 	
 	
 	

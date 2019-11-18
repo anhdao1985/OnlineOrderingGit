@@ -22,7 +22,7 @@ public class VerifyingCytogeneticsOrderpageAndSections {
 	}
 
 	@Test
-	public void verifyingTheUrlAndSectionWestCytogeneticsOrderPage() throws InterruptedException {
+	public void verifyingTheUrlAndSectionCytogeneticsOrderPage() throws InterruptedException {
 
 		System.out.println("launching Chrome browser");
 
@@ -161,8 +161,8 @@ public class VerifyingCytogeneticsOrderpageAndSections {
 			System.out.println("Additional Test Option Section       is Absent");
 		}
 
-// #5
-		// Assign sampleInfo variable
+// #5 has been removed
+		/* Assign sampleInfo variable
 		allPanels sampleInfo = new allPanels(driver);
 		sampleInfo.getSampleInfoPanel();
 
@@ -173,7 +173,8 @@ public class VerifyingCytogeneticsOrderpageAndSections {
 		} else {
 			System.out.println("Sample-information                    is Absent");
 		}
-
+	*/
+		
 // #6
 		// Assign parentsSection variable
 		allPanels parentsSection = new allPanels(driver);
