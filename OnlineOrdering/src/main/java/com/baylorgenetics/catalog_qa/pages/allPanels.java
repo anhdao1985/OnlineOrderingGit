@@ -304,6 +304,11 @@ public class allPanels {
 	public static By windowLogInButton = By.id("btn-login"); 
 	
 	
+	
+	
+// The Parents panel
+	
+	
 	//---------------------------------------------------------------
 	
 	

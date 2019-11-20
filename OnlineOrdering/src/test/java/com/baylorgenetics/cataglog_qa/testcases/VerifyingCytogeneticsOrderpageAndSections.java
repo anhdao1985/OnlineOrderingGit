@@ -149,8 +149,8 @@ public class VerifyingCytogeneticsOrderpageAndSections {
 			System.out.println("Payment Info                         is Absent");
 		}
 
-// #4
-		// Assign addTestOpInfo variable
+// #4  - removed
+		/* Assign addTestOpInfo variable
 		allPanels addTestOpInfo = new allPanels(driver);
 		addTestOpInfo.getAdditionalTestOpPanel();
 
@@ -160,9 +160,8 @@ public class VerifyingCytogeneticsOrderpageAndSections {
 		} else {
 			System.out.println("Additional Test Option Section       is Absent");
 		}
-
-// #5 has been removed
-		/* Assign sampleInfo variable
+	*/
+// #5 Assign sampleInfo variable
 		allPanels sampleInfo = new allPanels(driver);
 		sampleInfo.getSampleInfoPanel();
 
@@ -173,7 +172,7 @@ public class VerifyingCytogeneticsOrderpageAndSections {
 		} else {
 			System.out.println("Sample-information                    is Absent");
 		}
-	*/
+	
 		
 // #6
 		// Assign parentsSection variable
