@@ -319,10 +319,43 @@ public class allPanels {
 	
 	
 	
-// The Parents panel
+//The Previous Testing Panel 
 	
+	//The Metabolic sub panel
+	public static By metabolicSubPanel = By.id("previous-testings"); 
 	
+	//The Metabolic text box
+	public static By metabolicTextBox = By.id("Metabolic Testing-details"); 
 	
+	//The Baylor Genetics check box under Metabolic
+	public static By baylorGeneticsFlagMetabolic = (By.xpath("//div[@id='root']/div/div/div[1]/div[2]/div/div[8]/div/div/div/div[1]/div/div/div/div/fieldset/div/label[1]/span[1]/span[1]/input"));
+	
+	//The Another Laboratory check box under Metabolic
+	public static By anotherLaboratoryFlagMetabolic = (By.xpath("//div[@id='root']/div/div/div[1]/div[2]/div/div[8]/div/div/div/div[1]/div/div/div/div/fieldset/div/label[2]/span[1]/span[1]/input"));
+	
+	//The Chromosomal Microarray analysis
+	public static By chromosomalMicroarray = By.id("chromosomal-microarray-analysis"); 
+	
+	//The Chromosomal Microarray analysis text box
+	public static By chromosomalMicroarrayTextBox = By.id("Chromosomal Microarray Analysis-details"); 
+	
+	//The Baylor Genetics check box under Chromosomal Microarray
+	public static By baylorGeneticsFlagChromosomal = (By.xpath("//div[@id='root']/div/div/div[1]/div[2]/div/div[8]/div/div/div/div[2]/div/div/div/div/fieldset/div/label[1]/span[1]/span[1]/input"));
+	
+	//The Another Laboratory check box under Chromosomal
+	public static By anotherLaboratoryFlagChromosomal = (By.xpath("//div[@id='root']/div/div/div[1]/div[2]/div/div[8]/div/div/div/div[2]/div/div/div/div/fieldset/div/label[2]/span[1]/span[1]/input"));
+	
+	//The genetic analysis sub panel
+	public static By geneticAnalysisSubPanel = By.id("genetic-analysis"); 
+	
+	//The genetic analysis text box
+	public static By geneticAnalysisTextBox = By.id("Genetic Analysis-details"); 
+	
+	//The Baylor Genetics check box under Genetic Analysis
+	public static By baylorGeneticsFlagGeneAnalysis = (By.xpath("//div[@id='root']/div/div/div[1]/div[2]/div/div[8]/div/div/div/div[3]/div/div/div/div/fieldset/div/label[1]/span[1]/span[1]/input"));
+	
+	//The Another Laboratory check box under genetic analysis
+	public static By anotherLaboratoryFlagGeneAnalysis = (By.xpath("//div[@id='root']/div/div/div[1]/div[2]/div/div[8]/div/div/div/div[3]/div/div/div/div/fieldset/div/label[2]/span[1]/span[1]/input"));
 	
 	
 	
@@ -874,10 +907,84 @@ public class allPanels {
 	}			
 				
 	
+//The Previous Testing Panel 	
+	
+//Select The Metabolic sub panel
+	public WebElement getmetabolicSubPanel() {
+		return driver.findElement(metabolicSubPanel);
+	}			
+		
+//The Metabolic text box	
+	public WebElement getmetabolicTextBox() {
+		return driver.findElement(metabolicTextBox);
+	}			
+		
+//The Baylor Genetics check box under Metabolic	
+	public WebElement getbaylorGeneticsFlagMetabolic() {
+		return driver.findElement(baylorGeneticsFlagMetabolic);
+	}
+	
+//The Another Laboratory check box under Metabolic	
+	public WebElement getanotherLaboratoryFlagMetabolic() {
+		return driver.findElement(anotherLaboratoryFlagMetabolic);
+	}
+	
+//The Chromosomal Microarray analysis	
+	public WebElement getchromosomalMicroarray() {
+		return driver.findElement(chromosomalMicroarray);
+	}
+		
+//The Chromosomal Microarray analysis text box	
+	public WebElement getchromosomalMicroarrayTextBox() {
+		return driver.findElement(chromosomalMicroarrayTextBox);
+	}
+			
+//The Baylor Genetics check box under Chromosomal Microarray		
+	public WebElement getbaylorGeneticsFlagChromosomal() {
+		return driver.findElement(baylorGeneticsFlagChromosomal);
+	}
+		
+//The Another Laboratory check box under Chromosomal		
+	public WebElement getanotherLaboratoryFlagChromosomal() {
+		return driver.findElement(anotherLaboratoryFlagChromosomal);
+	}	
+	
+//The genetic analysis sub panel	
+	public WebElement getgeneticAnalysisSubPanel() {
+		return driver.findElement(geneticAnalysisSubPanel);
+	}	
+	
+//The genetic analysis text box	
+	public WebElement getgeneticAnalysisTextBox () {
+		return driver.findElement(geneticAnalysisTextBox);
+	}
+	
+//The Baylor Genetics check box under Genetic Analysis	
+	public WebElement getbaylorGeneticsFlagGeneAnalysis () {
+		return driver.findElement(baylorGeneticsFlagGeneAnalysis);
+	}
+		
+//The Another Laboratory check box under genetic analysis	
+	public WebElement getanotherLaboratoryFlagGeneAnalysis () {
+		return driver.findElement(anotherLaboratoryFlagGeneAnalysis);
+	}	
+		
+		
 	
 	
 	
-
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
