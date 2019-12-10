@@ -358,6 +358,20 @@ public class allPanels {
 	public static By anotherLaboratoryFlagGeneAnalysis = (By.xpath("//div[@id='root']/div/div/div[1]/div[2]/div/div[8]/div/div/div/div[3]/div/div/div/div/fieldset/div/label[2]/span[1]/span[1]/input"));
 	
 	
+//Additional studies/research panels
+	//The Additional Studies/Researeach panel
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
@@ -683,22 +697,7 @@ public class allPanels {
 		return driver.findElement(birthYearOrderPage);
 	}	
 					
-			
-	
-	
-	
-	
-	
-	
 
-	
-	
-	
-
-		
-	
-	
-	
 //Sample type drop down under Sample Information panel	
 	public WebElement getsampleTypeDropDownOrderPage () {
 		return driver.findElement(sampleTypeDropDownOrderPage);
