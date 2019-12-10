@@ -114,14 +114,27 @@ public class allPanels {
 	
 	
 	
+//The Merged Couple Report Panel
 	
+	public static By mergedCoupleReportPanel = By.id("merged-couple-report");
 	
+	//The Last Name field 
+	public static By mergedCoupleLastName = By.id("last-name");
 	
+	//The First Name field
+	public static By mergedCoupleFirstName = By.id("first-name");
 	
+	//The Birth month drop down under Merged couple report panel
+	public static By mergedCoupleBirthMonth = By.id("birthdate-month");
 	
+	//The Birth day drop down under Merged couple report panel
+	public static By mergedCoupleBirthDay = By.id("birthdate-day");
 	
+	//The Birth year drop down under Merged couple report panel
+	public static By mergedCoupleBirthYear = By.id("birthdate-year");
 	
-	
+	//The Search button under the merged couple report panel
+	public static By mergedCoupleSearchButton = By.id("search");
 	
 	
 	
@@ -307,6 +320,12 @@ public class allPanels {
 	
 	
 // The Parents panel
+	
+	
+	
+	
+	
+	
 	
 	
 	//---------------------------------------------------------------
@@ -819,10 +838,50 @@ public class allPanels {
 		return driver.findElement(secondaryGroupNumber);
 	}		
 		
+//Select the Merged COuple Report Panel
+	public WebElement getmergedCoupleReportPanel() {
+		return driver.findElement(mergedCoupleReportPanel);
+	}			
+	
+//Select the Last Name field under the Merged Couple Report	
+	public WebElement getmergedCoupleLastName() {
+		return driver.findElement(mergedCoupleLastName);
+	}			
+	
+//Select the First Name field under the Merged Couple Report	
+	public WebElement getmergedCoupleFirstName() {
+		return driver.findElement(mergedCoupleFirstName);
+	}			
+			
+//Select Birth month drop down under Merged couple report panel
+	public WebElement getmergedCoupleBirthMonth() {
+		return driver.findElement( mergedCoupleBirthMonth);
+	}			
+		
+//Select the Birth day drop down under Merged couple report panel				
+	public WebElement getmergedCoupleBirthDay() {
+		return driver.findElement(mergedCoupleBirthDay);
+	}			
+	
+//Select The Birth year drop down under Merged couple report panel			
+	public WebElement getmergedCoupleBirthYear() {
+		return driver.findElement(mergedCoupleBirthYear);
+	}			
+			
+//Select The Search button under Merged couple report panel			
+	public WebElement getmergedCoupleSearchButton() {
+		return driver.findElement(mergedCoupleSearchButton);
+	}			
+				
+	
+	
+	
+	
 
 	
 	
 	
+
 	
 	
 	 
