@@ -2,27 +2,27 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="20175" started-at="2019-11-20T19:21:43Z" finished-at="2019-11-20T19:22:03Z">
+  <suite name="Default suite" duration-ms="36288" started-at="2019-12-10T16:43:34Z" finished-at="2019-12-10T16:44:10Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="20175" started-at="2019-11-20T19:21:43Z" finished-at="2019-11-20T19:22:03Z">
-      <class name="com.baylorgenetics.cataglog_qa.testcases.VerifyingAllValuesInTheEthnicityDropDown">
-        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:com.baylorgenetics.cataglog_qa.testcases.VerifyingAllValuesInTheEthnicityDropDown@75881071]" name="setup" is-config="true" duration-ms="11" started-at="2019-11-20T19:21:43Z" finished-at="2019-11-20T19:21:43Z">
+    <test name="Default test" duration-ms="36288" started-at="2019-12-10T16:43:34Z" finished-at="2019-12-10T16:44:10Z">
+      <class name="com.baylorgenetics.cataglog_qa.testcases.First60101MergedWith60106male">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:com.baylorgenetics.cataglog_qa.testcases.First60101MergedWith60106male@75881071]" name="setup" is-config="true" duration-ms="12" started-at="2019-12-10T16:43:34Z" finished-at="2019-12-10T16:43:34Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@5454d35e]]>
+                <![CDATA[org.testng.TestRunner@3a1d593e]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="ValidateAllValueEthnicity()[pri:0, instance:com.baylorgenetics.cataglog_qa.testcases.VerifyingAllValuesInTheEthnicityDropDown@75881071]" name="ValidateAllValueEthnicity" duration-ms="20152" started-at="2019-11-20T19:21:43Z" finished-at="2019-11-20T19:22:03Z">
+        <test-method status="PASS" signature="Merging60106To60101()[pri:0, instance:com.baylorgenetics.cataglog_qa.testcases.First60101MergedWith60106male@75881071]" name="Merging60106To60101" duration-ms="36261" started-at="2019-12-10T16:43:34Z" finished-at="2019-12-10T16:44:10Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidateAllValueEthnicity -->
-      </class> <!-- com.baylorgenetics.cataglog_qa.testcases.VerifyingAllValuesInTheEthnicityDropDown -->
+        </test-method> <!-- Merging60106To60101 -->
+      </class> <!-- com.baylorgenetics.cataglog_qa.testcases.First60101MergedWith60106male -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
