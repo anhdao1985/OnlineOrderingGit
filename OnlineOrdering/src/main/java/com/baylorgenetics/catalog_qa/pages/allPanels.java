@@ -360,7 +360,7 @@ public class allPanels {
 	
 //Additional studies/research panels
 	//The Additional Studies/Researeach panel
-	
+	public static By additiionalStudiesandResearch = By.id("additional-studies"); 
 	
 	
 	
