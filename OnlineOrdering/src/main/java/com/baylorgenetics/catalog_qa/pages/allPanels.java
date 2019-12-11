@@ -319,7 +319,7 @@ public class allPanels {
 	
 	
 	
-//The Previous Testing Panel 
+//---------------------The Previous Testing Panel ------------------------------------------
 	
 	//The Metabolic sub panel
 	public static By metabolicSubPanel = By.id("previous-testings"); 
@@ -358,18 +358,76 @@ public class allPanels {
 	public static By anotherLaboratoryFlagGeneAnalysis = (By.xpath("//div[@id='root']/div/div/div[1]/div[2]/div/div[8]/div/div/div/div[3]/div/div/div/div/fieldset/div/label[2]/span[1]/span[1]/input"));
 	
 	
-//Additional studies/research panels
-	//The Additional Studies/Researeach panel
+	
+//---------------------	Additional studies/research panels----------------------------
+	
+	//We need to check with Dev so that they can use different id for the fields below
+
+	//The Additional Studies/Research panel
 	public static By additiionalStudiesandResearch = By.id("additional-studies"); 
 	
+	//The additional Study Yes radio button
+	public static By additiionalStudiesYesRadio = By.id("additionalStudy-yes"); 
 	
+	//The additional Study No radio button
+	public static By additiionalStudiesNoRadio = By.id("additionalStudy-no"); 
+		
+	//The use patient info flag
+	public static By additiionalStudiesUsePatientFlag = By.id("use-patient-info"); 
 	
+	//The first name under the Studies/Research
+	public static By additiionalStudiesFirstName = By.id("first-name"); // need to have ID change by DEv
 	
+	//The Middle Name under the Studies/Research
+	public static By additiionalStudiesMName = By.id("middle-name"); // need to have ID change by DEv
 	
+	//The Last Name under the Studies/Research
+	public static By additiionalStudiesLName = By.id("last-name"); // need to have ID change by DEv
 	
+	//The BD month under the Studies/research 
+	public static By additiionalStudiesBDmonth = By.id("birth-date-month"); // need to have ID change by DEv
 	
+	//The BD day under the Studies/research
+	public static By additiionalStudiesBDday = By.id("birth-date-day"); // need to have ID change by DEv
 	
+	//The BD year under the Studies/research
+	public static By additiionalStudiesBDyear = By.id("birth-date-year"); // need to have ID change by DEv
 	
+	//The Phone number under the Studies/research
+	public static By additiionalStudiesPhoneNumber = By.id("phone-number"); // need to have ID change by DEv
+	
+	//The alt phone number under the Studies/Research
+	public static By additiionalStudiesAltPhone = By.id("alt-phone-number");
+	
+	//The address-1 under the Studies/Research
+	public static By additiionalStudiesAddress1 = By.id("address-1"); // need to have ID change by DEv
+	
+	//The address-2 optional
+	public static By additiionalStudiesaddress2 = (By.xpath("//div[@id='root']/div/div/div[1]/div[2]/div/div[8]/div/div/div/div[3]/div/div/div/div/fieldset/div/label[2]/span[1]/span[1]/input")); // need to have ID change by DEv
+	
+	//The city under the Studies/Research
+	public static By additiionalStudiesCity = By.id("city"); // need to have ID change by DEv
+	
+	//The zipcode under the Studies/Research
+	public static By additiionalStudiesZipcode = By.id("zip-code"); // need to have ID change by DEv
+	
+	//The state under the Studies/Research
+	public static By additiionalStudiesState = By.id("state"); // need to have ID change by DEv
+		
+	//The email under the Studies/Research
+	public static By additiionalStudiesEmail = By.id("email");
+	
+	//The preferred contact method-0 under the Studies/Research
+	public static By additiionalPreferredContactMethod0 = By.id("preferred-contact-method-0");
+	
+	//The preferred contact method-1 under the Studies/Research
+	public static By additiionalPreferredContactMethod1 = By.id("preferred-contact-method-1");
+	
+	//The preferred contact method-2 under the Studies/Research
+	public static By additiionalPreferredContactMethod2 = By.id("preferred-contact-method-2");
+		
+	//The preferred contact method-3 under the Studies/Research
+	public static By additiionalPreferredContactMethod3 = By.id("preferred-contact-method-3");
 	
 	
 	
