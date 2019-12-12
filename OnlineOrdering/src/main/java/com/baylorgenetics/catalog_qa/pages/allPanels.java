@@ -183,19 +183,44 @@ public class allPanels {
 	//The sample type under the Maternal Info sub panel
 	public static By theParentSampleTypeMaternal = By.id("parent-sample-type-Maternal"); 
 	
-	
-	
-	
+	//The Paternal info sub panel
+	public static By thePaternalInfosubPanel = By.id("paternal-information");
 
-
+	//The first name field under the Paternal info sub panel
+	public static By thePaternalInfoFirstName = By.id("parent-first-Paternal");
 	
+	//The middle name field under the Paternal info sub panel
+	public static By thePaternalInfoMiddleName = By.id("parent-middle-Paternal");
 	
+	//The last name field under the Paternal info sub panel
+	public static By thePaternalInfoLastName = By.id("parent-last-Paternal");
 	
+	//The birth date month under the Paternal info sub panel
+	public static By thePaternalInfoBDMonth = By.id("parent-birthdate-Paternal-month");
 	
+	//The birth date day under the Paternal info sub panel
+	public static By thePaternalInfoBDDay = By.id("parent-birthdate-Paternal-day");
 	
+	//The birth date day under the Paternal info sub panel
+	public static By thePaternalInfoBDYear = By.id("parent-birthdate-Paternal-year");
 	
+	//The Asymptomatic radio button under the Paternal info sub panel
+	public static By thePaternalInfoAsymptomatic = By.id("parent-sympto-Paternal"); //Dev need to change this to Asymptomatic
 	
+	//The Symptomatic radio button under the Paternal info sub panel
+	public static By thePaternalInfoSymptomatic = By.id("parent-sympto-Paternal");
 	
+	//The month drop down under the Paternal info sub panel
+	public static By thePaternalInfoMonthDropDown = By.id("parent-collected-Paternal-month");
+	
+	//The day drop down under the Paternal info sub panel
+	public static By thePaternalInfoDayDropDown = By.id("parent-collected-Paternal-day");
+	
+	//The year drop down under the Paternal info sub panel
+	public static By thePaternalInfoYearDropDown = By.id("parent-collected-Paternal-year");
+	
+	//The sample type drop down under the Paternal info sub panel
+	public static By thePaternalInfoSampleType = By.id("parent-sample-type-Paternal");
 	
 	
 	
@@ -589,8 +614,6 @@ public class allPanels {
 		return driver.findElement(billTopatientRadioButton);
 	}
 		
-	
-	
 	
 	public WebElement getAdditionalTestOpPanel() {
 		return driver.findElement(additionalTestOpPanel);
@@ -1194,8 +1217,7 @@ public class allPanels {
 	}	
 	
 		
-		
-		
+//----------------objects under the Parents panel-------------		
 		
 	
 	
