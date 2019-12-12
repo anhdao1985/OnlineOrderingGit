@@ -927,7 +927,8 @@ public class allPanels {
 	public WebElement getsecondaryGroupNumber() {
 		return driver.findElement(secondaryGroupNumber);
 	}		
-		
+
+//---------------Merged couple -----
 //Select the Merged COuple Report Panel
 	public WebElement getmergedCoupleReportPanel() {
 		return driver.findElement(mergedCoupleReportPanel);
@@ -964,7 +965,7 @@ public class allPanels {
 	}			
 				
 	
-//The Previous Testing Panel 	
+//-----------------------The Previous Testing Panel 	
 	
 //Select The Metabolic sub panel
 	public WebElement getmetabolicSubPanel() {
@@ -1027,25 +1028,132 @@ public class allPanels {
 	}	
 		
 		
+//--------------------------Additional Studies/Research--------------
 	
 	
+//The Additional Studies/Research panel	
+	public WebElement getadditiionalStudiesandResearch () {
+		return driver.findElement(additiionalStudiesandResearch);
+	}		
 	
+//The additional Study Yes radio button	
+	public WebElement getadditiionalStudiesYesRadio () {
+		return driver.findElement(additiionalStudiesYesRadio);
+	}		
 	
+//The additional Study No radio button	
+	public WebElement getadditiionalStudiesNoRadio () {
+		return driver.findElement(additiionalStudiesNoRadio);
+	}	
 	
+//The use patient info flag	
+	public WebElement getadditiionalStudiesUsePatientFlag () {
+		return driver.findElement(additiionalStudiesUsePatientFlag);
+	}	
 	
+//The first name under the Studies/Research
+	public WebElement getadditiionalStudiesFirstName () {
+		return driver.findElement(additiionalStudiesFirstName);
+	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+//The Middle Name under the Studies/Research	
+	public WebElement getadditiionalStudiesMName () {
+		return driver.findElement(additiionalStudiesMName);
+	}
 
+//The Last Name under the Studies/Research		
+	public WebElement getadditiionalStudiesLName () {
+		return driver.findElement(additiionalStudiesLName);
+	}
+	
+//The BD month under the Studies/research 	
+	public WebElement getadditiionalStudiesBDmonth () {
+		return driver.findElement(additiionalStudiesBDmonth);
+	}
+		
+//The BD day under the Studies/research	
+	public WebElement getadditiionalStudiesBDday () {
+		return driver.findElement(additiionalStudiesBDday);
+	}
+		
+//The BD year under the Studies/research	
+	public WebElement getadditiionalStudiesBDyear () {
+		return driver.findElement(additiionalStudiesBDyear);
+	}
+		
+//The Phone number under the Studies/research		
+	public WebElement getadditiionalStudiesPhoneNumber () {
+		return driver.findElement(additiionalStudiesPhoneNumber);
+	}	
+		
+//The alt phone number under the Studies/Research		
+	public WebElement getadditiionalStudiesAltPhone  () {
+		return driver.findElement(additiionalStudiesAltPhone );
+	}	
+		
+//The address-1 under the Studies/Research		
+	public WebElement getadditiionalStudiesAddress1  () {
+		return driver.findElement(additiionalStudiesAddress1 );
+	}	
+		
+//The address-2 optional
+	public WebElement getadditiionalStudiesaddress2  () {
+		return driver.findElement(additiionalStudiesaddress2);
+	}
+	
+//The city under the Studies/Research	
+	public WebElement getadditiionalStudiesCity () {
+		return driver.findElement(additiionalStudiesCity );
+	}
+	
+//The zipcode under the Studies/Research		
+	public WebElement getadditiionalStudiesZipcode () {
+		return driver.findElement( additiionalStudiesZipcode );
+	}	
+	
+//The state under the Studies/Research		
+	public WebElement getadditiionalStudiesState() {
+		return driver.findElement( additiionalStudiesState );
+	}	
+	
+//The email under the Studies/Research	
+	public WebElement getadditiionalStudiesEmail() {
+		return driver.findElement(additiionalStudiesEmail);
+	}	
+		
+//The preferred contact method-0 under the Studies/Research	
+	public WebElement getadditiionalPreferredContactMethod0 () {
+		return driver.findElement( additiionalPreferredContactMethod0 );
+	}	
+	
+//The preferred contact method-1 under the Studies/Research	
+	public WebElement getadditiionalPreferredContactMethod1  () {
+		return driver.findElement(additiionalPreferredContactMethod1);
+	}	
+	
+//The preferred contact method-2 under the Studies/Research		
+	public WebElement getadditiionalPreferredContactMethod2() {
+		return driver.findElement(additiionalPreferredContactMethod2);
+	}	
+		
+//The preferred contact method-3 under the Studies/Research
+	public WebElement additiionalPreferredContactMethod3() {
+		return driver.findElement(additiionalPreferredContactMethod3);
+	}	
+	
+		
+		
+		
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	 
