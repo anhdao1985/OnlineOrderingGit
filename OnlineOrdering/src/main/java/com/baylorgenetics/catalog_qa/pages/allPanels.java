@@ -142,11 +142,66 @@ public class allPanels {
 	public static By theOrderKitsButton = By.id("order-kits");
 	
 	
+//----------------objects under the Parents panel-------------
+	
+	//The Maternal info sub panel
+	public static By theMaternalInfosubPanel = By.id("maternal-information");
+	
+	//The first name field under the Maternal Info sub panel
+	public static By theFirstNameMaternal = By.id("parent-first-Maternal");
+	
+	//The middle name field under the Maternal Info sub panel
+	public static By theMiddleNameMaternal = By.id("parent-middle-Maternal");
+	
+	//The last name field under the Maternal Info sub panel
+	public static By theLastNameMaternal = By.id("parent-last-Maternal");
+	
+	//The parent birthdate month field under the Maternal Info sub panel
+	public static By theBDMonthMaternal = By.id("parent-birthdate-Maternal-month");
+	
+	//The parent birthdate day field under the Maternal Info sub panel
+	public static By theBDDayMaternal = By.id("parent-birthdate-Maternal-day");
+	
+	//The parent birthdate Year field under the Maternal Info sub panel
+	public static By theBDYearMaternal = By.id("parent-birthdate-Maternal-year");
+	
+	//The Asymptomatic radio button under the Maternal Info sub panel
+	public static By theAsymptomaticMaternal = By.id("parent-sympto-Maternal"); // dev needs to change this to parent-asymptomatic-maternal
+	
+	//The Symptomatic radio button under the Maternal Info sub panel
+	public static By theSymptomaticMaternal = By.id("parent-sympto-Maternal"); 
+	
+	//The collected month under the Maternal Info sub panel
+	public static By theParentCollectedMonthMaternal = By.id("parent-collected-Maternal-month"); 
+	
+	//The collected day under the Maternal Info sub panel
+	public static By theParentCollectedDayMaternal = By.id("parent-collected-Maternal-month"); 
+	
+	//The collected year under the Maternal Info sub panel
+	public static By theParentCollectedYearMaternal = By.id("parent-collected-Maternal-year"); 
+	
+	//The sample type under the Maternal Info sub panel
+	public static By theParentSampleTypeMaternal = By.id("parent-sample-type-Maternal"); 
 	
 	
 	
 	
 
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+//---------------All panels---------------
 	
 	//Additional Test Option Panel
 	public static By additionalTestOpPanel = By.id("additional-test-options"); 
@@ -363,8 +418,7 @@ public class allPanels {
 	
 	//We need to check with Dev so that they can use different id for the fields below
 
-	//The Additional Studies/Research panel
-	public static By additiionalStudiesandResearch = By.id("additional-studies"); 
+
 	
 	//The additional Study Yes radio button
 	public static By additiionalStudiesYesRadio = By.id("additionalStudy-yes"); 
@@ -1032,9 +1086,7 @@ public class allPanels {
 	
 	
 //The Additional Studies/Research panel	
-	public WebElement getadditiionalStudiesandResearch () {
-		return driver.findElement(additiionalStudiesandResearch);
-	}		
+	
 	
 //The additional Study Yes radio button	
 	public WebElement getadditiionalStudiesYesRadio () {
