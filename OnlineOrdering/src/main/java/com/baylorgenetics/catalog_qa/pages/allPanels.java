@@ -205,22 +205,22 @@ public class allPanels {
 	public static By thePaternalInfoBDYear = By.id("parent-birthdate-Paternal-year");
 	
 	//The Asymptomatic radio button under the Paternal info sub panel
-	public static By thePaternalInfoAsymptomatic = By.id("parent-sympto-Paternal"); //Dev need to change this to Asymptomatic
+	public static By thePaternalInfoAsymptomatic1 = By.id("parent-sympto-Paternal"); //Dev need to change this to Asymptomatic
 	
 	//The Symptomatic radio button under the Paternal info sub panel
-	public static By thePaternalInfoSymptomatic = By.id("parent-sympto-Paternal");
+	public static By thePaternalInfoSymptomatic1 = By.id("parent-sympto-Paternal");
 	
 	//The month drop down under the Paternal info sub panel
-	public static By thePaternalInfoMonthDropDown = By.id("parent-collected-Paternal-month");
+	public static By thePaternalInfoMonthDropDown1 = By.id("parent-collected-Paternal-month");
 	
 	//The day drop down under the Paternal info sub panel
-	public static By thePaternalInfoDayDropDown = By.id("parent-collected-Paternal-day");
+	public static By thePaternalInfoDayDropDown1 = By.id("parent-collected-Paternal-day");
 	
 	//The year drop down under the Paternal info sub panel
-	public static By thePaternalInfoYearDropDown = By.id("parent-collected-Paternal-year");
+	public static By thePaternalInfoYearDropDown1 = By.id("parent-collected-Paternal-year");
 	
 	//The sample type drop down under the Paternal info sub panel
-	public static By thePaternalInfoSampleType = By.id("parent-sample-type-Paternal");
+	public static By thePaternalInfoSampleType1 = By.id("parent-sample-type-Paternal");
 	
 	
 	
@@ -1042,7 +1042,7 @@ public class allPanels {
 	}			
 				
 	
-//-----------------------The Previous Testing Panel 	
+//-----------------------The Previous Testing Panel-------------------- 	
 	
 //Select The Metabolic sub panel
 	public WebElement getmetabolicSubPanel() {
@@ -1212,24 +1212,150 @@ public class allPanels {
 	}	
 		
 //The preferred contact method-3 under the Studies/Research
-	public WebElement additiionalPreferredContactMethod3() {
+	public WebElement getadditiionalPreferredContactMethod3() {
 		return driver.findElement(additiionalPreferredContactMethod3);
 	}	
 	
 		
 //----------------objects under the Parents panel-------------		
 		
+//The Maternal info sub panel
+	public WebElement gettheMaternalInfosubPanel() {
+		return driver.findElement(theMaternalInfosubPanel);
+	}	
+		
+//The first name field under the Maternal Info sub panel	
+	public WebElement gettheFirstNameMaternal() {
+		return driver.findElement(theFirstNameMaternal);
+	}
+	
+//The middle name field under the Maternal Info sub panel	
+	public WebElement gettheMiddleNameMaternal() {
+		return driver.findElement(theMiddleNameMaternal);
+	}
+	
+//The last name field under the Maternal Info sub panel
+	public WebElement gettheLastNameMaternal() {
+		return driver.findElement(theLastNameMaternal);
+	}
+	
+//The parent birthdate month field under the Maternal Info sub panel
+	public WebElement gettheBDMonthMaternal() {
+		return driver.findElement(theBDMonthMaternal);
+	}
+	
+//The parent birthdate day field under the Maternal Info sub panel
+	public WebElement gettheBDDayMaternal() {
+		return driver.findElement(theBDDayMaternal);
+	}
+	
+//The parent birthdate Year field under the Maternal Info sub panel	
+	public WebElement gettheBDYearMaternal() {
+		return driver.findElement(theBDYearMaternal);
+	}	
+
+//The Asymptomatic radio button under the Maternal Info sub panel		
+	public WebElement gettheAsymptomaticMaternal() {
+		return driver.findElement(theAsymptomaticMaternal);
+	}
+		
+//The Symptomatic radio button under the Maternal Info sub panel
+	public WebElement gettheSymptomaticMaternal() {
+		return driver.findElement(theSymptomaticMaternal);
+	}
+	
+//The collected month under the Maternal Info sub panel	
+	public WebElement gettheParentCollectedMonthMaternal() {
+		return driver.findElement(theParentCollectedMonthMaternal);
+	}
+	
+//The collected day under the Maternal Info sub panel	
+	public WebElement gettheParentCollectedDayMaternal() {
+		return driver.findElement(theParentCollectedDayMaternal);
+	}
+	
+//The collected year under the Maternal Info sub panel		
+	public WebElement gettheParentCollectedYearMaternal() {
+		return driver.findElement(theParentCollectedYearMaternal);
+	}	
+	
+//The sample type under the Maternal Info sub panel		
+	public WebElement gettheParentSampleTypeMaternal() {
+		return driver.findElement(theParentSampleTypeMaternal);
+	}
+		
+//The Paternal info sub panel
+	public WebElement getthePaternalInfosubPanel() {
+		return driver.findElement(thePaternalInfosubPanel);
+	}
+		
+//The first name field under the Paternal info sub panel	
+	public WebElement getthePaternalInfoFirstName () {
+		return driver.findElement(thePaternalInfoFirstName );
+	}	
+	
+//The middle name field under the Paternal info sub panel
+	public WebElement getthePaternalInfoMiddleName() {
+		return driver.findElement(thePaternalInfoMiddleName);
+	}
+		
+//The last name field under the Paternal info sub panel		
+	public WebElement getthePaternalInfoLastName() {
+		return driver.findElement(thePaternalInfoLastName);
+	}
+	
+//The birth date month under the Paternal info sub panel	
+	public WebElement getthePaternalInfoBDMonth() {
+		return driver.findElement(thePaternalInfoBDMonth);
+	}
+	
+//The birth date day under the Paternal info sub panel	
+	public WebElement getthePaternalInfoBDDay() {
+		return driver.findElement(thePaternalInfoBDDay);
+	}	
+	
+
+	//The birth date day under the Paternal info sub panel		
+		public WebElement getthePaternalInfoBDYear() {
+			return driver.findElement(thePaternalInfoBDYear);
+		}	
+			
+	//The Asymptomatic radio button under the Paternal info sub panel	
+		public WebElement getthePaternalInfoAsymptomatic() {
+			return driver.findElement(thePaternalInfoAsymptomatic1);
+		}	
+		
+	//The Symptomatic radio button under the Paternal info sub panel		
+		public WebElement getthePaternalInfoSymptomatic() {
+			return driver.findElement(thePaternalInfoSymptomatic1);
+		}	
+		
+	//The month drop down under the Paternal info sub panel	
+		public WebElement getthePaternalInfoMonthDropDown() {
+			return driver.findElement(thePaternalInfoMonthDropDown1);
+		}
+			
+	//The day drop down under the Paternal info sub panel		
+		public WebElement getthePaternalInfoDayDropDown() {
+			return driver.findElement(thePaternalInfoDayDropDown1);
+		}
+			
+	//The year drop down under the Paternal info sub panel		
+		public WebElement getthePaternalInfoYearDropDown() {
+			return driver.findElement(thePaternalInfoYearDropDown1);
+		}	
+			
+	//The sample type drop down under the Paternal info sub panel		
+		public WebElement getthePaternalInfoSampleType() {
+			return driver.findElement(thePaternalInfoSampleType1);
+		}	
+				
+		
 	
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
+		
 	 
    
 	}

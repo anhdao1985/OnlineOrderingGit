@@ -37,8 +37,8 @@ import org.openqa.selenium.support.ui.Select;
 import com.baylorgenetics.catalog_qa.pages.GenerateData;
 import com.baylorgenetics.catalog_qa.pages.allPanels;
 
-public class First60106MergedWith60101 {
-	public String baseUrl = "https://catalog-qa.baylorgenetics.com/details/60101";
+public class CreatingAnOrderWithAdditionalStudiesRSelectingYESonBoth {
+	public String baseUrl = "https://catalog-qa.baylorgenetics.com/details/4900";
 	String driverPath = "C:\\Eclipse\\chromedriver.exe";
 	public WebDriver driver;
 	GenerateData NameOfInsured;
@@ -50,7 +50,7 @@ public class First60106MergedWith60101 {
 	}
 
 	@Test
-	public void Merging60101To60106() throws InterruptedException, AWTException {
+	public void CreateOrderWithAdditionalStudiesRwithYEonBoth() throws InterruptedException, AWTException {
 
 		NameOfInsured = new GenerateData();
 
@@ -269,29 +269,18 @@ public class First60106MergedWith60101 {
 		dropdownSampleType.selectByVisibleText("Blood");
 		Thread.sleep(1000);
 
-		// Initiate the Merged Couple report panel
-		allPanels mergedCoupleReport = new allPanels(driver);
+		// Initiate the Additional Studies/Research panel
+		allPanels addtionalSRPanel = new allPanels(driver);
 
-		// Calling the getMergedCoupleReport panel
-		mergedCoupleReport.getmergedCoupleReportPanel().click();
+		// Calling the Additional Studies/Research panel
+		addtionalSRPanel.getAdditionalStudiesResearchPanel().click();
 
-		// Initiate the Last Name field under the Merged Couple report
-		allPanels mergedCoupleLname = new allPanels(driver);
+		// initiate the Use Patient info flag
+		allPanels usePatientInfoFlag = new allPanels(driver);
+		Thread.sleep(1000);
 
-		// Calling the getMergedCoupleReport panel
-		mergedCoupleLname.getmergedCoupleLastName().sendKeys("female60101");
-
-		// Initiate the First Name field under the Merged Couple report
-		allPanels mergedCoupleFname = new allPanels(driver);
-
-		// Calling the getMergedCoupleReport panel
-		mergedCoupleFname.getmergedCoupleFirstName().sendKeys("automationfemale");
-
-		// Initiate the Search button under the Merged Couple report
-		allPanels mergedCoupleSearchB = new allPanels(driver);
-
-		// Calling the getMergedCoupleReport panel
-		mergedCoupleSearchB.getmergedCoupleSearchButton().click();
+		// Calling the Use Patient info flag under Research
+		usePatientInfoFlag.getadditiionalStudiesUsePatientFlag().click();
 
 		// Initiate the Submit button
 		allPanels submitButtonOnOrderPage = new allPanels(driver);

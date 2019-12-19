@@ -37,24 +37,21 @@ import org.openqa.selenium.support.ui.Select;
 import com.baylorgenetics.catalog_qa.pages.GenerateData;
 import com.baylorgenetics.catalog_qa.pages.allPanels;
 
-
 public class First60101MergedWith60106male {
 	public String baseUrl = "https://catalog-qa.baylorgenetics.com/details/60101";
 	String driverPath = "C:\\Eclipse\\chromedriver.exe";
 	public WebDriver driver;
 	GenerateData NameOfInsured;
-	
+
 	@BeforeTest
 	public void setup(ITestContext ctx) {
 		TestRunner runner = (TestRunner) ctx;
 		runner.setOutputDirectory("J:\\zzQA Selenium Automation Suite\\Test Results");
 	}
-	
-	
-	
-  @Test
-  public void Merging60106To60101() throws InterruptedException, AWTException {
-	  NameOfInsured = new GenerateData();
+
+	@Test
+	public void Merging60106To60101() throws InterruptedException, AWTException {
+		NameOfInsured = new GenerateData();
 
 		System.out.println("launching Chrome browser");
 		System.setProperty("webdriver.chrome.driver", driverPath);
@@ -91,7 +88,6 @@ public class First60101MergedWith60106male {
 
 		Thread.sleep(3000);
 
-	  
 		// Generate The First Name of Insured using the GenerateData class
 		// driver.findElement(By.xpath("//*[@id='simple-tabpanel-2']/div/div/div[1]/div[2]/div/div[1]/div/div/input")).sendKeys(NameOfInsured.generateRandomAlphaNumeric(8));
 		driver.findElement(By.id("first-name")).sendKeys(NameOfInsured.generateRandomString(10));
@@ -103,253 +99,244 @@ public class First60101MergedWith60106male {
 		driver.findElement(By.id("last-name")).sendKeys(NameOfInsured.generateRandomString(10));
 		Thread.sleep(1000);
 
-
-		//Initiate the Birth Month
+		// Initiate the Birth Month
 		allPanels dropMonthDownList = new allPanels(driver);
-		
-		//Enter 10/October
+
+		// Enter 10/October
 		dropMonthDownList.getbirthMonthOrderPage().sendKeys("10");
-		
-		//Initiate the Birth Day
+
+		// Initiate the Birth Day
 		allPanels dropDayDownList = new allPanels(driver);
-		
-		//Enter 20 
-		 dropDayDownList.getbirthDayOrderPage().sendKeys("20");
-			
-		//Initiate the year drop down
+
+		// Enter 20
+		dropDayDownList.getbirthDayOrderPage().sendKeys("20");
+
+		// Initiate the year drop down
 		allPanels drpYearDwnList = new allPanels(driver);
-		
-		//Enter 1985 
+
+		// Enter 1985
 		drpYearDwnList.getbirthYearOrderPage().sendKeys("1985");
-	  
+
 		// Selecting female radio button
-				driver.findElement(By.xpath("//*[starts-with(@id, 'patient-gender-0')]")).click();
-				Thread.sleep(5000);
+		driver.findElement(By.xpath("//*[starts-with(@id, 'patient-gender-0')]")).click();
+		Thread.sleep(5000);
 
-				// below is the portion to randomly select the ethnicity in the ethnicity drop
-				// down
-				// Object of the e
-				WebElement ethnicityDropDownList = driver.findElement(By.id("ethnicity"));
+		// below is the portion to randomly select the ethnicity in the ethnicity drop
+		// down
+		// Object of the e
+		WebElement ethnicityDropDownList = driver.findElement(By.id("ethnicity"));
 
-				// Using Select Class to fetch the count
-				Select ethnicityObjSel = new Select(ethnicityDropDownList);
-				List<WebElement> webListEthinicty = ethnicityObjSel.getOptions();
+		// Using Select Class to fetch the count
+		Select ethnicityObjSel = new Select(ethnicityDropDownList);
+		List<WebElement> webListEthinicty = ethnicityObjSel.getOptions();
 
-				// Taking the count of items
-				int eCnt = webListEthinicty.size();
-				
-				// Using Random class to generate random values
-				Random numEthnicity = new Random();
-				int eSelect = numEthnicity.nextInt(eCnt);
+		// Taking the count of items
+		int eCnt = webListEthinicty.size();
 
-				// Selecting value from DropDownList
-				ethnicityObjSel.selectByIndex(eSelect);
+		// Using Random class to generate random values
+		Random numEthnicity = new Random();
+		int eSelect = numEthnicity.nextInt(eCnt);
 
-				ethnicityObjSel.selectByIndex(eSelect);
-				if (eSelect == 15) {
-					// if(ethnicityObjSel.selectedValue.equals("Other"){
-					driver.findElement(By.xpath(
-							"//div[@id='root']/div/div/div[1]/div[2]/div/div[3]/div/div/form/div[1]/div[7]/div/div/input"))
-							.sendKeys(NameOfInsured.generateRandomAlphaNumeric(8));
+		// Selecting value from DropDownList
+		ethnicityObjSel.selectByIndex(eSelect);
 
-				} else {
-					System.out.println(ethnicityDropDownList.getAttribute("value"));
-				}
+		ethnicityObjSel.selectByIndex(eSelect);
+		if (eSelect == 15) {
+			// if(ethnicityObjSel.selectedValue.equals("Other"){
+			driver.findElement(By.xpath(
+					"//div[@id='root']/div/div/div[1]/div[2]/div/div[3]/div/div/form/div[1]/div[7]/div/div/input"))
+					.sendKeys(NameOfInsured.generateRandomAlphaNumeric(8));
 
-				// Assign value for address 1 under Patient info section
-				driver.findElement(By.id("address-1")).sendKeys("555 Main Street");
+		} else {
+			System.out.println(ethnicityDropDownList.getAttribute("value"));
+		}
 
-				// Assign value for address 1 under Patient info section
-				driver.findElement(By.id("address-2")).sendKeys("PO BOX 102");
+		// Assign value for address 1 under Patient info section
+		driver.findElement(By.id("address-1")).sendKeys("555 Main Street");
 
-				// Assign value for City under Patient info section
-				driver.findElement(By.id("city")).sendKeys("San Jose");
+		// Assign value for address 1 under Patient info section
+		driver.findElement(By.id("address-2")).sendKeys("PO BOX 102");
 
-				// Assign value for Zip under Patient info section
-				driver.findElement(By.id("zip-code")).sendKeys("95116");
+		// Assign value for City under Patient info section
+		driver.findElement(By.id("city")).sendKeys("San Jose");
 
-				// Assign value for state under Patient info section
-				driver.findElement(By.id("state")).sendKeys("CA");
+		// Assign value for Zip under Patient info section
+		driver.findElement(By.id("zip-code")).sendKeys("95116");
 
-				// Assign value for Phone# under Patient info section
-				driver.findElement(By.id("address-type")).sendKeys("B");
+		// Assign value for state under Patient info section
+		driver.findElement(By.id("state")).sendKeys("CA");
 
-				// Assign value for phone under Patient info section
-				driver.findElement(By.id("phone-number")).sendKeys("1408-555-8888");
+		// Assign value for Phone# under Patient info section
+		driver.findElement(By.id("address-type")).sendKeys("B");
 
-				// Selecting a random value in the Reference drop down
+		// Assign value for phone under Patient info section
+		driver.findElement(By.id("phone-number")).sendKeys("1408-555-8888");
 
-				WebElement referenceDropDownList = driver.findElement(By.id("preference"));
+		// Selecting a random value in the Reference drop down
 
-				// Using Select Class to fetch the count
-				Select referenceObjSel = new Select(referenceDropDownList);
-				List<WebElement> webListreference = referenceObjSel.getOptions();
+		WebElement referenceDropDownList = driver.findElement(By.id("preference"));
 
-				// Taking the count of items
-				int reCnt = webListreference.size();
-				// Using Random class to generate random values
+		// Using Select Class to fetch the count
+		Select referenceObjSel = new Select(referenceDropDownList);
+		List<WebElement> webListreference = referenceObjSel.getOptions();
 
-				Random numReference = new Random();
-				int reSelect = numReference.nextInt(reCnt);
+		// Taking the count of items
+		int reCnt = webListreference.size();
+		// Using Random class to generate random values
 
-				// Selecting value from DropDownList
-				referenceObjSel.selectByIndex(reSelect);
+		Random numReference = new Random();
+		int reSelect = numReference.nextInt(reCnt);
 
-				// Print out Selected Value
-				System.out.println(referenceDropDownList.getAttribute("value"));
+		// Selecting value from DropDownList
+		referenceObjSel.selectByIndex(reSelect);
 
-				// Assign value for Medical record # under Patient info section
-				driver.findElement(By.id("medical-record-number")).sendKeys(NameOfInsured.generateRandomAlphaNumeric(10));
+		// Print out Selected Value
+		System.out.println(referenceDropDownList.getAttribute("value"));
 
-				// Assign value for Accession # under Patient info section
-				driver.findElement(By.id("accession-number")).sendKeys(NameOfInsured.generateRandomNumber(10));
+		// Assign value for Medical record # under Patient info section
+		driver.findElement(By.id("medical-record-number")).sendKeys(NameOfInsured.generateRandomAlphaNumeric(10));
 
-				// Selecting NO for Discharged
-				driver.findElement(By.id("discharged-Yes-1")).click();
-				Thread.sleep(1000);
+		// Assign value for Accession # under Patient info section
+		driver.findElement(By.id("accession-number")).sendKeys(NameOfInsured.generateRandomNumber(10));
 
-				// Initiate the sample info panel
-				allPanels sampleinfopanel = new allPanels(driver);
+		// Selecting NO for Discharged
+		driver.findElement(By.id("discharged-Yes-1")).click();
+		Thread.sleep(1000);
 
-				// Calling the sampleinfo panel
-				sampleinfopanel.getSampleInfoPanel().click();
+		// Initiate the sample info panel
+		allPanels sampleinfopanel = new allPanels(driver);
 
-				// Set 2 months prior to today date
-				SimpleDateFormat df = new SimpleDateFormat("M"); // this is to pass in just the month into the field
-				Date dt = new Date();
-				Calendar cl = Calendar.getInstance();
-				cl.setTime(dt);
-				;
-				cl.add(Calendar.MONTH, -2);
-				dt = cl.getTime();
-				String str = df.format(dt);
-				System.out.println("the date today is " + str);
+		// Calling the sampleinfo panel
+		sampleinfopanel.getSampleInfoPanel().click();
 
-				Thread.sleep(1000);
-				WebElement el = driver.findElement(By.id("collection-date-month"));
-				el.sendKeys(str);
-				Thread.sleep(1000);
+		// Set 2 months prior to today date
+		SimpleDateFormat df = new SimpleDateFormat("M"); // this is to pass in just the month into the field
+		Date dt = new Date();
+		Calendar cl = Calendar.getInstance();
+		cl.setTime(dt);
+		;
+		cl.add(Calendar.MONTH, -2);
+		dt = cl.getTime();
+		String str = df.format(dt);
+		System.out.println("the date today is " + str);
 
-				// below is the portion to randomly select the day in the Day drop down
+		Thread.sleep(1000);
+		WebElement el = driver.findElement(By.id("collection-date-month"));
+		el.sendKeys(str);
+		Thread.sleep(1000);
 
-				// Object of the Day Drop downlist
-				WebElement lmpDayList = driver.findElement(By.id("collection-date-day"));
+		// below is the portion to randomly select the day in the Day drop down
 
-				// Using FindElements to create a List object
-				// List <WebElement> weblist =
-				// driver.findElements(By.xpath(".//*[@id='drpdwnTopics']/option"));
-				Thread.sleep(1000);
+		// Object of the Day Drop downlist
+		WebElement lmpDayList = driver.findElement(By.id("collection-date-day"));
 
-				// Using Select Class to fetch the count
-				Select objLmpDaySel = new Select(lmpDayList);
-				List<WebElement> weblistLmpDay = objLmpDaySel.getOptions();
+		// Using FindElements to create a List object
+		// List <WebElement> weblist =
+		// driver.findElements(By.xpath(".//*[@id='drpdwnTopics']/option"));
+		Thread.sleep(1000);
 
-				// Taking the count of items
-				int dCnt = weblistLmpDay.size();
-				// Using Random class to generate random values
+		// Using Select Class to fetch the count
+		Select objLmpDaySel = new Select(lmpDayList);
+		List<WebElement> weblistLmpDay = objLmpDaySel.getOptions();
 
-				Random numLmpDay = new Random();
-				int dSelect = numLmpDay.nextInt(dCnt);
+		// Taking the count of items
+		int dCnt = weblistLmpDay.size();
+		// Using Random class to generate random values
 
-				// Selecting value from DropDownList
-				objLmpDaySel.selectByIndex(dSelect);
+		Random numLmpDay = new Random();
+		int dSelect = numLmpDay.nextInt(dCnt);
 
-				// Print out Selected Value
-				System.out.println(lmpDayList.getAttribute("value"));
+		// Selecting value from DropDownList
+		objLmpDaySel.selectByIndex(dSelect);
 
-				Thread.sleep(1000);
-				// Selecting a year for the LMP drop down
-				Select dropdown = new Select(driver.findElement(By.id("collection-date-year")));
+		// Print out Selected Value
+		System.out.println(lmpDayList.getAttribute("value"));
 
-				// wait 1 second and select "2019"
-				Thread.sleep(1000);
-				dropdown.selectByVisibleText("2019");
+		Thread.sleep(1000);
+		// Selecting a year for the LMP drop down
+		Select dropdown = new Select(driver.findElement(By.id("collection-date-year")));
 
-				// Selecting a value in the Sample Type drop down
-				Select dropdownSampleType = new Select(driver.findElement(By.id("sample-type")));
+		// wait 1 second and select "2019"
+		Thread.sleep(1000);
+		dropdown.selectByVisibleText("2019");
 
-				// wait 1 second and select "2019"
-				Thread.sleep(1000);
-				dropdownSampleType.selectByVisibleText("Blood");
-				Thread.sleep(1000);
-	  
-			
-				// Initiate the Merged Couple report  panel
-				allPanels mergedCoupleReport = new allPanels(driver);
+		// Selecting a value in the Sample Type drop down
+		Select dropdownSampleType = new Select(driver.findElement(By.id("sample-type")));
 
-				// Calling the getMergedCoupleReport panel
-				mergedCoupleReport.getmergedCoupleReportPanel().click();
+		// wait 1 second and select "2019"
+		Thread.sleep(1000);
+		dropdownSampleType.selectByVisibleText("Blood");
+		Thread.sleep(1000);
 
-	  
-				//Initiate the Last Name field under the Merged Couple report
-				allPanels mergedCoupleLname = new allPanels(driver);
-	  
-				// Calling the getMergedCoupleReport panel
-				mergedCoupleLname.getmergedCoupleLastName().sendKeys("male60106");
-				
-				//Initiate the First Name field under the Merged Couple report
-				allPanels mergedCoupleFname = new allPanels(driver);
+		// Initiate the Merged Couple report panel
+		allPanels mergedCoupleReport = new allPanels(driver);
 
-				// Calling the getMergedCoupleReport panel
-				mergedCoupleFname.getmergedCoupleFirstName().sendKeys("automation60106Male");
-	  
-				//Initiate the Search button under the Merged Couple report
-				allPanels mergedCoupleSearchB = new allPanels(driver);
+		// Calling the getMergedCoupleReport panel
+		mergedCoupleReport.getmergedCoupleReportPanel().click();
 
-				// Calling the getMergedCoupleReport panel
-				mergedCoupleSearchB.getmergedCoupleSearchButton().click();
-						
+		// Initiate the Last Name field under the Merged Couple report
+		allPanels mergedCoupleLname = new allPanels(driver);
+
+		// Calling the getMergedCoupleReport panel
+		mergedCoupleLname.getmergedCoupleLastName().sendKeys("male60106");
+
+		// Initiate the First Name field under the Merged Couple report
+		allPanels mergedCoupleFname = new allPanels(driver);
+
+		// Calling the getMergedCoupleReport panel
+		mergedCoupleFname.getmergedCoupleFirstName().sendKeys("automation60106Male");
+
+		// Initiate the Search button under the Merged Couple report
+		allPanels mergedCoupleSearchB = new allPanels(driver);
+
+		// Calling the getMergedCoupleReport panel
+		mergedCoupleSearchB.getmergedCoupleSearchButton().click();
+
 // Initiate the Submit button
-				allPanels submitButtonOnOrderPage = new allPanels(driver);
+		allPanels submitButtonOnOrderPage = new allPanels(driver);
 
-				// Calling the submit button and then click
-				WebElement element1 = submitButtonOnOrderPage.gettheSubmitButtonOnOrderForm();
-				Actions actions2 = new Actions(driver);
-				actions2.moveToElement(element1).click().build().perform();
-				
-					// Store the parent window
-				String parentWindowHandler = driver.getWindowHandle();
-				String subWindowHandler = null;
+		// Calling the submit button and then click
+		WebElement element1 = submitButtonOnOrderPage.gettheSubmitButtonOnOrderForm();
+		Actions actions2 = new Actions(driver);
+		actions2.moveToElement(element1).click().build().perform();
 
-				// get all window handles
-				Set<String> handles = driver.getWindowHandles();
-				Iterator<String> iterator = handles.iterator();
+		// Store the parent window
+		String parentWindowHandler = driver.getWindowHandle();
+		String subWindowHandler = null;
 
-				subWindowHandler = iterator.next();
-				driver.switchTo().window(subWindowHandler);
+		// get all window handles
+		Set<String> handles = driver.getWindowHandles();
+		Iterator<String> iterator = handles.iterator();
 
-				// click the cancel button
-				WebElement cancelOnMessage = driver.findElement(By.xpath("//html/body/div[3]/div[3]/div/div[3]/button[1]"));
-				cancelOnMessage.click();
-	  
-				/// Initiate the Submit button
-				allPanels submitButtonAgainOnOrderPage = new allPanels(driver);
+		subWindowHandler = iterator.next();
+		driver.switchTo().window(subWindowHandler);
 
-				// Calling the submit button and then click
-				WebElement element2 = submitButtonAgainOnOrderPage.gettheSubmitButtonOnOrderForm();
-				Actions actions1 = new Actions(driver);
-				actions1.moveToElement(element2).click().build().perform();
+		// click the cancel button
+		WebElement cancelOnMessage = driver.findElement(By.xpath("//html/body/div[3]/div[3]/div/div[3]/button[1]"));
+		cancelOnMessage.click();
 
-				// Selecting absolute xpath and click the Confirm button
-				WebElement confirmOnMessage = driver.findElement(By.xpath("//html/body/div[3]/div[3]/div/div[3]/button[2]"));
-				confirmOnMessage.click();
+		/// Initiate the Submit button
+		allPanels submitButtonAgainOnOrderPage = new allPanels(driver);
 
-				driver.switchTo().window(parentWindowHandler);
+		// Calling the submit button and then click
+		WebElement element2 = submitButtonAgainOnOrderPage.gettheSubmitButtonOnOrderForm();
+		Actions actions1 = new Actions(driver);
+		actions1.moveToElement(element2).click().build().perform();
 
-				Thread.sleep(5000);
+		// Selecting absolute xpath and click the Confirm button
+		WebElement confirmOnMessage = driver.findElement(By.xpath("//html/body/div[3]/div[3]/div/div[3]/button[2]"));
+		confirmOnMessage.click();
 
-				// Check for the Login and institution
-				WebElement username2 = driver.findElement(By.xpath("//div[@id='root']/div[2]/div"));
-				assertEquals(username2.getText().trim(), "Order saved!");
-				
-				// Close browser
-				driver.close();
-	  
-	  
-	  
-	  
-				
-	  
-	  
-  }
+		driver.switchTo().window(parentWindowHandler);
+
+		Thread.sleep(5000);
+
+		// Check for the Login and institution
+		WebElement username2 = driver.findElement(By.xpath("//div[@id='root']/div[2]/div"));
+		assertEquals(username2.getText().trim(), "Order saved!");
+
+		// Close browser
+		driver.close();
+
+	}
 }

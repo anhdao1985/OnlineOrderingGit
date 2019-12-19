@@ -37,8 +37,8 @@ import org.openqa.selenium.support.ui.Select;
 import com.baylorgenetics.catalog_qa.pages.GenerateData;
 import com.baylorgenetics.catalog_qa.pages.allPanels;
 
-public class First60106MergedWith60101 {
-	public String baseUrl = "https://catalog-qa.baylorgenetics.com/details/60101";
+public class CreatingAnOrderWithAdditionalStudiesRSelectingYESandNOonFlag {
+	public String baseUrl = "https://catalog-qa.baylorgenetics.com/details/4900";
 	String driverPath = "C:\\Eclipse\\chromedriver.exe";
 	public WebDriver driver;
 	GenerateData NameOfInsured;
@@ -49,10 +49,10 @@ public class First60106MergedWith60101 {
 		runner.setOutputDirectory("J:\\zzQA Selenium Automation Suite\\Test Results");
 	}
 
-	@Test
-	public void Merging60101To60106() throws InterruptedException, AWTException {
-
-		NameOfInsured = new GenerateData();
+	
+  @Test
+  public void CreateOrderWithAdditionalStudiesRwithYESandNoOnFlag() throws InterruptedException, AWTException {
+	  NameOfInsured = new GenerateData();
 
 		System.out.println("launching Chrome browser");
 		System.setProperty("webdriver.chrome.driver", driverPath);
@@ -269,75 +269,39 @@ public class First60106MergedWith60101 {
 		dropdownSampleType.selectByVisibleText("Blood");
 		Thread.sleep(1000);
 
-		// Initiate the Merged Couple report panel
-		allPanels mergedCoupleReport = new allPanels(driver);
+		// Initiate the Additional Studies/Research panel
+		allPanels addtionalSRPanel = new allPanels(driver);
 
-		// Calling the getMergedCoupleReport panel
-		mergedCoupleReport.getmergedCoupleReportPanel().click();
-
-		// Initiate the Last Name field under the Merged Couple report
-		allPanels mergedCoupleLname = new allPanels(driver);
-
-		// Calling the getMergedCoupleReport panel
-		mergedCoupleLname.getmergedCoupleLastName().sendKeys("female60101");
-
-		// Initiate the First Name field under the Merged Couple report
-		allPanels mergedCoupleFname = new allPanels(driver);
-
-		// Calling the getMergedCoupleReport panel
-		mergedCoupleFname.getmergedCoupleFirstName().sendKeys("automationfemale");
-
-		// Initiate the Search button under the Merged Couple report
-		allPanels mergedCoupleSearchB = new allPanels(driver);
-
-		// Calling the getMergedCoupleReport panel
-		mergedCoupleSearchB.getmergedCoupleSearchButton().click();
-
-		// Initiate the Submit button
-		allPanels submitButtonOnOrderPage = new allPanels(driver);
-
-		// Calling the submit button and then click
-		WebElement element1 = submitButtonOnOrderPage.gettheSubmitButtonOnOrderForm();
-		Actions actions2 = new Actions(driver);
-		actions2.moveToElement(element1).click().build().perform();
-
-		// Store the parent window
-		String parentWindowHandler = driver.getWindowHandle();
-		String subWindowHandler = null;
-
-		// get all window handles
-		Set<String> handles = driver.getWindowHandles();
-		Iterator<String> iterator = handles.iterator();
-
-		subWindowHandler = iterator.next();
-		driver.switchTo().window(subWindowHandler);
-
-		// click the cancel button
-		WebElement cancelOnMessage = driver.findElement(By.xpath("//html/body/div[3]/div[3]/div/div[3]/button[1]"));
-		cancelOnMessage.click();
-
-		/// Initiate the Submit button
-		allPanels submitButtonAgainOnOrderPage = new allPanels(driver);
-
-		// Calling the submit button and then click
-		WebElement element2 = submitButtonAgainOnOrderPage.gettheSubmitButtonOnOrderForm();
-		Actions actions1 = new Actions(driver);
-		actions1.moveToElement(element2).click().build().perform();
-
-		// Selecting absolute xpath and click the Confirm button
-		WebElement confirmOnMessage = driver.findElement(By.xpath("//html/body/div[3]/div[3]/div/div[3]/button[2]"));
-		confirmOnMessage.click();
-
-		driver.switchTo().window(parentWindowHandler);
-
-		Thread.sleep(5000);
-
-		// Check for the Login and institution
-		WebElement username2 = driver.findElement(By.xpath("//div[@id='root']/div[2]/div"));
-		assertEquals(username2.getText().trim(), "Order saved!");
-
-		// Close browser
-		driver.close();
-
-	}
+		// Calling the Additional Studies/Research panel
+		addtionalSRPanel.getAdditionalStudiesResearchPanel().click();
+		
+		//Initiate the First name field under the additional/research panel
+		allPanels firstNameUnderAddR = new allPanels(driver);
+		
+		//Calling the First Name field under the additional/Research panel
+		firstNameUnderAddR.getadditiionalStudiesFirstName().sendKeys(NameOfInsured.generateRandomString(10));
+		
+		//Initiate the Middle name field under the additional/research panel
+		allPanels middleNameUnderAddR = new allPanels(driver);
+		
+		//Calling the Middle Name field under the additional/Research panel
+		middleNameUnderAddR.getadditiionalStudiesMName().sendKeys(NameOfInsured.generateRandomString(10));
+		
+		//Initiate the Last name field under the additional/research panel
+		allPanels lastNameUnderAddR = new allPanels(driver);
+	  
+		//Calling the Last Name field under the additional/Research panel
+		lastNameUnderAddR.getadditiionalStudiesLName().sendKeys(NameOfInsured.generateRandomString(10));
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	  
+  }
 }
