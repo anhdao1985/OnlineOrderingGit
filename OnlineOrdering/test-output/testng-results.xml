@@ -2,27 +2,27 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="36288" started-at="2019-12-10T16:43:34Z" finished-at="2019-12-10T16:44:10Z">
+  <suite name="Default suite" duration-ms="36912" started-at="2019-12-23T19:31:32Z" finished-at="2019-12-23T19:32:09Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="36288" started-at="2019-12-10T16:43:34Z" finished-at="2019-12-10T16:44:10Z">
-      <class name="com.baylorgenetics.cataglog_qa.testcases.First60101MergedWith60106male">
-        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:com.baylorgenetics.cataglog_qa.testcases.First60101MergedWith60106male@75881071]" name="setup" is-config="true" duration-ms="12" started-at="2019-12-10T16:43:34Z" finished-at="2019-12-10T16:43:34Z">
+    <test name="Default test" duration-ms="36912" started-at="2019-12-23T19:31:32Z" finished-at="2019-12-23T19:32:09Z">
+      <class name="com.baylorgenetics.cataglog_qa.testcases.OrderTestFor1500">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:com.baylorgenetics.cataglog_qa.testcases.OrderTestFor1500@75881071]" name="setup" is-config="true" duration-ms="12" started-at="2019-12-23T19:31:32Z" finished-at="2019-12-23T19:31:32Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@3a1d593e]]>
+                <![CDATA[org.testng.TestRunner@5fcacc0]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="Merging60106To60101()[pri:0, instance:com.baylorgenetics.cataglog_qa.testcases.First60101MergedWith60106male@75881071]" name="Merging60106To60101" duration-ms="36261" started-at="2019-12-10T16:43:34Z" finished-at="2019-12-10T16:44:10Z">
+        <test-method status="PASS" signature="Merging60101To60106()[pri:0, instance:com.baylorgenetics.cataglog_qa.testcases.OrderTestFor1500@75881071]" name="Merging60101To60106" duration-ms="36886" started-at="2019-12-23T19:31:32Z" finished-at="2019-12-23T19:32:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Merging60106To60101 -->
-      </class> <!-- com.baylorgenetics.cataglog_qa.testcases.First60101MergedWith60106male -->
+        </test-method> <!-- Merging60101To60106 -->
+      </class> <!-- com.baylorgenetics.cataglog_qa.testcases.OrderTestFor1500 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
