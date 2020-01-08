@@ -354,10 +354,32 @@ public class OrderTestFor1500 {
 			//Select the birth date Year under the Paternal info
 			BDYearPaternalInfo.getthePaternalInfoBDYear().sendKeys("1968");
 			
+			//Intiate the Asymptomatic/Sympotamic - waiting on dev to have the id update
 			
 			
+			//Initiate the Paternal Info Collected Month
+			allPanels PaternalCMonth = new allPanels(driver);
 			
+			//Select the Collected Month for Paternal info
+			PaternalCMonth.getthePaternalInfoMonthDropDown().sendKeys("6");
 			
+			//Initiate the Collected Day for Paternal info
+			allPanels PaternalCDay = new allPanels(driver);
+			
+			//Select the Collect Day for Paternal Info
+			PaternalCDay.getthePaternalInfoDayDropDown().sendKeys("22");
+			
+			//Initiate the Collected year under Paternal info
+			allPanels PaternalCYear = new allPanels(driver);
+			
+			//Select the Collect year for Paternal info
+			PaternalCYear.getthePaternalInfoYearDropDown().sendKeys("2019");
+			
+			//Initiate the Sample type under Paternal
+			allPanels PaternalSampleType = new allPanels(driver);
+			
+			//Select the Sample Type under Paternal
+			PaternalSampleType.getthePaternalInfoSampleType().sendKeys("Saliva");
 	  
 	  
 	  
