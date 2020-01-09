@@ -292,6 +292,14 @@ public class allPanels {
 	//Select file button
 	public static By selectFileButton  =  By.id("select-file"); 
 	
+//---------- Indication for testing TestCode 1500
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	//Egg Donor

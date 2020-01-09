@@ -5,6 +5,8 @@ import org.testng.ITestContext;
 import org.testng.TestRunner;
 import org.testng.annotations.BeforeTest;
 
+import static org.testng.Assert.assertEquals;
+
 //import static org.testng.Assert.assertEquals;
 
 //import static org.testng.Assert.assertEquals;
@@ -17,10 +19,12 @@ import java.awt.AWTException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Iterator;
 //import java.util.Iterator;
 //import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
+import java.util.Set;
 //import java.util.Set;
 //import java.util.Set;
 //import java.util.List;
@@ -28,6 +32,7 @@ import java.util.Random;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 //import org.openqa.selenium.interactions.Actions;
 //import org.openqa.selenium.interactions.Actions;
 //import org.openqa.selenium.interactions.Actions;
@@ -292,6 +297,70 @@ public class CreatingAnOrderWithAdditionalStudiesRSelectingYESandNOonFlag {
 	  
 		//Calling the Last Name field under the additional/Research panel
 		lastNameUnderAddR.getadditiionalStudiesLName().sendKeys(NameOfInsured.generateRandomString(10));
+		
+
+		// Initiate the save button on the Order page
+		allPanels theSaveButton = new allPanels(driver);
+
+		// Click on the save button
+		WebElement element = theSaveButton.gettheSaveButtonOnOrderForm();
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element).click().build().perform();
+
+		Thread.sleep(3000);
+
+		// Initiate the Submit button
+		allPanels submitButtonOnOrderPage = new allPanels(driver);
+
+		// Calling the submit button and then click
+		WebElement element1 = submitButtonOnOrderPage.gettheSubmitButtonOnOrderForm();
+		Actions actions2 = new Actions(driver);
+		actions2.moveToElement(element1).click().build().perform();
+
+		// Store the parent window
+		String parentWindowHandler = driver.getWindowHandle();
+		String subWindowHandler = null;
+
+		// get all window handles
+		Set<String> handles = driver.getWindowHandles();
+		Iterator<String> iterator = handles.iterator();
+
+		subWindowHandler = iterator.next();
+		driver.switchTo().window(subWindowHandler);
+		
+		Thread.sleep(2000);
+		// click the cancel button
+		WebElement cancelOnMessage = driver.findElement(By.xpath("//html/body/div[3]/div[3]/div/div[3]/button[1]"));
+		cancelOnMessage.click();
+		
+		
+		/// Initiate the Submit button
+		allPanels submitButtonAgainOnOrderPage = new allPanels(driver);
+		
+		Thread.sleep(2000);
+		// Calling the submit button and then click
+		WebElement element2 = submitButtonAgainOnOrderPage.gettheSubmitButtonOnOrderForm();
+		Actions actions1 = new Actions(driver);
+		actions1.moveToElement(element2).click().build().perform();
+		
+		Thread.sleep(2000);
+		// Selecting absolute xpath and click the Confirm button
+		WebElement confirmOnMessage = driver.findElement(By.xpath("//html/body/div[3]/div[3]/div/div[3]/button[2]"));
+		confirmOnMessage.click();
+
+		driver.switchTo().window(parentWindowHandler);
+		
+		
+		WebElement username2 = driver.findElement(By.id("download-completed-req"));
+		assertEquals(username2.getText().trim(), "DOWNLOAD REQ");
+
+		
+		
+		
+		Thread.sleep(3000);	
+		// Close browser
+		driver.close();
+
 		
 		
 		
