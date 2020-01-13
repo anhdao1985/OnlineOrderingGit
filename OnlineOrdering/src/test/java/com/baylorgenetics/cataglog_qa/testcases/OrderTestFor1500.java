@@ -433,8 +433,8 @@ public class OrderTestFor1500 {
 			driver.switchTo().window(parentWindowHandler);
 			
 			
-			WebElement username2 = driver.findElement(By.id("download-completed-req"));
-			assertEquals(username2.getText().trim(), "DOWNLOAD REQ");
+			//WebElement username2 = driver.findElement(By.id("download-completed-req"));
+			//assertEquals(username2.getText().trim(), "DOWNLOAD REQ");
 
 			
 			

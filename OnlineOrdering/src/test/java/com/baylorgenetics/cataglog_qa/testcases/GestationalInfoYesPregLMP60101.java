@@ -168,31 +168,7 @@ public class GestationalInfoYesPregLMP60101 {
 		Actions actions1 = new Actions(driver);
 		actions1.moveToElement(element2).click().build().perform();
 
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+	
 		
 		
 		
