@@ -5,7 +5,7 @@ import org.testng.ITestContext;
 import org.testng.TestRunner;
 import org.testng.annotations.BeforeTest;
 
-import static org.testng.Assert.assertEquals;
+//import static org.testng.Assert.assertEquals;
 
 //import static org.testng.Assert.assertEquals;
 
