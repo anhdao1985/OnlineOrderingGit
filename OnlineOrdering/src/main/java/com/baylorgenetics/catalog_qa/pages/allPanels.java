@@ -246,11 +246,74 @@ public class allPanels {
 	//Differential Diagnosis
 	public static By differentDiagnosisPanel = By.id("differential-diagnosis"); 
 	
+//----------------------------------
 	//Consent Panel
 	public static By consentPanel = By.id("consent"); 
 	
+	//Yes radio button Medically Actionable under Consent
+	public static By yesRadioMedicallyAc = (By.xpath("//div[@id='root']/div/div/div[1]/div[2]/div/div[12]/div/div/div[2]/label[1]/span[2]/p"));
+	
+	//No radio button Medically Actionable under Consent
+	public static By noRadioMedicallyAc = (By.xpath("//div[@id='root']/div/div/div[1]/div[2]/div/div[12]/div/div/div[2]/label[2]/span[2]/p"));
+	
+	//Yes radio button Carrier Status for Autosomal
+	public static By yesRadioCarrierStatus = (By.xpath("//div[@id='root']/div/div/div[1]/div[2]/div/div[12]/div/div/div[4]/label[1]/span[2]/p"));
+	
+	//No radio button Carrier Status for Autosomal
+	public static By noRadioCarrierStatus = (By.xpath("//div[@id='root']/div/div/div[1]/div[2]/div/div[12]/div/div/div[4]/label[2]/span[2]/p"));
+	
+	//Yes radio button Samples Submitted NY
+	public static By yesRadioSamplesSubmittedNY = (By.xpath("//div[@id='root']/div/div/div[1]/div[2]/div/div[12]/div/div/div[7]/label[1]/span[2]/p"));
+	
+	//No radio button Samples Submitted From NY
+	public static By noRadioSamplesSubmittedNY = (By.xpath("//div[@id='root']/div/div/div[1]/div[2]/div/div[12]/div/div/div[7]/label[2]/span[2]/p"));
+	
+	
+
+	
+//----------------------------------------------------------	
 	//Parents consent Panel
 	public static By parentsConsentPanel = By.id("parents-consent"); 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+//--------------------------------------------------------------------------------------------
 	
 	//NY Consent
 	public static By nyConsentPanel = By.id("ny-consent"); 
@@ -647,10 +710,39 @@ public class allPanels {
 		return driver.findElement(additionalClinicInfoPanel);
 	}
 
+	
+//---------------------------------------------	
 	public WebElement getConsentPanel() {
 		return driver.findElement(additionalClinicInfoPanel);
 	}
 
+	public WebElement getyesRadioMedicallyAc() {
+		return driver.findElement(yesRadioMedicallyAc);
+	}
+	
+	public WebElement getnoRadioMedicallyAc() {
+		return driver.findElement(noRadioMedicallyAc);
+	}
+	
+	public WebElement getyesRadioCarrierStatus() {
+		return driver.findElement(yesRadioCarrierStatus);
+	}
+	
+	public WebElement getnoRadioCarrierStatus() {
+		return driver.findElement(noRadioCarrierStatus);
+	}	
+	
+	public WebElement getyesRadioSamplesSubmittedNY() {
+		return driver.findElement(yesRadioSamplesSubmittedNY);
+	}	
+		
+	public WebElement getnoRadioSamplesSubmittedNY() {
+		return driver.findElement(noRadioSamplesSubmittedNY);
+	}		
+		
+	
+	
+//---------------------------------------------------------	
 	public WebElement getParentsConsentPanel() {
 		return driver.findElement(parentsConsentPanel);
 	}

@@ -203,6 +203,21 @@ public class First60101MergedWith60106male {
 		driver.findElement(By.id("discharged-Yes-1")).click();
 		Thread.sleep(1000);
 
+		//Initiate the Pyament panel
+		allPanels PaymentInfo = new allPanels(driver);
+				
+		//Calling the Payment info panel
+		PaymentInfo.getPaymentInfoPanel().click();
+		Thread.sleep(1000);
+				
+		//Initiate the Payment Info
+		allPanels InstitutionalBill = new allPanels(driver);
+		
+		//Calling the Institution billing icon
+		InstitutionalBill.getinstitutionBillingIcon().click();
+		Thread.sleep(1000);
+		
+		
 		// Initiate the sample info panel
 		allPanels sampleinfopanel = new allPanels(driver);
 
@@ -273,7 +288,8 @@ public class First60101MergedWith60106male {
 
 		// Calling the getMergedCoupleReport panel
 		mergedCoupleReport.getmergedCoupleReportPanel().click();
-
+		
+//This part need dev to change the ID because the Last and first name field id are the same with the Patient info		
 		// Initiate the Last Name field under the Merged Couple report
 		allPanels mergedCoupleLname = new allPanels(driver);
 

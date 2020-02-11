@@ -27,7 +27,8 @@ import java.util.Set;
 //import java.util.Random;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
+
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.interactions.Actions;
 //import org.openqa.selenium.interactions.Actions;
 //import org.openqa.selenium.interactions.Actions;
@@ -37,11 +38,10 @@ import org.openqa.selenium.support.ui.Select;
 import com.baylorgenetics.catalog_qa.pages.GenerateData;
 import com.baylorgenetics.catalog_qa.pages.allPanels;
 
-public class First60106MergedWith60101 {
+public class EdgeDriverCreateOrder60101Female {
 	public String baseUrl = "https://catalog-qa.baylorgenetics.com/details/60101";
-	String driverPath = "C:\\Eclipse\\chromedriver.exe";
+	String driverPath = "C:\\Eclipse\\msedgedriver.exe";
 	public WebDriver driver;
-	GenerateData NameOfInsured;
 
 	@BeforeTest
 	public void setup(ITestContext ctx) {
@@ -50,13 +50,12 @@ public class First60106MergedWith60101 {
 	}
 
 	@Test
-	public void Merging60101To60106() throws InterruptedException, AWTException {
+	public void EdgeDriverCreateOrder60101() throws InterruptedException, AWTException {
+		GenerateData NameOfInsured = new GenerateData();
 
-		NameOfInsured = new GenerateData();
-
-		System.out.println("launching Chrome browser");
-		System.setProperty("webdriver.chrome.driver", driverPath);
-		driver = new ChromeDriver();
+		System.out.println("launching Edge browser");
+		System.setProperty("webdriver.edge.driver", driverPath);
+		driver = new EdgeDriver();
 		String currentWindow = driver.getWindowHandle();
 		driver.switchTo().window(currentWindow);
 		driver.get(baseUrl);
@@ -204,20 +203,19 @@ public class First60106MergedWith60101 {
 		driver.findElement(By.id("discharged-Yes-1")).click();
 		Thread.sleep(1000);
 
-		// Initiate the Pyament panel
+		//Initiate the Payment panel
 		allPanels PaymentInfo = new allPanels(driver);
-
-		// Calling the Payment info panel
+		
+		//Calling the Payment info panel
 		PaymentInfo.getPaymentInfoPanel().click();
-		Thread.sleep(1000);
-
-		// Initiate the Payment Info
+		
+		//Initiate the Payment Info
 		allPanels InstitutionalBill = new allPanels(driver);
-
-		// Calling the Institution billing icon
+		
+		//Calling the Institution billing icon
 		InstitutionalBill.getinstitutionBillingIcon().click();
 		Thread.sleep(1000);
-
+		
 		// Initiate the sample info panel
 		allPanels sampleinfopanel = new allPanels(driver);
 
@@ -288,18 +286,19 @@ public class First60106MergedWith60101 {
 
 		// Calling the getMergedCoupleReport panel
 		mergedCoupleReport.getmergedCoupleReportPanel().click();
-//This part need dev to change the ID because the Last and first name field id are the same with the Patient info		
+
 		// Initiate the Last Name field under the Merged Couple report
 		allPanels mergedCoupleLname = new allPanels(driver);
 
+//This part need dev to change the ID because the Last and first name field id are the same with the Patient info		
 		// Calling the getMergedCoupleReport panel
-		mergedCoupleLname.getmergedCoupleLastName().sendKeys("female60101");
+		mergedCoupleLname.getmergedCoupleLastName().sendKeys("male60106");
 
 		// Initiate the First Name field under the Merged Couple report
 		allPanels mergedCoupleFname = new allPanels(driver);
 
 		// Calling the getMergedCoupleReport panel
-		mergedCoupleFname.getmergedCoupleFirstName().sendKeys("automationfemale");
+		mergedCoupleFname.getmergedCoupleFirstName().sendKeys("automation60106Male");
 
 		// Initiate the Search button under the Merged Couple report
 		allPanels mergedCoupleSearchB = new allPanels(driver);
@@ -307,7 +306,7 @@ public class First60106MergedWith60101 {
 		// Calling the getMergedCoupleReport panel
 		mergedCoupleSearchB.getmergedCoupleSearchButton().click();
 
-		// Initiate the Submit button
+//Initiate the Submit button
 		allPanels submitButtonOnOrderPage = new allPanels(driver);
 
 		// Calling the submit button and then click
