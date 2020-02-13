@@ -243,8 +243,16 @@ public class allPanels {
 	//Additional Clinical Info Panel
 	public static By additionalClinicInfoPanel = By.id("additional-clinical-info"); 
 	
+	//Additional Clinical Info Panel text field
+	public static By additionalClinicInfoPanelTextField = By.id("additional-clinical-info"); 
+		
 	//Differential Diagnosis
 	public static By differentDiagnosisPanel = By.id("differential-diagnosis"); 
+	
+	//Differential Diagnosis Text field
+	public static By differentDiagnosisPanelTextField = By.id("differential-diagnosis-info"); 
+	
+	
 	
 //----------------------------------
 	//Consent Panel
@@ -275,37 +283,47 @@ public class allPanels {
 	//Parents consent Panel
 	public static By parentsConsentPanel = By.id("parents-consent"); 
 	
+	//Maternal Options secondary panel
+	public static By maternalOptionsSecPanel = By.id("maternal-options");
 	
+	//Paternal Options secondary panel
+	public static By paternalOptionsSecPanel = By.id("paternal-options");
 	
+	//Maternal Yes Medically actionable
+	public static By yesMedicallyMaternalActionable = (By.xpath("//div[@id='root']/div/div/div[1]/div[2]/div/div[13]/div/div/div[1]/div/div[2]/label[1]/span[2]/p"));
 	
+	//Maternal No Medically actionable
+	public static By noMedicallyMaternalActionable = (By.xpath("//div[@id='root']/div/div/div[1]/div[2]/div/div[13]/div/div/div[1]/div/div[2]/label[2]/span[2]/p"));
 	
+	//Maternal yes Carrier Status for Autosomal
+	public static By yesCarrierMaternalActionable = (By.xpath("//div[@id='root']/div/div/div[1]/div[2]/div/div[13]/div/div/div[1]/div/div[3]/label[1]/span[2]/p"));
 	
+	//Maternal No carrier Status for Autosomal
+	public static By noCarrierMaternalActionable = (By.xpath("//div[@id='root']/div/div/div[1]/div[2]/div/div[13]/div/div/div[1]/div/div[3]/label[2]/span[2]/p"));
 	
+	//Maternal Yes Samples Submitted NY
+	public static By yesMaternalSampleSubNYActionable = (By.xpath("//div[@id='root']/div/div/div[1]/div[2]/div/div[13]/div/div/div[1]/div/div[4]/label[1]/span[2]/p"));
 	
+	//Maternal No samples Submitted NY
+	public static By noMaternalSampleSubNYActionable = (By.xpath("//div[@id='root']/div/div/div[1]/div[2]/div/div[13]/div/div/div[1]/div/div[4]/label[2]/span[2]/p"));
 	
+	//Paternal Yes Medically Actionable
+	public static By yesPaternalMedicallyActionable = (By.xpath("//div[@id='root']/div/div/div[1]/div[2]/div/div[13]/div/div/div[2]/div/div[2]/label[1]/span[2]/p"));
 	
+	//Paternal No Medically Actionable
+	public static By noPaternalMedicallyActionable = (By.xpath("//div[@id='root']/div/div/div[1]/div[2]/div/div[13]/div/div/div[2]/div/div[2]/label[2]/span[2]/p"));
 	
+	//Paternal yes Carrier Status
+	public static By yesPaternalCarrierStatus = (By.xpath("//div[@id='root']/div/div/div[1]/div[2]/div/div[13]/div/div/div[2]/div/div[3]/label[1]/span[2]/p"));
 	
+	//Paternal No carrier status
+	public static By noPaternalCarrierStatus = (By.xpath("//div[@id='root']/div/div/div[1]/div[2]/div/div[13]/div/div/div[2]/div/div[3]/label[2]/span[2]/p"));
 	
+	//Paternal Yes Samples Submitted NY
+	public static By yesPaternalSamplesSubmittedNY = (By.xpath("//div[@id='root']/div/div/div[1]/div[2]/div/div[13]/div/div/div[2]/div/div[4]/label[1]/span[2]/p"));
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	//Paternal No samples Submitted NY
+	public static By noPaternalSamplesSubmittedNY = (By.xpath("//div[@id='root']///*[@id=\"root\"]/div/div/div[1]/div[2]/div/div[13]/div/div/div[2]/div/div[4]/label[2]/span[2]/p"));
 	
 	
 	
@@ -702,16 +720,28 @@ public class allPanels {
 		return driver.findElement(indicationForTestingPanel);
 	}
 
+// Additional Clinical Info Panel	
 	public WebElement getAdditionalClinicInfoPanel() {
 		return driver.findElement(additionalClinicInfoPanel);
 	}
 
+	public WebElement getadditionalClinicInfoPanelTextField() {
+		return driver.findElement(additionalClinicInfoPanelTextField);
+	}
+
+// Different Diagnosis Panel	
 	public WebElement getDifferentDiagnosisPanel() {
 		return driver.findElement(additionalClinicInfoPanel);
 	}
 
+	public WebElement getdifferentDiagnosisPanelTextField() {
+		return driver.findElement(differentDiagnosisPanelTextField);
+	}
+
 	
-//---------------------------------------------	
+	
+	
+//-----------------Consent----------------------------	
 	public WebElement getConsentPanel() {
 		return driver.findElement(additionalClinicInfoPanel);
 	}
@@ -742,11 +772,75 @@ public class allPanels {
 		
 	
 	
-//---------------------------------------------------------	
+//----------------------Parent consents-----------------------------------	
 	public WebElement getParentsConsentPanel() {
 		return driver.findElement(parentsConsentPanel);
 	}
+	
+	public WebElement getmaternalOptionsSecPanel() {
+		return driver.findElement(maternalOptionsSecPanel);
+	}
 
+	public WebElement getpaternalOptionsSecPanel() {
+		return driver.findElement(paternalOptionsSecPanel);
+	}
+
+	public WebElement getyesMedicallyMaternalActionable() {
+		return driver.findElement(yesMedicallyMaternalActionable);
+	}
+	
+	public WebElement getnoMedicallyMaternalActionable() {
+		return driver.findElement(noMedicallyMaternalActionable);
+	}
+	
+	public WebElement getyesCarrierMaternalActionable() {
+		return driver.findElement(yesCarrierMaternalActionable);
+	}
+
+	public WebElement getnoCarrierMaternalActionable() {
+		return driver.findElement(noCarrierMaternalActionable);
+	}
+	
+	public WebElement getYesMaternalSampleSubNYActionable() {
+		return driver.findElement(yesMaternalSampleSubNYActionable);
+	}
+	
+	public WebElement getNoMaternalSampleSubNYActionable() {
+		return driver.findElement(noMaternalSampleSubNYActionable);
+	}	
+		
+	public WebElement getYesPaternalMedicallyActionable() {
+		return driver.findElement(yesPaternalMedicallyActionable);
+	}	
+		
+	public WebElement getNoPaternalMedicallyActionable() {
+		return driver.findElement(noPaternalMedicallyActionable);
+	}	
+		
+	public WebElement getYesPaternalCarrierStatus() {
+		return driver.findElement(yesPaternalCarrierStatus);
+	}	
+		
+	public WebElement getNoPaternalCarrierStatus() {
+		return driver.findElement(noPaternalCarrierStatus);
+	}	
+			
+	public WebElement getYesPaternalSamplesSubmittedNY() {
+		return driver.findElement(yesPaternalSamplesSubmittedNY);
+	}	
+		
+	public WebElement getNoPaternalSamplesSubmittedNY() {
+		return driver.findElement(noPaternalSamplesSubmittedNY);
+	}	
+		
+		
+
+	
+	
+//------------------------------------------------	
+	
+
+	
 	public WebElement getNyConsentPanel() {
 		return driver.findElement(nyConsentPanel);
 	}
