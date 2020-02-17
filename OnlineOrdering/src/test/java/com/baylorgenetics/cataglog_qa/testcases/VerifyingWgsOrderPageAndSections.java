@@ -12,14 +12,14 @@ import com.baylorgenetics.catalog_qa.pages.allPanels;
 
 public class VerifyingWgsOrderPageAndSections {
 
-	public String baseUrl = "https://catalog-qa.baylorgenetics.com/search?";
+	public String baseUrl = "https://catalog-qa.baylorgenetics.com/search";
 	String driverPath = "C:\\Eclipse\\chromedriver.exe";
 	public WebDriver driver;
 
 	@BeforeTest
 	public void setup(ITestContext ctx) {
 		TestRunner runner = (TestRunner) ctx;
-		runner.setOutputDirectory("J:\\zzQA Selenium Automation Suite\\Test Results");
+		runner.setOutputDirectory("C:\\Users\\atd0623\\Desktop\\Automation Results");
 	}
 
 	@Test
@@ -248,7 +248,7 @@ public class VerifyingWgsOrderPageAndSections {
 			System.out.println("Parents-consent  Section                    is Absent");
 		}
 
-// #12
+/* #12
 		// Assign nyConsentSectiontSection variable
 		allPanels nyConsentSectiontSection = new allPanels(driver);
 		nyConsentSectiontSection.getNyConsentPanel();
@@ -260,7 +260,8 @@ public class VerifyingWgsOrderPageAndSections {
 			System.out.println("The ny-consent  Section                    is Absent");
 		}
 
-// #13
+*/ 
+//#13
 		// Assign additionalStudiesSection variable
 		allPanels additionalStudiesRSection = new allPanels(driver);
 		additionalStudiesRSection.getAdditionalStudiesResearchPanel();
