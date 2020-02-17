@@ -157,8 +157,13 @@ public class allPanels {
 	
 	
 	
-	//The order-kits button
+//-----The order-kits button----------
 	public static By theOrderKitsButton = By.id("order-kits");
+	
+	
+//-------- The result page drop down------	
+	public static By theResultsPerPage = By.xpath("//div[@id='root']/div/div/div[1]/div[2]/div/div[3]/div[1]/div[2]/select");
+	
 	
 	
 //----------------objects under the Parents panel-------------
@@ -1610,6 +1615,13 @@ public class allPanels {
 				
 		
 	
+//-------- The result page drop down------	
+		public WebElement gettheResultsPerPage () {
+			return driver.findElement(theResultsPerPage );
+		}	
+			
+		
+		
 	
 	
 	

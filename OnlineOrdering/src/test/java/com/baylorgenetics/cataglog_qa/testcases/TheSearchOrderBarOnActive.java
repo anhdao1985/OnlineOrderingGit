@@ -79,7 +79,7 @@ public class TheSearchOrderBarOnActive {
 
 		// Calling the password method from class allPales and insert value
 		windowLogInButton2.getWindowLogInButton().click();
-		
+
 		// --------- Searching for Lab#----------------
 
 		// Initiate the searchorder bar on draft page
@@ -256,6 +256,36 @@ public class TheSearchOrderBarOnActive {
 			System.out.println("Medical Record Number Found");
 		} else {
 			System.out.println("Medical Record Number Not Found");
+			Assert.fail("Could not find  in the Result page"); // This will fail the testcase if the button become
+																// enable in this scenario
+		}
+
+		// Search for the lab number-----------------------
+		allPanels searchOrderBarDraft7 = new allPanels(driver);
+
+		// Send value into the search bar on draft page
+		searchOrderBarDraft7.getsearchOrderBarDraftActiveComplete().sendKeys(Keys.chord(Keys.CONTROL, "a"));
+		Thread.sleep(1000);
+
+		// Initiate the searchorder bar on draft page
+		allPanels searchOrderBarDraftMDN7 = new allPanels(driver);
+
+		// Send value into the search bar on draft page
+		searchOrderBarDraftMDN7.getsearchOrderBarDraftActiveComplete().sendKeys("5465486");
+
+		// Initiate the Manifying glass icon on draft page
+		allPanels magnifIconDraftPageMDN7 = new allPanels(driver);
+
+		// Click on the magnifying glass icon to conduct the search
+		magnifIconDraftPageMDN7.getmagnifyingGlassIconDraftActiveComplete().click();
+
+		// Check the result grid for ACN
+		Thread.sleep(1000);
+		// Check the result grid for ACN
+		if (driver.getPageSource().contains("5465486")) {
+			System.out.println("Lab # Found");
+		} else {
+			System.out.println("Lab # Not Found");
 			Assert.fail("Could not find  in the Result page"); // This will fail the testcase if the button become
 																// enable in this scenario
 		}

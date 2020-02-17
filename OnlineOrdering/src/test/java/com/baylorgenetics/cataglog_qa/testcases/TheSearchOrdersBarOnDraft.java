@@ -271,7 +271,7 @@ public class TheSearchOrdersBarOnDraft {
 		allPanels searchOrderBarDraftMDN = new allPanels(driver);
 
 		// Send value into the search bar on draft page
-		searchOrderBarDraftMDN.getsearchOrderBarDraftActiveComplete().sendKeys("LIHUMrpDCX");
+		searchOrderBarDraftMDN.getsearchOrderBarDraftActiveComplete().sendKeys("1232323");
 
 		// Initiate the Manifying glass icon on draft page
 		allPanels magnifIconDraftPageMDN = new allPanels(driver);
@@ -282,10 +282,10 @@ public class TheSearchOrdersBarOnDraft {
 		// Check the result grid for ACN
 		Thread.sleep(1000);
 		// Check the result grid for ACN
-		if (driver.getPageSource().contains("111AUTODONOTUSE")) {
-			System.out.println("Medical Record # Found");
+		if (driver.getPageSource().contains("1232323")) {
+			System.out.println("Lab Record # Found");
 		} else {
-			System.out.println("Medical Record # Not Found");
+			System.out.println("Lab Record # Not Found");
 			Assert.fail("Could not find  in the Result page"); // This will fail the testcase if the button become
 																// enable in this scenario
 		}
