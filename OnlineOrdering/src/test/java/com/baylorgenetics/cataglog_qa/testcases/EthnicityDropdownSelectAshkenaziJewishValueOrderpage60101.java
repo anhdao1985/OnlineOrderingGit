@@ -23,7 +23,7 @@ public class EthnicityDropdownSelectAshkenaziJewishValueOrderpage60101 {
 	@BeforeTest
 	public void setup(ITestContext ctx) {
 		TestRunner runner = (TestRunner) ctx;
-		runner.setOutputDirectory("J:\\zzQA Selenium Automation Suite\\Test Results");
+		runner.setOutputDirectory("C:\\Users\\atd0623\\Desktop\\Automation Results");
 	}
 
 	@Test
@@ -38,6 +38,7 @@ public class EthnicityDropdownSelectAshkenaziJewishValueOrderpage60101 {
 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
+		
 		// Initiate username email as the allPanels class
 		allPanels userEmail = new allPanels(driver);
 

@@ -34,11 +34,11 @@ public class NegativePatientInfoSubmitWithoutRequiredFields {
 	@BeforeTest
 	public void setup(ITestContext ctx) {
 		TestRunner runner = (TestRunner) ctx;
-		runner.setOutputDirectory("J:\\zzQA Selenium Automation Suite\\Test Results");
+		runner.setOutputDirectory("C:\\Users\\atd0623\\Desktop\\Automation Results");
 	}
 
 	@Test
-	public void NegativePatientInfoNorequiredFieldsSubmit() throws InterruptedException {
+	public void NegativePatientInfoNorequiredFieldsNoSubmitAndSaveButton() throws InterruptedException {
 		// This is how i call the class GenerateData
 		NameOfInsured = new GenerateData();
 
@@ -233,7 +233,7 @@ public class NegativePatientInfoSubmitWithoutRequiredFields {
 		// Print out Selected Value
 		System.out.println(drpYearDwnList.getAttribute("value"));
 
-*/
+
 		// Initiate the Submit button
 		allPanels submitButtonOnOrderPage = new allPanels(driver);
 
@@ -283,6 +283,21 @@ public class NegativePatientInfoSubmitWithoutRequiredFields {
 
 		// Close browser
 		driver.close();
+*/
 
+//Check to see if the Submit button is disable or enable	
+		WebElement element = driver.findElement(By.id("submit-order"));
+		boolean actualValue = element.isEnabled();
+		if(actualValue) {
+			 System.out.println("DisabledEnabled");
+			 Assert.fail("This message will be printed in stacktrace if the assertion fails."); //This will fail the testcase if the button become enable in this scenario
+		} else {
+			System.out.println("Disabled");
+			
+		}
+		
+		// Close browser
+			driver.close();	
+		
 	}
 }

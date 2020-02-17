@@ -46,7 +46,7 @@ public class First60106MergedWith60101 {
 	@BeforeTest
 	public void setup(ITestContext ctx) {
 		TestRunner runner = (TestRunner) ctx;
-		runner.setOutputDirectory("J:\\zzQA Selenium Automation Suite\\Test Results");
+		runner.setOutputDirectory("C:\\Users\\atd0623\\Desktop\\Automation Results");
 	}
 
 	@Test

@@ -48,7 +48,7 @@ public class OrderTestFor1500 {
 		@BeforeTest
 		public void setup(ITestContext ctx) {
 			TestRunner runner = (TestRunner) ctx;
-			runner.setOutputDirectory("J:\\zzQA Selenium Automation Suite\\Test Results");
+			runner.setOutputDirectory("C:\\Users\\atd0623\\Desktop\\Automation Results");
 		}
 
 		
@@ -207,6 +207,7 @@ public class OrderTestFor1500 {
 			driver.findElement(By.id("discharged-Yes-1")).click();
 			Thread.sleep(1000);
 
+			
 			// Initiate the sample info panel
 			allPanels sampleinfopanel = new allPanels(driver);
 
@@ -227,7 +228,7 @@ public class OrderTestFor1500 {
 			Thread.sleep(1000);
 			WebElement el = driver.findElement(By.id("collection-date-month"));
 			el.sendKeys(str);
-			Thread.sleep(1000);
+			Thread.sleep(3000);
 
 			// below is the portion to randomly select the day in the Day drop down
 
@@ -272,6 +273,9 @@ public class OrderTestFor1500 {
 			dropdownSampleType.selectByVisibleText("Extracted DNA");
 			Thread.sleep(1000);
 		
+			
+//---- Maternal info			
+			
 			//Initiate the First Name under Maternal Info
 			allPanels FNameMaternalInfo = new allPanels(driver);
 			
@@ -311,12 +315,32 @@ public class OrderTestFor1500 {
 			//Initiate the Asymptomatic - wait for the dev 
 			
 			
-			
 			//Initiate the Month for Collected under Maternal Info
 			allPanels MaternalCollectMonth = new allPanels(driver);
 			
 			//Select the Month for the collected Under Maternal Info
 			MaternalCollectMonth.gettheParentCollectedMonthMaternal().sendKeys("11");
+			
+			//Initiate the Day for Collected under Maternal Info
+			allPanels MaternalCollectDay = new allPanels(driver);
+			
+			//Select the Month for the collected Under Maternal Info
+			MaternalCollectDay.gettheParentCollectedDayMaternal().sendKeys("11");
+			
+			//Initiate the Year for Collected under Maternal Info
+			allPanels maternalCollectYear = new allPanels(driver);
+			
+			//Select the Month for the collected Under Maternal Info
+			maternalCollectYear.gettheParentCollectedYearMaternal().sendKeys("1966");
+			
+			//Initiate the Sample Type 
+			allPanels maternalInfoSampleType = new allPanels(driver);
+			
+			//Select the Maternal sample type 
+			maternalInfoSampleType.gettheParentSampleTypeMaternal().sendKeys("Blood");
+			
+			
+//------------- Paternal Info 			
 			
 			//Initiate the First Name under Paternal Info
 			allPanels FirstNamePaternalInfo = new allPanels(driver);
@@ -352,7 +376,7 @@ public class OrderTestFor1500 {
 			allPanels BDYearPaternalInfo = new allPanels(driver);
 			
 			//Select the birth date Year under the Paternal info
-			BDYearPaternalInfo.getthePaternalInfoBDYear().sendKeys("1968");
+			BDYearPaternalInfo.getthePaternalInfoBDYear().sendKeys("2019");
 			
 			//Intiate the Asymptomatic/Sympotamic - waiting on dev to have the id update
 			
@@ -380,7 +404,25 @@ public class OrderTestFor1500 {
 			
 			//Select the Sample Type under Paternal
 			PaternalSampleType.getthePaternalInfoSampleType().sendKeys("Saliva");
-	  
+			Thread.sleep(1000);
+
+			//Initiate the Payment panel
+			allPanels PaymentInfo = new allPanels(driver);
+					
+			//Calling the Payment info panel
+			PaymentInfo.getPaymentInfoPanel().click();
+			Thread.sleep(1000);
+					
+			//Initiate the Payment Info
+			allPanels InstitutionalBill = new allPanels(driver);
+			
+			//Calling the Institution billing icon
+			InstitutionalBill.getinstitutionBillingIcon().click();
+			Thread.sleep(1000);
+			
+			
+			
+			
 			// Initiate the save button on the Order page
 			allPanels theSaveButton = new allPanels(driver);
 

@@ -51,7 +51,7 @@ public class CreatingAnOrderWithAdditionalStudiesRSelectingYESandNOonFlag {
 	@BeforeTest
 	public void setup(ITestContext ctx) {
 		TestRunner runner = (TestRunner) ctx;
-		runner.setOutputDirectory("J:\\zzQA Selenium Automation Suite\\Test Results");
+		runner.setOutputDirectory("C:\\Users\\atd0623\\Desktop\\Automation Results");
 	}
 
 	
@@ -130,9 +130,11 @@ public class CreatingAnOrderWithAdditionalStudiesRSelectingYESandNOonFlag {
 		// below is the portion to randomly select the ethnicity in the ethnicity drop
 		// down
 		// Object of the e
-		WebElement ethnicityDropDownList = driver.findElement(By.id("ethnicity"));
+		driver.findElement(By.id("ethnicity")).sendKeys("Finnish");
 
-		// Using Select Class to fetch the count
+		
+	/*	WebElement ethnicityDropDownList = driver.findElement(By.id("ethnicity"));
+		 Using Select Class to fetch the count
 		Select ethnicityObjSel = new Select(ethnicityDropDownList);
 		List<WebElement> webListEthinicty = ethnicityObjSel.getOptions();
 
@@ -156,7 +158,9 @@ public class CreatingAnOrderWithAdditionalStudiesRSelectingYESandNOonFlag {
 		} else {
 			System.out.println(ethnicityDropDownList.getAttribute("value"));
 		}
-
+*/
+		
+		
 		// Assign value for address 1 under Patient info section
 		driver.findElement(By.id("address-1")).sendKeys("555 Main Street");
 
@@ -208,7 +212,23 @@ public class CreatingAnOrderWithAdditionalStudiesRSelectingYESandNOonFlag {
 		// Selecting NO for Discharged
 		driver.findElement(By.id("discharged-Yes-1")).click();
 		Thread.sleep(1000);
+		
+		
+//payment panel and the institutional billing			
+		// Initiate the Payment info panel
+		allPanels paymentPanel = new allPanels(driver);
 
+		// Calling and click on the Payment info panel
+		paymentPanel.getPaymentInfoPanel().click();
+
+		// Calling the Institutional Billing icon
+		allPanels institutionalBillingicon = new allPanels(driver);
+
+		// Calling and click on the institutional Billing icon
+		institutionalBillingicon.getinstitutionBillingIcon().click();
+//---------------------------
+		
+		
 		// Initiate the sample info panel
 		allPanels sampleinfopanel = new allPanels(driver);
 
@@ -271,9 +291,10 @@ public class CreatingAnOrderWithAdditionalStudiesRSelectingYESandNOonFlag {
 
 		// wait 1 second and select "2019"
 		Thread.sleep(1000);
-		dropdownSampleType.selectByVisibleText("Blood");
+		dropdownSampleType.selectByVisibleText("Plasma");
 		Thread.sleep(1000);
-
+		
+//This part we need Dev to update the IDs
 		// Initiate the Additional Studies/Research panel
 		allPanels addtionalSRPanel = new allPanels(driver);
 

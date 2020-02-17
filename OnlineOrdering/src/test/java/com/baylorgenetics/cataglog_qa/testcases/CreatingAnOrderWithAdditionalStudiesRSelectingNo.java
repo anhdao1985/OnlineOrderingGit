@@ -46,7 +46,7 @@ public class CreatingAnOrderWithAdditionalStudiesRSelectingNo {
 	@BeforeTest
 	public void setup(ITestContext ctx) {
 		TestRunner runner = (TestRunner) ctx;
-		runner.setOutputDirectory("J:\\zzQA Selenium Automation Suite\\Test Results");
+		runner.setOutputDirectory("C:\\Users\\atd0623\\Desktop\\Automation Results");
 	}
 
 	@Test
@@ -203,7 +203,21 @@ public class CreatingAnOrderWithAdditionalStudiesRSelectingNo {
 		// Selecting NO for Discharged
 		driver.findElement(By.id("discharged-Yes-1")).click();
 		Thread.sleep(1000);
-
+		
+		
+//payment panel and the institutional billing			
+		//Initiate the Payment info panel
+		allPanels paymentPanel = new allPanels(driver);
+	
+		//Calling and click on the Payment info panel
+		paymentPanel.getPaymentInfoPanel().click();
+		
+		//Calling the Institutional Billing icon
+		allPanels institutionalBillingicon = new allPanels(driver);
+		
+		//Calling and click on the institutional Billing icon
+		institutionalBillingicon.getinstitutionBillingIcon().click();
+//---------------------------
 		// Initiate the sample info panel
 		allPanels sampleinfopanel = new allPanels(driver);
 
@@ -266,7 +280,7 @@ public class CreatingAnOrderWithAdditionalStudiesRSelectingNo {
 
 		// wait 1 second and select "2019"
 		Thread.sleep(1000);
-		dropdownSampleType.selectByVisibleText("Blood");
+		dropdownSampleType.selectByVisibleText("Plasma");
 		Thread.sleep(1000);
 
 		// Initiate the Additional Studies/Research panel

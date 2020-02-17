@@ -46,7 +46,7 @@ public class CreatingAnOrderWithAdditionalStudiesRSelectingYESonBoth {
 	@BeforeTest
 	public void setup(ITestContext ctx) {
 		TestRunner runner = (TestRunner) ctx;
-		runner.setOutputDirectory("J:\\zzQA Selenium Automation Suite\\Test Results");
+		runner.setOutputDirectory("C:\\Users\\atd0623\\Desktop\\Automation Results");
 	}
 
 	@Test
@@ -266,14 +266,20 @@ public class CreatingAnOrderWithAdditionalStudiesRSelectingYESonBoth {
 
 		// wait 1 second and select "2019"
 		Thread.sleep(1000);
-		dropdownSampleType.selectByVisibleText("Blood");
+		dropdownSampleType.selectByVisibleText("Plasma");
 		Thread.sleep(1000);
 
 		// Initiate the Additional Studies/Research panel
 		allPanels addtionalSRPanel = new allPanels(driver);
-
-		// Calling the Additional Studies/Research panel
+		
+		//Calling the Additional Studies/Research Panel and click on it
 		addtionalSRPanel.getAdditionalStudiesResearchPanel().click();
+
+		//Initiate the Yes flag under Additional Studies and research
+		allPanels yesFlag = new allPanels(driver);
+		
+		// Calling the Additional Studies/Research panel
+		 yesFlag.getadditiionalStudiesYesRadio().click();
 
 		// initiate the Use Patient info flag
 		allPanels usePatientInfoFlag = new allPanels(driver);
