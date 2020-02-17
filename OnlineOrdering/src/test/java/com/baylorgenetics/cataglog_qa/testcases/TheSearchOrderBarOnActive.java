@@ -10,8 +10,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import com.baylorgenetics.catalog_qa.pages.allPanels;
 
-public class TheSearchOrdersBarOnDraft {
-
+public class TheSearchOrderBarOnActive {
 	public String baseUrl = "https://catalog-qa.baylorgenetics.com/search?";
 	String driverPath = "C:\\Eclipse\\chromedriver.exe";
 	public WebDriver driver;
@@ -23,7 +22,7 @@ public class TheSearchOrdersBarOnDraft {
 	}
 
 	@Test
-	public void testTheSearchOrderBarDraftpage() throws InterruptedException {
+	public void testTheSearchOrderBarActivePage() throws InterruptedException {
 		System.out.println("launching Chrome browser");
 		System.setProperty("webdriver.chrome.driver", driverPath);
 		driver = new ChromeDriver();
@@ -54,13 +53,12 @@ public class TheSearchOrdersBarOnDraft {
 
 		// Calling the password method from class allPanels and insert value
 		windowLogInButton.getWindowLogInButton().click();
-		Thread.sleep(2000);
-		
+
 		// Initiate the draft icon
-		allPanels draftIcon = new allPanels(driver);
+		allPanels activeIcon = new allPanels(driver);
 
 		// Calling and click on the draft icon
-		draftIcon.gettheDraftButton().click();
+		activeIcon.gettheActiveButton().click();
 
 //We can remove this once the bug for login is fixed		
 		// Initiate username email as the allPanels class
@@ -75,48 +73,20 @@ public class TheSearchOrdersBarOnDraft {
 		// Calling the password method from class allPales and insert value
 		password2.getPassWord().sendKeys("Test@1234");
 
+		Thread.sleep(2000);
 		// Initiate the login button on the login window as the allPanels class
 		allPanels windowLogInButton2 = new allPanels(driver);
 
 		// Calling the password method from class allPales and insert value
 		windowLogInButton2.getWindowLogInButton().click();
-
-//------------Searching for Test Code---------------		
-
-		// Initiate the searchorder bar on draft page
-		allPanels searchOrderBarDraft = new allPanels(driver);
-
-		// Send value into the search bar on draft page
-		searchOrderBarDraft.getsearchOrderBarDraftActiveComplete().sendKeys("60101");
-
-		// Initiate the Manifying glass icon on draft page
-		allPanels magnifIconDraftPage = new allPanels(driver);
-
-		// Click on the magnifying glass icon to conduct the search
-		magnifIconDraftPage.getmagnifyingGlassIconDraftActiveComplete().click();
-
-		// Check the result grid for 60101
-		if (driver.getPageSource().contains("60101")) {
-			System.out.println("60101 Found");
-		} else {
-			System.out.println("60101 Not Found");
-			Assert.fail("Could not find 60101 in the Result page"); // This will fail the testcase if the button become
-																	// enable in this scenario
-		}
-
-//--------- Searching for Lab#----------------		
-		// Initiate the search order bar on draft page
-		allPanels searchOrderBarDraft2 = new allPanels(driver);
-
-		// Send value into the search bar on draft page
-		searchOrderBarDraft2.getsearchOrderBarDraftActiveComplete().sendKeys(Keys.chord(Keys.CONTROL, "a"));
-		Thread.sleep(1000);
+		
+		// --------- Searching for Lab#----------------
 
 		// Initiate the searchorder bar on draft page
 		allPanels searchOrderBarDraftLabN = new allPanels(driver);
 
 		// Send value into the search bar on draft page
-		searchOrderBarDraftLabN.getsearchOrderBarDraftActiveComplete().sendKeys("12321344");
+		searchOrderBarDraftLabN.getsearchOrderBarDraftActiveComplete().sendKeys("60101");
 
 		// Initiate the Manifying glass icon on draft page
 		allPanels magnifIconDraftPageLabN = new allPanels(driver);
@@ -127,27 +97,27 @@ public class TheSearchOrdersBarOnDraft {
 		// Check the result grid for Lab#
 		Thread.sleep(1000);
 		// Check the result grid for 60101
-		if (driver.getPageSource().contains("12321344")) {
-			System.out.println("12321344 Found");
+		if (driver.getPageSource().contains("60101")) {
+			System.out.println("60101 Found");
 		} else {
-			System.out.println("12321344 Not Found");
+			System.out.println("60101 Not Found");
 			Assert.fail("Could not find  in the Result page"); // This will fail the testcase if the button become
 																// enable in this scenario
 		}
 
-//--------------------Searching for First Name-----------------------		
+		// --------------------Searching for First Name-----------------------
 		// Initiate the search order bar on draft page
-		allPanels searchOrderBarDraft3 = new allPanels(driver);
+		allPanels searchOrderBarDraft2 = new allPanels(driver);
 
 		// Send value into the search bar on draft page
-		searchOrderBarDraft3.getsearchOrderBarDraftActiveComplete().sendKeys(Keys.chord(Keys.CONTROL, "a"));
+		searchOrderBarDraft2.getsearchOrderBarDraftActiveComplete().sendKeys(Keys.chord(Keys.CONTROL, "a"));
 		Thread.sleep(1000);
 
 		// Initiate the searchorder bar on draft page
 		allPanels searchOrderBarDraftFN = new allPanels(driver);
 
 		// Send value into the search bar on draft page
-		searchOrderBarDraftFN.getsearchOrderBarDraftActiveComplete().sendKeys("111AUTOMATION");
+		searchOrderBarDraftFN.getsearchOrderBarDraftActiveComplete().sendKeys("9999Automation");
 
 		// Initiate the Manifying glass icon on draft page
 		allPanels magnifIconDraftPageFN = new allPanels(driver);
@@ -158,27 +128,27 @@ public class TheSearchOrdersBarOnDraft {
 		// Check the result grid for Lab#
 		Thread.sleep(1000);
 		// Check the result grid for First Name
-		if (driver.getPageSource().contains("111AUTOMATION")) {
-			System.out.println("111AUTOMATION Found");
+		if (driver.getPageSource().contains("9999Automation")) {
+			System.out.println("9999Automation Found");
 		} else {
-			System.out.println("111AUTOMATION Not Found");
+			System.out.println("9999Automation Not Found");
 			Assert.fail("Could not find  in the Result page"); // This will fail the testcase if the button become
 																// enable in this scenario
 		}
 
-// --------------------Searching for Last Name-----------------------
+		// --------------------Searching for Last Name-----------------------
 		// Initiate the search order bar on draft page
-		allPanels searchOrderBarDraft4 = new allPanels(driver);
+		allPanels searchOrderBarDraft3 = new allPanels(driver);
 
 		// Send value into the search bar on draft page
-		searchOrderBarDraft4.getsearchOrderBarDraftActiveComplete().sendKeys(Keys.chord(Keys.CONTROL, "a"));
+		searchOrderBarDraft3.getsearchOrderBarDraftActiveComplete().sendKeys(Keys.chord(Keys.CONTROL, "a"));
 		Thread.sleep(1000);
 
 		// Initiate the searchorder bar on draft page
 		allPanels searchOrderBarDraftLN = new allPanels(driver);
 
 		// Send value into the search bar on draft page
-		searchOrderBarDraftLN.getsearchOrderBarDraftActiveComplete().sendKeys("111AUTODONOTUSE");
+		searchOrderBarDraftLN.getsearchOrderBarDraftActiveComplete().sendKeys("777Automation");
 
 		// Initiate the Manifying glass icon on draft page
 		allPanels magnifIconDraftPageLN = new allPanels(driver);
@@ -189,20 +159,20 @@ public class TheSearchOrdersBarOnDraft {
 		// Check the result grid for Lab#
 		Thread.sleep(1000);
 		// Check the result grid for Last Name
-		if (driver.getPageSource().contains("111AUTODONOTUSE")) {
-			System.out.println("111AUTODONOTUSE Found");
+		if (driver.getPageSource().contains("777Automation")) {
+			System.out.println("777Automation Found");
 		} else {
-			System.out.println("111AUTODONOTUSE Not Found");
+			System.out.println("777Automation Not Found");
 			Assert.fail("Could not find  in the Result page"); // This will fail the testcase if the button become
 																// enable in this scenario
 		}
 
-// --------------------Searching for DOB-----------------------
+		// --------------------Searching for DOB-----------------------
 		// Initiate the search order bar on draft page
-		allPanels searchOrderBarDraft5 = new allPanels(driver);
+		allPanels searchOrderBarDraft4 = new allPanels(driver);
 
 		// Send value into the search bar on draft page
-		searchOrderBarDraft5.getsearchOrderBarDraftActiveComplete().sendKeys(Keys.chord(Keys.CONTROL, "a"));
+		searchOrderBarDraft4.getsearchOrderBarDraftActiveComplete().sendKeys(Keys.chord(Keys.CONTROL, "a"));
 		Thread.sleep(1000);
 
 		// Initiate the searchorder bar on draft page
@@ -228,19 +198,19 @@ public class TheSearchOrdersBarOnDraft {
 																// enable in this scenario
 		}
 
-// --------------------Searching for Accession Number-----------------------
+		// --------------------Searching for Accession Number-----------------------
 		// Initiate the search order bar on draft page
-		allPanels searchOrderBarDraft6 = new allPanels(driver);
+		allPanels searchOrderBarDraft5 = new allPanels(driver);
 
 		// Send value into the search bar on draft page
-		searchOrderBarDraft6.getsearchOrderBarDraftActiveComplete().sendKeys(Keys.chord(Keys.CONTROL, "a"));
+		searchOrderBarDraft5.getsearchOrderBarDraftActiveComplete().sendKeys(Keys.chord(Keys.CONTROL, "a"));
 		Thread.sleep(1000);
 
 		// Initiate the searchorder bar on draft page
 		allPanels searchOrderBarDraftACN = new allPanels(driver);
 
 		// Send value into the search bar on draft page
-		searchOrderBarDraftACN.getsearchOrderBarDraftActiveComplete().sendKeys("6620323526");
+		searchOrderBarDraftACN.getsearchOrderBarDraftActiveComplete().sendKeys("8786945208");
 
 		// Initiate the Manifying glass icon on draft page
 		allPanels magnifIconDraftPageACN = new allPanels(driver);
@@ -251,27 +221,27 @@ public class TheSearchOrdersBarOnDraft {
 		// Check the result grid for ACN
 		Thread.sleep(1000);
 		// Check the result grid for ACN
-		if (driver.getPageSource().contains("111AUTOMATION ")) {
+		if (driver.getPageSource().contains("8786945208")) {
 			System.out.println("Accession # Found");
 		} else {
-			System.out.println("Accession # Not Found");
+			System.out.println("Accession #  Not Found");
 			Assert.fail("Could not find  in the Result page"); // This will fail the testcase if the button become
 																// enable in this scenario
 		}
 
 // --------------------Searching for Medical Record number-----------------------
 		// Initiate the search order bar on draft page
-		allPanels searchOrderBarDraft7 = new allPanels(driver);
+		allPanels searchOrderBarDraft6 = new allPanels(driver);
 
 		// Send value into the search bar on draft page
-		searchOrderBarDraft7.getsearchOrderBarDraftActiveComplete().sendKeys(Keys.chord(Keys.CONTROL, "a"));
+		searchOrderBarDraft6.getsearchOrderBarDraftActiveComplete().sendKeys(Keys.chord(Keys.CONTROL, "a"));
 		Thread.sleep(1000);
 
 		// Initiate the searchorder bar on draft page
 		allPanels searchOrderBarDraftMDN = new allPanels(driver);
 
 		// Send value into the search bar on draft page
-		searchOrderBarDraftMDN.getsearchOrderBarDraftActiveComplete().sendKeys("LIHUMrpDCX");
+		searchOrderBarDraftMDN.getsearchOrderBarDraftActiveComplete().sendKeys("MzRXsVLSVf");
 
 		// Initiate the Manifying glass icon on draft page
 		allPanels magnifIconDraftPageMDN = new allPanels(driver);
@@ -282,16 +252,15 @@ public class TheSearchOrdersBarOnDraft {
 		// Check the result grid for ACN
 		Thread.sleep(1000);
 		// Check the result grid for ACN
-		if (driver.getPageSource().contains("111AUTODONOTUSE")) {
-			System.out.println("Medical Record # Found");
+		if (driver.getPageSource().contains("MzRXsVLSVf")) {
+			System.out.println("Medical Record Number Found");
 		} else {
-			System.out.println("Medical Record # Not Found");
+			System.out.println("Medical Record Number Not Found");
 			Assert.fail("Could not find  in the Result page"); // This will fail the testcase if the button become
 																// enable in this scenario
 		}
 
 		// Close browser
 		driver.close();
-
 	}
 }
