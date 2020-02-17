@@ -11,15 +11,34 @@ import org.openqa.selenium.WebElement;
 public class allPanels {
 
 
-	
+
 	
 
 //Order Page objects	
 	public WebDriver driver;
 	
 	
-
+//The header icons
+	//The Home icon
+	public static By theHomeButton = (By.xpath("//div[@id='root']/div/header/div/div/div[2]/div[2]/a[1]/img"));
+		
+	//The Draft icon
+	public static By theDraftButton = (By.xpath("//div[@id='root']/div/header/div/div/div[2]/div[2]/a[2]/img"));
 	
+	//The Active icon
+	public static By theActiveButton = (By.xpath("//div[@id='root']/div/header/div/div/div[2]/div[2]/a[3]/img"));
+	
+	//The Completed/cancelled icon
+	public static By theCompletedButton = (By.xpath("//div[@id='root']/div/header/div/div/div[2]/div[2]/a[4]/img"));
+	
+	
+//The search order bar
+	//The search order bar on Draft, active, completed
+	public static By searchOrderBarDraftActiveComplete = By.id("search-text");
+	
+	//The Magnifying glass icon
+	public static By magnifyingGlassIconDraftActiveComplete = By.id("search");
+
 	
 	
 	//Patient Info Panel
@@ -175,7 +194,7 @@ public class allPanels {
 	public static By theParentCollectedMonthMaternal = By.id("parent-collected-Maternal-month"); 
 	
 	//The collected day under the Maternal Info sub panel
-	public static By theParentCollectedDayMaternal = By.id("parent-collected-Maternal-month"); 
+	public static By theParentCollectedDayMaternal = By.id("parent-collected-Maternal-day"); 
 	
 	//The collected year under the Maternal Info sub panel
 	public static By theParentCollectedYearMaternal = By.id("parent-collected-Maternal-year"); 
@@ -535,10 +554,10 @@ public class allPanels {
 
 	
 	//The additional Study Yes radio button
-	public static By additiionalStudiesYesRadio = By.id("additionalStudy-yes"); 
+	public static By additiionalStudiesYesRadio = (By.xpath("//div[@id='root']/div/div/div[1]/div[2]/div/div[9]/div/div/form/div[2]/label[1]/span[2]/p"));
 	
 	//The additional Study No radio button
-	public static By additiionalStudiesNoRadio = By.id("additionalStudy-no"); 
+	public static By additiionalStudiesNoRadio = (By.xpath("//div[@id='root']/div/div/div[1]/div[2]/div/div[9]/div/div/form/div[2]/label[2]/span[2]/p"));
 		
 	//The use patient info flag
 	public static By additiionalStudiesUsePatientFlag = By.id("use-patient-info"); 
@@ -636,6 +655,15 @@ public class allPanels {
 	//The order button
 	public static By theOrderButtonDetailsP = By.id("order-test");
 	
+	
+	
+//The search order bar
+	
+	
+	
+	
+	
+
 	
 	
 	//-------&&&&--------------------------------------------------------&&&&&-----------------------------------------&&&------------
@@ -738,7 +766,18 @@ public class allPanels {
 		return driver.findElement(differentDiagnosisPanelTextField);
 	}
 
+//The search bar and search button Draft, active, completed
 	
+	public WebElement getsearchOrderBarDraftActiveComplete() {
+		return driver.findElement(searchOrderBarDraftActiveComplete);
+	}
+
+	public WebElement getmagnifyingGlassIconDraftActiveComplete() {
+		return driver.findElement(magnifyingGlassIconDraftActiveComplete);
+	}
+	
+
+
 	
 	
 //-----------------Consent----------------------------	
@@ -912,6 +951,14 @@ public class allPanels {
 		return driver.findElement(theMagnifyingGlassIcon);
 	}
 	
+	public WebElement gettheLoginButton() {
+		return driver.findElement(theLoginButton);
+	}
+	
+	
+	
+	
+	
 
 	//---------------------------------------------------------------
 
@@ -1048,6 +1095,23 @@ public class allPanels {
 	}
 			
 	
+//The header icons
+	
+	public WebElement gettheHomeButton () {
+		return driver.findElement(theHomeButton);
+	}
+		
+	public WebElement gettheDraftButton () {
+		return driver.findElement(theDraftButton);
+	}
+	
+	public WebElement gettheActiveButton () {
+		return driver.findElement(theActiveButton);
+	}
+	
+	public WebElement gettheCompletedButton () {
+		return driver.findElement(theCompletedButton);
+	}
 	
 	
 	

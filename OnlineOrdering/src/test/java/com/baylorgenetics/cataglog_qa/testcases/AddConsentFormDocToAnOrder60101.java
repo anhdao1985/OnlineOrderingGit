@@ -41,7 +41,7 @@ public class AddConsentFormDocToAnOrder60101 {
 	@BeforeTest
 	public void setup(ITestContext ctx) {
 		TestRunner runner = (TestRunner) ctx;
-		runner.setOutputDirectory("J:\\zzQA Selenium Automation Suite\\Test Results");
+		runner.setOutputDirectory("C:\\Users\\atd0623\\Desktop\\Automation Results");
 	}
 	
 	
@@ -369,7 +369,7 @@ public class AddConsentFormDocToAnOrder60101 {
 			// Thread.sleep(2000);
 
 			// Paste the file location into the path
-			StringSelection ss = new StringSelection("C:\\Users\\atd0623\\Desktop\\Automation test files\\2jpeg");
+			StringSelection ss = new StringSelection("C:\\Users\\atd0623\\Desktop\\Automation test files\\2jpeg.jpg");
 			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
 
 			// native key strokes for CTRL, V and ENTER keys
