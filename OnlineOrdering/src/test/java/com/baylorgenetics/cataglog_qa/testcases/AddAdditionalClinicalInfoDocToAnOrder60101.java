@@ -418,7 +418,7 @@ public class AddAdditionalClinicalInfoDocToAnOrder60101 {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(element).click().build().perform();
 
-		// Close browser
+		//Close browser
 		driver.close();
 
 	}
